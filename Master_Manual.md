@@ -6,7 +6,9 @@
 
 Master是骰娘的控制者，每个骰娘同时至多只能有一个Master。Master可以控制骰娘的发言和行为，并个性化大量配置。受信任用户也可以获得对骰娘的部分权限，但只有Master拥有发放和回收高级权限的权限。
 
-![](_static/demo_app_manager.png)Master功能初始默认关闭，需要在酷Q的应用菜单中切换。
+![](_static/demo_app_manager.png)
+
+Master功能初始默认关闭，需要在酷Q的应用菜单中切换。
 
 #### Master绑定/解绑
 
@@ -249,7 +251,7 @@ DisabledGlobal=1等价于.admin off（全局关闭）。开启时一切如常，
 .strNameSet 以后就称呼{nick}的名称为{new_nick}了
 ```
 
-![demo_str.png](_static/demo_str.png)
+![](_static/demo_str.png)
 
 **如果没有设置，strSelfName和strSelfCall将预设为QQ昵称，并且{self}会自动替换为strSelfCall**
 
