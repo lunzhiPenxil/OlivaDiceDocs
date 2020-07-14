@@ -265,7 +265,7 @@ Dice!较新版本中，给予骰娘群权限的群能得到更多信任，这暗
 
 2. 点击菜单的Master模式切换，开启后第一个对骰娘.master (public)的用户将获得骰娘的唯一Master权限。Mirai用户请右键菜单栏内的流泪猫猫头。
 
-<img src="_static/demo_master_new.png" alt="公骰认主" style="zoom:40%;" /><img src="_static/demo_master_private.png" alt="私骰认主"  style="zoom: 40%;" />
+![公骰认主](_static/demo_master_new.png)
 
 #### 认主都有什么用？
 
@@ -275,7 +275,7 @@ Dice!较新版本中，给予骰娘群权限的群能得到更多信任，这暗
 
 右键点击悬浮窗->【应用】->【应用管理】->【菜单】 或 右键点击悬浮窗->【应用】->【Dice!】->[菜单选项]。 Mirai用户请右键菜单栏内的流泪猫猫头。
 
-<center><img src="_static/intro_app_menu.png" alt="应用菜单" style="zoom: 50%;" />
+![应用菜单](_static/intro_app_menu.png)
 
 #### 悬浮窗显示的是什么？
 
@@ -385,9 +385,7 @@ Platform=2
 
 注意，如果要商业化，除了掷骰插件，请注意骰娘其余部分有无商用限制，比如图像、文本创作/翻译内容、其他插件。即使非营利，也请避免因盗图、盗人设产生的纠纷。
 
-<center><img src="_static/alipay_shiki.png" alt="投喂码" title="支持作者" style="zoom:50%;" />
-<center>欢迎投喂Shiki，最好备注称呼和QQ</center>
-
+![欢迎投喂Shiki，最好备注称呼和QQ](_static/alipay_shiki.png)
 
 ## 五、骰娘怎么调教
 
@@ -429,7 +427,7 @@ str文本中，{}表示文本变量替换，如{nick}会自动转义成用户昵
 
 完整条目见Shiki_Master_Manual.pdf->全局设置
 
-<center><img src="_static/demo_admin_set.png" alt="全局设置指令"/>
+![全局设置指令](_static/demo_admin_set.png)
 
 ##### 如何全局禁用.draw/.jrrp/.send？
 
