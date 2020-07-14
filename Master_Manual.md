@@ -249,7 +249,7 @@ DisabledGlobal=1等价于.admin off（全局关闭）。开启时一切如常，
 .strNameSet 以后就称呼{nick}的名称为{new_nick}了
 ```
 
-![](_static/demo_str.png)
+![demo_str.png](_static/demo_str.png)
 
 **如果没有设置，strSelfName和strSelfCall将预设为QQ昵称，并且{self}会自动替换为strSelfCall**
 
