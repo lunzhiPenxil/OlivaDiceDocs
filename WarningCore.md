@@ -3,8 +3,11 @@
 ### 简介
 WarningCore是针对Dice! 的黑名单同步功能功能提出并设计的Warning转发机功能插件。
 
-本插件目前处于`原型验证阶段`的`公开验证环节`，已经计划的全部流程如下：
+#### 获取插件
+想要获取最新当前最新版本，请在此处下载：[WarningCore](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/Warning%E8%BD%AC%E5%8F%91%E6%9C%BAv1.0.9.epk)
+
 #### 计划流程
+本插件目前处于`原型验证阶段`的`公开验证环节`，已经计划的全部流程如下：
 - 理论与结构设计阶段
   - [x] 理论提出环节  *完成于2020-07-01*
   - [x] 结构设计环节  *完成于2020-07-01*
