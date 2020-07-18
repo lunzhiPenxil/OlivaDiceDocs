@@ -37,7 +37,7 @@ WarningCore是针对Dice! 的黑名单同步功能功能提出并设计的Warnin
 
 简而言之，我认为该基于[AGPL-3.0](https://github.com/Dice-Developer-Team/Dice/blob/Shiki/LICENSE)的开源项目以及其所编译生成的二进制文件，当你运行并使用在你的相关服务上时，一切由你说了算。
 
-**我无权干涉你使用我的改版以及我的转发机！再次重复！这是基于[AGPL-3.0](https://github.com/Dice-Developer-Team/Dice/blob/Shiki/LICENSE)的开源项目！**
+**我无权干涉你使用我的改版以及我的转发机！再次重复！这是基于[AGPL-3.0](https://github.com/Dice-Developer-Team/Dice/blob/Shiki/LICENSE)的开源项目！但同理，我无法为你的使用所造成的任何后果负责！**
 
 ##### 当前进度
 目前已经完成了基于[EPK - 铃心自定义](http://myepk.club/variable.html)的导入包版本，作为`原型验证阶段`的`公开验证环节`所使用的版本。
