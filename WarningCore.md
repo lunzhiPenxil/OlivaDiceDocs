@@ -74,7 +74,7 @@ Dice!V2是一个基于QQ传输协议的，借助各种封装过的机器人平�
 #### 注意事项
 使用此转发机，需要安装导入包的机器人完成以下设置：
 - 创建`RadioData`目录
-    请确保在`CoolQ`执行文件（即`CQA.exe/CQP.exe`）下手动建立名为`RadioData`的文件夹。
+    请确保在`CoolQ`执行文件（即`CQA.exe/CQP.exe`）所在的文件夹下下手动建立名为`RadioData`的文件夹。
 
 使用此转发机，需要接收转发黑名单信息的骰娘完成以下设置：
 - 将`CloudBlackShare`置`0`    
