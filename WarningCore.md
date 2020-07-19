@@ -1,6 +1,6 @@
 ## WarningCore
 
-### 简介
+#### 简介
 WarningCore是针对Dice! 的黑名单同步功能功能提出并设计的Warning转发机功能插件。
 
 #### 获取插件
