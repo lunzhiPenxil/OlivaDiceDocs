@@ -4,7 +4,7 @@
 WarningCore是针对Dice! 的黑名单同步功能功能提出并设计的Warning转发机功能插件。
 
 #### 获取插件
-想要获取最新当前最新版本，请在此处下载：[WarningCore](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/Warning%E8%BD%AC%E5%8F%91%E6%9C%BAv1.0.9.epk)
+想要获取最新当前最新版本，请在此处下载：[WarningCore](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/Warning%E8%BD%AC%E5%8F%91%E6%9C%BAv1.0.9.epk)    
 或者你可以使用备用链接：[WarningCore - 青果云](http://pan.benzencloudhk.xyz/s/rrvwsshs)  密码：`LOVEOLIVA`
 
 #### 计划流程
