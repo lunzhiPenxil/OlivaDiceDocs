@@ -39,6 +39,12 @@
 详见本小节`上传云记录相关调整上传云记录相关调整`部分。
 
 #### 额外配置项
+- `BelieveShikiExceptGroup`
+缺省默认：`0`
+控制是否拉取[http://shiki.stringempty.xyz/DiceCloud/except_group.json](http://shiki.stringempty.xyz/DiceCloud/except_group.json)的ExceptGroup。
+当为0时，不拉取。
+当为1时，拉取并装载。
+完全更改ExceptGroup需要进行应用的重载。
 - `BelieveShikiDicelist`
 缺省默认：`0`
 控制是否拉取[http://shiki.stringempty.xyz/DiceList/](http://shiki.stringempty.xyz/DiceList/)的Dicelist。
