@@ -7,7 +7,7 @@
 `青果扩充核心 Oliva Dice!`是由`仑质(BenzenPenxil)`基于已有的Dice!V2核心进行代码层的修改后进行发布的非官方版本，该项目的代码仓库与分支地址为[lunzhiPenxil/Dice - Oliva](https://github.com/lunzhiPenxil/Dice/tree/Oliva)。
 该版本核心会引入一些本人认为足够好，同时又不够成熟到提交到官方版本的功能，并针对一些特定场景进行优化，如果你不清楚这些改动的意图与初衷，或者觉得这些改动不符合你的想法，请确保你能够以**合理的方式清晰有条理地**使用`现代汉语(简体中文 - 北京)`提出意见，否则请认为 **“这个垃圾的修改版本实在是太难用了！我还是继续用官方版本比较好”** 
 
-想要获取最新当前最新版本，请在此处下载：[Oliva Dice!](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/564-Oliva.1.2.4_20200728001.zip)    
+想要获取最新当前最新版本，请在此处下载：[Oliva Dice!](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/564-Oliva.1.2.4_20200729001.zip)    
 或者你可以使用备用链接：[Oliva Dice! - 青果云](http://pan.benzencloudhk.xyz/s/0g9q35i7)  密码：`LOVEOLIVA`
 
 本核心扩充功能如下：
