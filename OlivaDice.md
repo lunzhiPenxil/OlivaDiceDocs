@@ -9,10 +9,10 @@
 
 想要获取最新当前最新版本，请在此处下载：    
 - [Oliva Dice!](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/564-Oliva.1.2.4_20200729002.zip)    
-- [Oliva Dice! for Mirai](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/Dice%20for%20Mirai%20OlivaBranch%2020200802001.zip)    
+- [Oliva Dice! for Mirai 整合包](https://github.com/lunzhiPenxil/OlivaDiceDocs/raw/master/_release/Dice%20for%20Mirai%20OlivaBranch%2020200802001.zip)    
 或者你可以使用备用链接：    
 - [Oliva Dice! - 青果云](http://pan.benzencloudhk.xyz/s/0g9q35i7)  密码：`LOVEOLIVA`    
-- [Oliva Dice! for Mirai - 青果云](http://pan.benzencloudhk.xyz/s/v4wor8et)  密码：`LOVEOLIVA`    
+- [Oliva Dice! for Mirai 整合包 - 青果云](http://pan.benzencloudhk.xyz/s/v4wor8et)  密码：`LOVEOLIVA`    
 
 本核心扩充功能如下：
 
