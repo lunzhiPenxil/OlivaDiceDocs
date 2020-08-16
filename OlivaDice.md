@@ -11,7 +11,8 @@
 - [Oliva Dice! for Mirai 整合包](#)*暂无*    
 
 或者你可以使用备用链接：    
-- [Oliva Dice! for Mirai 整合包 - 青果云](http://pan.benzencloudhk.xyz/s/v4wor8et)  密码：`LOVEOLIVA`    
+- [Oliva Dice! - 青果云](http://pan.benzencloudhk.xyz/s/vul7k4ec)  密码：`LOVEOLIVA`    
+- [Oliva Dice! for Mirai 整合包 - 青果云](#)*暂无*    
 
 本核心扩充功能如下：
 
@@ -80,6 +81,13 @@
 - `strHlpRecommend`
 缺省默认：`已为您找到以下近似条目：`
 
+#### 额外配置项
+- `strHlpRecommend`
+缺省默认：`1`
+本地Jrrp控制项。
+当为0时，关闭模糊匹配。
+当为1时，开启模糊匹配，匹配推荐算法为`仑质`所改进后设计的`最长子串与最短编辑距离组合算法`。
+当为2时，开启模糊匹配，匹配推荐算法由`Shiki`基于`倒排算法`所改进。
 
 ### 扩充版今日人品Jrrp
 - 指令：`.jrrp`
@@ -129,4 +137,16 @@
 
 可以直接进行对抗检定。
 
+### 魔都模组
+- 指令：`.cnmods roll`
+
+抽取一个魔都模组。
+
+- 指令：`.cnmods search [名称] ([页码])`
+
+在线查找模组。
+
+- 指令：`.cnmods get [编号]`
+
+获取对应模组。
 
