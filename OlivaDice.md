@@ -41,11 +41,11 @@
 缺省默认：`0`（原本为`1`）
 该项将会决定是否进行云记录的上传与验证。
 详见本小节`上传云记录相关调整上传云记录相关调整`部分。
+
+#### 额外配置项
 - `DisabledListenWarning`
 缺省默认：`0`
 该项为非`0`时将会屏蔽Warning响应流程，这个设计主要用于暂时避免吃Warning后由于框架问题导致的大规模无差别退群问题。
-
-#### 额外配置项
 - `BelieveShikiExceptGroup`
 缺省默认：`0`
 控制是否拉取[http://shiki.stringempty.xyz/DiceCloud/except_group.json](http://shiki.stringempty.xyz/DiceCloud/except_group.json)的ExceptGroup。
