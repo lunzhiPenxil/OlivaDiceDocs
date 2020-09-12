@@ -8,11 +8,12 @@
 该版本核心会引入一些本人认为足够好，同时又不够成熟到提交到官方版本的功能，并针对一些特定场景进行优化，如果你不清楚这些改动的意图与初衷，或者觉得这些改动不符合你的想法，请确保你能够以**合理的方式清晰有条理地**使用`现代汉语(简体中文 - 北京)`提出意见，否则请认为 **“这个垃圾的修改版本实在是太难用了！我还是继续用官方版本比较好”** 
 
 想要获取最新当前最新版本，请在此处下载：    
-- [Oliva Dice! for Mirai 整合包](#)*暂无*    
+- [Oliva Dice!](https://github.com/lunzhiPenxil/Dice/releases)  *这个途径获得的编译可能会不安全或版本落后*
+- [Oliva Dice! for Mirai 整合包](#)  *暂无*    
 
 或者你可以使用备用链接：    
 - [Oliva Dice! - 青果云](http://pan.benzencloudhk.xyz/s/vul7k4ec)  密码：`LOVEOLIVA`    
-- [Oliva Dice! for Mirai 整合包 - 青果云](#)*暂无*    
+- [Oliva Dice! for Mirai 整合包 - 青果云](#)  *暂无*    
 
 本核心扩充功能如下：
 
