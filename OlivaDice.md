@@ -16,7 +16,6 @@
 
 或者你可以使用备用链接：    
 - [Oliva Dice! - 青果云](http://pan.benzencloudhk.xyz/s/vul7k4ec)  密码：`LOVEOLIVA`    
-- [Oliva Dice! for Mirai 整合包 - 青果云](#)  *暂无*    
 
 本核心扩充功能如下：
 
