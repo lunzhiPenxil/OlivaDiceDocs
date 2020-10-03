@@ -6,6 +6,8 @@
 
 本文档为Oliva Dice!，青果扩充核心文档，内含仑质所维护的Oliva分支版本的使用方法。
 
+![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
+
 # Dice!
 QQ Dice Robot For TRPG Based on CoolQ/Mirai/XQ    
 
