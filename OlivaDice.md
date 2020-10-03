@@ -2,6 +2,8 @@
 
 *For Oliva.1.2.9*
 
+![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
+
 欢迎使用由`仑质(BenzenPenxil)`所发布的`青果扩充核心 Oliva Dice!`，在使用本核心前，你应当已经是一个能够处理较为复杂问题的骰主，并且已经充分阅读了[Dice! Version 2 文档](https://v2docs.kokona.tech)，如果没有，请先阅读那份文档，本文档将不会对官方文档中所提到的各类特性进行说明。
 
 `青果扩充核心 Oliva Dice!`是由`仑质(BenzenPenxil)`基于已有的Dice!V2核心进行代码层的修改后进行发布的非官方版本，该项目的代码仓库与分支地址为[lunzhiPenxil/Dice - Oliva](https://github.com/lunzhiPenxil/Dice/tree/Oliva)。
