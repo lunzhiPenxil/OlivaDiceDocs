@@ -234,7 +234,7 @@ Reply模式控制项。
 当前所采用的方式是`POST`的`application/x-www-form-urlencoded`表单方式，`Dice!`将会每隔`300`秒执行一次上报。    
 上报目标服务器的`地址`与`端口`，还有鉴权所需的`token`都可以通过相关方法进行设置。    
 `Dice!`仅负责定期上报至指定服务器，如何监测这个上报结果需要使用者自行解决。    
-可供参考的处理方案有[仑质的骰娘列表页面](http://benzencloudhk.xyz/index.php/dicepage/)，如果需要有将自己的骰娘添加到该页面请与仑质协商。    
+可供参考的处理方案有[仑质的骰娘列表页面](http://benzencloudhk.xyz/index.php/dicepage/)，如果需要有将自己的骰娘添加到该页面请先使用[青果TOKEN](http://benzencloudhk.xyz/index.php/dicetoken/)获取一个新的`token`，再加入青果核心群与仑质协商相关事宜。    
 
 `POST`表单的上报参数具体如下:    
 | 参数键值                        | 上报值                         | 备注                            |
