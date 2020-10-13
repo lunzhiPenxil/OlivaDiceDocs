@@ -7,9 +7,9 @@
 
 ![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
 
-欢迎使用由`仑质(BenzenPenxil)`所发布的`青果扩充核心 Oliva Dice!`，在使用本核心前，你应当已经是一个能够处理较为复杂问题的骰主，并且已经充分阅读了[Dice! Version 2 文档](https://v2docs.kokona.tech)，如果没有，请先阅读那份文档，本文档将不会对官方文档中所提到的各类特性进行说明。
+欢迎使用由`仑质(BenzenPenxil)`所发布的`青果扩充核心 Oliva Dice!`，在使用本核心前，你应当已经是一个能够处理较为复杂问题的骰主，并且已经充分阅读了[Dice! Version 2 文档](https://v2docs.kokona.tech)，如果没有，请先阅读那份文档，本文档将不会对那份文档中所提到的各类特性进行说明，日后会考虑单独编写文档，这要取决于实际情况。
 
-`青果扩充核心 Oliva Dice!`是由`仑质(BenzenPenxil)`基于已有的Dice!V2核心进行代码层的修改后进行发布的非官方版本，该项目的代码仓库与分支地址为[lunzhiPenxil/Dice - Oliva](https://github.com/lunzhiPenxil/Dice/tree/Oliva)。
+`青果扩充核心 Oliva Dice!`是由`仑质(BenzenPenxil)`基于已有的Dice!V2核心进行代码层的修改后进行发布的分支版本，该项目的代码仓库与分支地址为[lunzhiPenxil/Dice - Oliva](https://github.com/lunzhiPenxil/Dice/tree/Oliva)。
 该版本核心会引入一些本人认为足够好，同时又不够成熟到提交到官方版本的功能，并针对一些特定场景进行优化，如果你不清楚这些改动的意图与初衷，或者觉得这些改动不符合你的想法，请确保你能够以**合理的方式清晰有条理地**使用`现代汉语(简体中文 - 北京)`提出意见，否则请认为 **“这个垃圾的修改版本实在是太难用了！我还是继续用官方版本比较好”** 
 
 如果你对本页面内容都没有价值观性质的疑问的话，欢迎加入仑质的青果用户群讨论本分支版本相关内容。    
@@ -32,12 +32,12 @@
 > *1.2.4:云黑名单漏洞修复*
 
 #### Dicelist相关调整
-原版的Dice! 核心在某版本引入了Dicelist概念，这是一种为黑名单信息广播所设计的自动授权系统，由简单的静态页面API实现信息的发布，核心会在初始化阶段拉取相关API的信息以设置本机的Dicelist名单，将会在`BelieveDicelist`项为1时接受该名单上的账号所发送的黑名单信息，该API的具体地址为：[http://shiki.stringempty.xyz/DiceList/](http://shiki.stringempty.xyz/DiceList/)
+Shiki分支的Dice! 核心在某版本引入了Dicelist概念，这是一种为黑名单信息广播所设计的自动授权系统，由简单的静态页面API实现信息的发布，核心会在初始化阶段拉取相关API的信息以设置本机的Dicelist名单，将会在`BelieveDicelist`项为1时接受该名单上的账号所发送的黑名单信息，该API的具体地址为：[http://shiki.stringempty.xyz/DiceList/](http://shiki.stringempty.xyz/DiceList/)
 本核心在此基础上引入了一个基于Github Pages的静态页面API，地址为：[http://benzenpenxil.xyz/Oliva-DiceList/](http://benzenpenxil.xyz/Oliva-DiceList/)
 **并且设置了相关配置项用于调整Dicelist的拉取**
 
 #### 上传云记录相关调整
-原版的Dice! 核心在某版本引入了对于黑名单的云记录，具体细节为：
+Shiki分支的Dice! 核心在某版本引入了对于黑名单的云记录，具体细节为：
 - 任何`CloudBlackShare`设置为`1`的骰娘在触发自动拉黑后会通过简单的POST指令对一个设置为`shiki.stringempty.xyz`域名的基于PHP的服务器进行无鉴权的数据上传
 - 任何`CloudBlackShare`设置为`1`的骰娘在完成上传后服务器会返回一个值，该值将作为黑名单信息广播广播时的`wid项`（该称呼可能随时间推移发生改变）
 - 任何`CloudBlackShare`设置为`1`的骰娘都将经过通过简单的POST指令对一个设置为`shiki.stringempty.xyz`域名的基于PHP的服务器进行黑名单信息的比对验证，如果存在记录且具有云黑效力，则无视发送者权限接受并同步该黑名单。
@@ -95,7 +95,7 @@
 
 - 指令：`.help [所查条目]`
 
-基于原版Helpdoc功能进行了加强，在没有对应条目时将进行模糊匹配搜索，搜索与排序算法基于`最长子字符串`与`最小编辑距离`两个算法的组合。
+对Helpdoc功能进行了加强，在没有对应条目时将进行模糊匹配搜索，搜索与排序算法基于`最长子字符串`与`最小编辑距离`两个算法的组合。
 
 #### 额外自定义回复
 - `strHlpNotFound`
@@ -118,7 +118,7 @@ Help指令模式控制项。
 
 - 指令：`.jrrp`
 
-对原版的jrrp进行了较大扩充，较为复杂。
+对jrrp进行了较大扩充，较为复杂。
 
 #### 额外关键词
 - `{dashes}`
