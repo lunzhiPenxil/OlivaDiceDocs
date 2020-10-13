@@ -13,6 +13,7 @@ QQ Dice Robot For TRPG Based on CoolQ/Mirai/XQ
 
 欢迎加入开发群: [青果铺] `661366095`    
 或是官方骰娘[小青果酱]的用户群: [青果批发车间] `828786809`    
+或是扩展文件交流分享群: [Dice扩展文件仓库] `1154204917`
 
 [![License](https://img.shields.io/github/license/lunzhiPenxil/Dice.svg)](http://www.gnu.org/licenses)
 [![Build status](https://ci.appveyor.com/api/projects/status/k1kxb3dpnd2ng88m/branch/Oliva?svg=true)](https://ci.appveyor.com/project/lunzhiPenxil/olivadice/branch/Oliva)
