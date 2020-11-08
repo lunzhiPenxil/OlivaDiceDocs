@@ -233,7 +233,7 @@ Reply模式控制项。
 #### 简介
 在`Shiki`分支中，设置心跳上报与否的配置项**不存在**，相关逻辑为**强制启用**，且所有的上报服务器路径、端口、内容都是**直接硬编码**写死在相关代码中的，**不存在**鉴权，对于一个使用AGPL协议的开源项目而言，这是**非常愚蠢**的，`Shiki`分支中相关代码如下图。
 
-![Shiki分支中心跳上报的线程函数]](_static/oliva_shiki_done_fool.png)
+![Shiki分支中心跳上报的线程函数](_static/oliva_shiki_done_fool.png)
 
 #### 标准
 当前所采用的方式是`POST`的`application/x-www-form-urlencoded`表单方式，`Dice!`将会每隔`300`秒执行一次上报。    
