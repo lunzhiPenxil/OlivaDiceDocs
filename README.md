@@ -1,9 +1,4 @@
 # 关于文档
-本文档基于Dice!主线分支：
-- [Dice! Version 2 文档](https://v2docs.kokona.tech) [![Documentation Status](https://readthedocs.org/projects/dicev2docs/badge/?version=latest)](https://v2docs.kokona.tech/zh/latest/?badge=latest)
-
-进行编写，非扩充部分请查看官方文档。
-
 本文档为Oliva Dice!，青果扩充核心文档，内含仑质所维护的Oliva分支版本的使用方法。
 
 ![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
