@@ -63,10 +63,22 @@ command["(\\.|。)duel"] = "duel"
 
 ### 基本模块
 
+#### 传入参数
+`Msg.msg` 本条消息  
+`Msg.str[int]` 正则表达式的第`int`个子表达式，为0时为原消息  
+`Msg.str_max` 上一条中`int`可达到的最大值  
+`Msg.msgType` 消息类型，0为私聊，1为群聊  
+`Msg.selfId` 本机QQ  
+`Msg.fromQQ` 本条消息发送者QQ  
+`Msg.fromGroup` 本条消息所在群号  
+`Msg.tergetId` 如果为私聊则为本条消息发送者QQ，否则为本条消息所在群号  
+`Msg.fromQQTrust` 本条消息发送者的信任度  
+`Msg.fromQQInfo` 本条消息发送者的群内权限，0为私聊，1为群员，2为管理，3为群主  
+
 #### dice模块
 
-dice.draw(`str`)  
-dice.send(`str`,`id`,`mode`)  
-dice.int2string(`int`)  
-dice.rd(`str`)  
-dice.md5(`str`)  
+dice.draw(`msg`)  
+dice.send(`msg`,`tergetId`,`msgType`)  
+dice.int2string(`msg`)  
+dice.rd(`msg`)  
+dice.md5(`msg`)  
