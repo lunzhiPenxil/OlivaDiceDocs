@@ -71,7 +71,7 @@ NOUPDATE
 login 123456789 TestMiraiOK
 say 655057127 MiraiOK_published!
 ----------
-```
+```  
 这样一段话  
 在下面一行输入`login 123456789 abcdefgh`  
 再按一个回车,然后保存即可  
