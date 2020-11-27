@@ -128,7 +128,7 @@ XQ请选中`插件扩展`栏
 关闭框架/卸载骰娘插件  
 然后替换`plugins\MiraiNative\plugins`目录下的对应dll和json文件  
 然后重启框架/重载骰娘插件并启用  
-#### XQ:
+### XQ:  
 关闭框架/卸载骰娘插件  
 然后替换`CQPlugins`目录下的对应dll和json文件  
 然后重启框架/重载骰娘插件并启用  
