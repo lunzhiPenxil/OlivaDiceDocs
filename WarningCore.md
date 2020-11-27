@@ -1,4 +1,4 @@
-## WarningCore
+## WarningCore转发模块
 
 #### 简介
 WarningCore是针对Dice! 的黑名单同步功能功能提出并设计的Warning转发机功能插件。
@@ -118,3 +118,5 @@ Dice!V2是一个基于QQ传输协议的，借助各种封装过的机器人平�
 展示出对应群的`转发群等级`。
 - `/radio qqcheck [QQ号]`    
 展示出对应用户的`转发用户等级`。
+
+
