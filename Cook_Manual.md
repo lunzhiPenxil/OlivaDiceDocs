@@ -62,6 +62,7 @@ abcdefghi换成你的骰娘密码中间的冒号记得别删
 你应该可以看见如下文件路径和文件  
 config.txt  
 如果不出意外,里面有  
+
 ```bat
 DEBUG
 NOUPDATE
@@ -72,8 +73,10 @@ login 123456789 TestMiraiOK
 say 655057127 MiraiOK_published!
 ----------
 ```  
+
 这样一段话  
-在下面一行输入`login 123456789 abcdefgh`  
+在下面一行输入  
+`login 123456789 abcdefgh`  
 再按一个回车,然后保存即可  
 
 #### XQ篇:  
