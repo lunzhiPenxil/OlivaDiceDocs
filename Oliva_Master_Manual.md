@@ -1,4 +1,4 @@
-## Dice! Master手册
+## OlivaDice 骰主手册
 
 *For Ver 2.5.0CHAOS1.Oliva.1.2.X*
 
@@ -636,7 +636,6 @@ sb
 | 关键词                   |  默认状态  | 说明                                              |
 |:------------------------|:--------:|:--------------------------------------------------|
 | DisabledListenWarning   | 0        | 屏蔽Warning响应流程                                 |
-| BelieveShikiExceptGroup | 0        | 控制是否拉取ExceptGroup                             |
 | BelieveOlivaDicelist    | 0        | 控制是否拉取OlivaDicelist                           |
 | BelieveThirdDicelist    | 0        | 控制是否拉取第三方Dicelist                           |
 | HelpMode                | 1        | Help指令模式控制项                                  |

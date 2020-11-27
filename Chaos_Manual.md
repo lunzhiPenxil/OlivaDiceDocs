@@ -1,4 +1,4 @@
-## Oliva Dice! 手册
+## OlivaDice 喧闹手册
 
 *For 2.5.0CHAOS1*
 
