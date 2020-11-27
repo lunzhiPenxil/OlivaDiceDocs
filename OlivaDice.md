@@ -19,7 +19,7 @@
 
 想要获取最新当前最新版本，请在此处下载：    
 - [Oliva Dice!](https://github.com/lunzhiPenxil/Dice/releases)  *这个途径获得的编译可能会不安全或版本落后*
-- [Oliva Dice! for Mirai 整合包](#)  *暂无*    
+- [Oliva Dice! for Mirai 整合包](#)  *暂无更多*    
 
 或者你可以使用备用链接：    
 - [Oliva Dice! - 青果云](http://pan.benzencloudhk.xyz/s/a4qhtato)  密码：`LOVEOLIVA`    
