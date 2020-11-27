@@ -41,21 +41,26 @@ XQ框架由于防火墙会误报
 有config文件夹的是新版  
 有config.txt的是原始版  
 请自行对号入座  
+
 - #### **Mirai新版**  
+
 在你的骰娘目录下  
 如果用的是整合包  
 你应该可以看见如下文件路径和文件  
 `config/console/autologin.yml`  
 如果不出意外,里面有  
+
 ```yaml
 plainPasswords:  
     123456789:abcdefghi  
 md5Passwords:  
     xxxxxxxxxxxxxxxxxxxxxx  
 ```
+
 123456789换成你的骰娘qq  
 abcdefghi换成你的骰娘密码中间的冒号记得别删  
 这样就可以自动登录了  
+
 - #### **Mirai原始版**  
 在你的骰娘目录下  
 如果用的是整合包  
