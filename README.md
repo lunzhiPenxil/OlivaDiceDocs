@@ -3,12 +3,8 @@
 
 ![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
 
-# Dice!
-QQ Dice Robot For TRPG Based on CoolQ/Mirai/XQ    
-
-欢迎加入开发群: [青果铺] `661366095`     
-或是官方骰娘[小青果酱]的用户群: [青果批发车间] `828786809`     
-或是扩展文件交流分享群: [Dice扩展文件仓库] `1154204917`
+# OlivaDice(DIXE)
+QQ Dice Robot For TRPG Based on CoolQ/Mirai/XQ
 
 [![License](https://img.shields.io/github/license/lunzhiPenxil/Dice.svg)](http://www.gnu.org/licenses)
 [![Build status](https://ci.appveyor.com/api/projects/status/k1kxb3dpnd2ng88m/branch/Oliva?svg=true)](https://ci.appveyor.com/project/lunzhiPenxil/olivadice/branch/Oliva)
@@ -18,24 +14,23 @@ QQ Dice Robot For TRPG Based on CoolQ/Mirai/XQ
 
 ## 简介
 
-Dice!是一款基于酷Q的QQ跑团掷骰机器人，而这是由仑质维护的Oliva分支。
+OlivaDice(DIXE)是一款基于酷Q的QQ跑团掷骰机器人，由仑质维护。
 
-欢迎加入开发群: 661366095    
-或是官方骰娘[小青果酱]的用户群: 828786809    
-
-论坛: <https://forum.kokona.tech>   
-主页: <https://kokona.tech/>   
+欢迎加入开发群: [青果铺] `661366095`    
+或是官方骰娘[小青果酱]的用户群: [青果批发车间] `828786809`    
+  
+主页: <http://oliva.dice.center>   
 手册: <https://oliva.dicer.wiki/>   
 
-Latest Stable Release: [![GitHub release](https://img.shields.io/github/release/lunzhiPenxil/dice.svg)](https://github.com/w4123/lunzhiPenxil/releases) [![GitHub Release Date](https://img.shields.io/github/release-date/lunzhiPenxil/dice.svg)](https://github.com/lunzhiPenxil/Dice/releases)
+Latest Stable Release: [![GitHub release](https://img.shields.io/github/release/lunzhiPenxil/dice.svg)](https://github.com/lunzhiPenxil/releases) [![GitHub Release Date](https://img.shields.io/github/release-date/lunzhiPenxil/dice.svg)](https://github.com/lunzhiPenxil/Dice/releases)
 
 Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lunzhiPenxil/dice.svg)](https://github.com/lunzhiPenxil/Dice/releases) [![GitHub Release Date](https://img.shields.io/github/release-date-pre/lunzhiPenxil/dice.svg)](https://github.com/lunzhiPenxil/Dice/releases)
 
 ## 开发者
 
-贡献者:w4123溯洄 Shiki jh123111 緋色月下、スイカを食う 仑质
+维护者:仑质
 
-感谢:Flandre Cirno 回転 他是王家乐。白いとう 哞哞哞哞哞哞哞哞哞哞哞哞 丸子 黯星 一盏大师 初音py2001 Coxxs orzFly 等(排名不分先后)(如有缺漏请务必联系溯洄:QQ1840686745) 
+感谢:Flandre Cirno 回転 他是王家乐。白いとう 哞哞哞哞哞哞哞哞哞哞哞哞 丸子 黯星 一盏大师 初音py2001 Coxxs orzFly 鱼仙 等(排名不分先后)
 
 ## 编译须知
 
