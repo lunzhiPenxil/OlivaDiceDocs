@@ -70,9 +70,8 @@ link用于管理员与特定窗口保持交流（尤其是新加入、待审核�
 #### 查看更新(.cloud update)
 
 远程获取Dice!正式版及开发版信息  
-`.cloud update` //检查版本更新  
-`.cloud update release` //下载最新发布版  
-`.cloud update dev` //下载最新开发版（请保持与开发者的交流）
+`.cloud update` //刷新更新源（在更新前这是必要的）  
+`.cloud update [对应指令]` //更新对应版本（在上一条指令中将会列出）  
 
 #### 一键清群(.master groupclr)
 
