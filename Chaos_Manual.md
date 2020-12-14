@@ -152,6 +152,7 @@ dice.send(msg,tergetId,msgType)
 | msgType     | integer     | 消息类型，0为私聊，1为群聊                 |              |
 
 *本函数无返回值。*  
+
 > 实现发送消息。  
 
 ---
@@ -305,10 +306,80 @@ rv = dice.UrlDecode(str)
 
 > 进行Url解码。  
 
-dice.getPcSkill(`QQ`,`Group`,`Skill`)  
-dice.setPcSkill(`QQ`,`Group`,`Skill`,`Skill_Val`)  
-dice.getPcName(`QQ`,`Group`)  
-dice.setPcName(`QQ`,`Group`,`New_Name`)  
+---
+
+##### getPcSkill  
+```lua
+Skill_Val = dice.getPcSkill(QQ,Group,Skill)  
+```
+
+| 形参名称     | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| QQ          | integer     | 其QQ号                 |              |
+| Group       | integer     | 所在群号                |              |
+| Skill       | string      | 属性名称                |              |
+
+| 返回值名称    | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| Skill_Val   | integer    | 所取属性值                |              |
+
+> 读人物卡属性值。  
+
+---
+
+##### setPcSkill  
+```lua
+dice.setPcSkill(QQ,Group,Skill,Skill_Val)  
+```
+
+| 形参名称     | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| QQ          | integer     | 其QQ号                 |              |
+| Group       | integer     | 所在群号                |              |
+| Skill       | string      | 属性名称                |              |
+| Skill_Val   | integer     | 所写属性值                |              |
+
+*本函数无返回值。*  
+
+> 写人物卡属性值。  
+
+---
+
+##### getPcName  
+```lua
+Name = dice.getPcName(QQ,Group)  
+```
+
+| 形参名称     | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| QQ          | integer     | 其QQ号                 |              |
+| Group       | integer     | 所在群号                |              |
+
+| 返回值名称    | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| Name        | string     | 所取人物卡名称            |              |
+
+> 读人物卡名称。  
+
+
+---
+
+##### setPcName  
+```lua
+dice.setPcName(QQ,Group,New_Name)  
+```
+
+| 形参名称     | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| QQ          | integer     | 其QQ号                 |              |
+| Group       | integer     | 所在群号                |              |
+| New_Name    | string      | 所写人物卡名称            |              |
+
+*本函数无返回值。*  
+
+> 写人物卡名称。  
+
+
 dice.fReadJson(`file`,`json_obj`,`json_obj`,`json_obj`,...)  
 dice.fGetJson(`file`,`default`,`json_obj`,`json_obj`,`json_obj`,...)  
 dice.fSetJson(`file`,`new_value`,`json_obj`,`json_obj`,`json_obj`,...)  
