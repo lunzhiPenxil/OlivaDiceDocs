@@ -107,7 +107,7 @@ Msg.str[1]
 | 成员名称     | 数据类型     | 说明                                                  |
 |:------------|:-----------|:------------------------------------------------------|
 | msg         | string     | 所匹配的回复全文                                         |
-| str         | table      | 正则表达式的子表达式                                      |
+| str         | table      | 正则表达式的子表达式，需使用下标调用，如`Msg.str[1]`         |
 | str_max     | integer    | 子表达式数量+1                                           |
 | msgType     | integer    | 消息类型，0为私聊，1为群聊                                 |
 | selfId      | integer    | 本机QQ                                                  |
@@ -361,7 +361,6 @@ Name = dice.getPcName(QQ,Group)
 
 > 读人物卡名称。  
 
-
 ---
 
 ##### setPcName  
@@ -379,8 +378,197 @@ dice.setPcName(QQ,Group,New_Name)
 
 > 写人物卡名称。  
 
+---
 
-dice.fReadJson(`file`,`json_obj`,`json_obj`,`json_obj`,...)  
-dice.fGetJson(`file`,`default`,`json_obj`,`json_obj`,`json_obj`,...)  
-dice.fSetJson(`file`,`new_value`,`json_obj`,`json_obj`,`json_obj`,...)  
-dice.fDownWebPage(`url`,`file`)  
+##### fReadJson  
+```lua
+res = dice.fReadJson(file,json_obj,json_obj,...)  
+```
+
+| 形参名称     | 数据类型             | 说明                    | 缺省          |
+|:------------|:--------------------|:------------------------|:-------------|
+| file        | string              | Json文件路径            |              |
+| json_obj    | string, integer     | Json键值               |              |
+| json_obj    | string, integer     | Json键值               |              |
+| ...         | string, integer     | Json键值               |              |
+*本函数入参不定数量。*  
+
+| 返回值名称    | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| res         | string     | 所取Json的dump结果        |              |
+
+> 本函数可以读取任意路径Json的任意结构体内容，并返回对应内容的dump。  
+> 例如对于如下`path`路径下的文件:  
+
+```json
+{
+    "author":"仑质",
+    "key":{
+        "Key1":"测试文本1",
+        "Key2":"测试文本2",
+        "List":[
+            "列表文本1",
+            "列表文本2"
+        ]
+    }
+}
+```
+
+> 有如下`res`  
+
+```lua
+res = dice.fReadJson(path,"author")  
+```
+> `res` 为  
+> "仑质"  
+
+```lua
+res = dice.fReadJson(path,"key")  
+```
+> `res` 为  
+> {"Key1":"测试文本1","Key2":"测试文本2","list":["列表文本1","列表文本2"]}  
+
+```lua
+res = dice.fReadJson(path,"key","Key1")  
+```
+> `res` 为  
+> "测试文本1"  
+
+```lua
+res = dice.fReadJson(path,"key","List",1)  
+```
+> `res` 为  
+> "列表文本2"  
+
+---
+
+##### fGetJson  
+```lua
+res = dice.fGetJson(file,default,json_obj,json_obj,...)  
+```
+
+| 形参名称     | 数据类型             | 说明                    | 缺省          |
+|:------------|:--------------------|:------------------------|:-------------|
+| file        | string              | Json文件路径           |              |
+| default     | string              | 缺省值                 |              |
+| json_obj    | string, integer     | Json键值               |              |
+| json_obj    | string, integer     | Json键值               |              |
+| ...         | string, integer     | Json键值               |              |
+*本函数入参不定数量。*  
+
+| 返回值名称    | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| res         | string     | 所取Json的结果        |              |
+
+> 本函数可以读取任意路径Json的任意结构体内容，并返回对应内容的精细化处理结果，并在访问失败时返回缺省值。  
+> 例如对于如下`path`路径下的文件:  
+
+```json
+{
+    "author":"仑质",
+    "key":{
+        "Key1":"测试文本1",
+        "Key2":"测试文本2",
+        "List":[
+            "列表文本1",
+            "列表文本2"
+        ]
+    }
+}
+```
+
+> 有如下`res`  
+
+```lua
+res = dice.fReadJson(path,"啥也没有","author")  
+```
+> `res` 为  
+> 仑质  
+
+```lua
+res = dice.fReadJson(path,"啥也没有","key")  
+```
+> `res` 为  
+> 啥也没有  
+
+```lua
+res = dice.fReadJson(path,"啥也没有","key","Key1")  
+```
+> `res` 为  
+> 测试文本1  
+
+```lua
+res = dice.fReadJson(path,"啥也没有","key","List",1)  
+```
+> `res` 为  
+> 列表文本2  
+
+```lua
+res = dice.fReadJson(path,"啥也没有","key","Fish")  
+```
+> `res` 为  
+> 啥也没有  
+
+---
+
+##### fSetJson  
+```lua
+dice.fSetJson(file,new_value,json_obj,json_obj,...)  
+```
+
+| 形参名称     | 数据类型             | 说明                    | 缺省          |
+|:------------|:--------------------|:------------------------|:-------------|
+| file        | string              | Json文件路径           |              |
+| new_value   | string              | 需要写入的值            |              |
+| json_obj    | string              | Json键值               |              |
+| json_obj    | string              | Json键值               |              |
+| ...         | string              | Json键值               |              |
+*本函数入参不定数量。*  
+
+| 返回值名称    | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| res         | string     | 所取Json的结果        |              |
+
+> 本函数可以在任意文件Json写入任意键值对结构体的内容。  
+> 例如对于`path`路径下的文件:  
+
+```lua
+dice.fSetJson(path,"仑质","author")
+dice.fSetJson(path,"测试文本1_1","key","Key1","有点问题")
+dice.fSetJson(path,"测试文本1_2","key","Key1","Key1_2")
+dice.fSetJson(path,"测试文本2","key","Key2")
+dice.fSetJson(path,"测试文本1_1","key","Key1","Key1_1")
+```
+
+> 即可实现写入与修改:
+
+```json
+{
+    "author":"仑质",
+    "key":{
+        "Key1":{
+            "Key1_1":"测试文本1_1",
+            "Key1_2":"测试文本1_2"
+        },
+        "Key2":"测试文本2"
+    }
+}
+```
+
+---
+
+##### setPcName  
+```lua
+rv = dice.fDownWebPage(url,file)  
+```
+
+| 形参名称     | 数据类型     | 说明                    | 缺省          |
+|:------------|:-----------|:------------------------|:-------------|
+| url         | string      | 对应网址                |              |
+| file        | string      | 所需保存的文件路径        |              |
+
+| 返回值名称    | 数据类型     | 说明                        | 缺省          |
+|:------------|:-----------|:----------------------------|:-------------|
+| rv          | integer     | 下载保存结果，0为成功          | 0            |
+
+> 获取对应网页源代码并保存到指定路径文件。  
