@@ -123,7 +123,7 @@ Msg.str[1]
 
 #### dice模块
 
->**draw**  
+##### draw  
 ```lua
 rv = dice.draw(msg)
 ```
@@ -140,7 +140,7 @@ rv = dice.draw(msg)
 
 ---
 
->**send**  
+##### send  
 ```lua
 dice.send(`msg`,`tergetId`,`msgType`)
 ```
@@ -156,7 +156,7 @@ dice.send(`msg`,`tergetId`,`msgType`)
 
 ---
 
->**int2string**  
+##### int2string  
 ```lua
 rv = dice.int2string(str)
 ```
