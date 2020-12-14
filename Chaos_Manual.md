@@ -534,7 +534,7 @@ dice.fSetJson(file,new_value,json_obj,json_obj,...)
 
 ```lua
 dice.fSetJson(path,"仑质","author")
-dice.fSetJson(path,"测试文本1_1","key","Key1","有点问题")
+dice.fSetJson(path,"有点问题","key","Key1","Key1_1")
 dice.fSetJson(path,"测试文本1_2","key","Key1","Key1_2")
 dice.fSetJson(path,"测试文本2","key","Key2")
 dice.fSetJson(path,"测试文本1_1","key","Key1","Key1_1")
