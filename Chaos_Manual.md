@@ -12,10 +12,10 @@
 
 你可以在通过在`DiceXXXXXXXX/plugin/`目录下创建`.lua`脚本文件来增加扩展指令，脚本基本结构如下。
 
-### 文件格式
+### 文件格式范例
 
 ```lua
-command = {};
+command = {}
 
 function duel(Msg)
     a1 = dice.rd("1d100")
@@ -61,19 +61,65 @@ end
 command["(\\.|。)duel"] = "duel"
 ```
 
-### 基本模块
+### 脚本原型
+
+对于如下脚本原型:  
+```lua
+command = {}
+
+function temFunc(Msg)
+    Reply = ""
+    return Reply
+end
+
+command[Regex] = Func
+```
+
+#### 指令映射
+
+对于如下指令映射原型:  
+```lua
+command[Regex] = Func
+```
+
+| 变量名称     | 数据类型     | 说明                 | 缺省          |
+|:------------|:-----------|:---------------------|:-------------|
+| command     | table      | 用于暴露指令的映射表     | 此为必须项    |
+| Regex       | string     | 设置指令的正则表达式     | 此为必须项    |
+| Func        | string     | 指令对应所映射的函数名称  | 此为必须项    |
+
+可以实现对于`Regex`正则表达式匹配后的指令，运行`Func`函数。
 
 #### 传入参数
-`Msg.msg` 本条消息  
-`Msg.str[int]` 正则表达式的第`int`个子表达式，为0时为原消息  
-`Msg.str_max` 上一条中`int`可达到的最大值  
-`Msg.msgType` 消息类型，0为私聊，1为群聊  
-`Msg.selfId` 本机QQ  
-`Msg.fromQQ` 本条消息发送者QQ  
-`Msg.fromGroup` 本条消息所在群号  
-`Msg.tergetId` 如果为私聊则为本条消息发送者QQ，否则为本条消息所在群号  
-`Msg.fromQQTrust` 本条消息发送者的信任度  
-`Msg.fromQQInfo` 本条消息发送者的群内权限，0为私聊，1为群员，2为管理，3为群主  
+
+对于如下函数原型:  
+```lua
+function temFunc(Msg)
+```
+
+`Msg`将会传入一个结构体，你可以如此调用它的成员:  
+```lua
+Msg.fromGroup
+Msg.str[1]
+```
+它将有以下成员:  
+
+| 变量名称     | 数据类型     | 说明                                                  |
+|:------------|:-----------|:------------------------------------------------------|
+| msg         | string     | 所匹配的回复全文                                         |
+| str         | table      | 正则表达式的子表达式                                      |
+| str_max     | integer    | 子表达式数量+1                                           |
+| msgType     | integer    | 消息类型，0为私聊，1为群聊                                 |
+| selfId      | integer    | 本机QQ                                                  |
+| fromQQ      | integer    | 本条消息发送者QQ                                          |
+| fromGroup   | integer    | 本条消息所在群号                                          |
+| tergetId    | integer    | 如果为私聊则为本条消息发送者QQ，否则为本条消息所在群号          |
+| fromQQTrust | integer    | 本条消息发送者的信任度                                     |
+| fromQQInfo  | integer    | 本条消息发送者的群内权限，0为私聊，1为群员，2为管理，3为群主     |
+
+### 内置模块
+
+结合现有功能提供以下内置模块以便于扩展指令的程序设计直接对本体进行干预。
 
 #### dice模块
 
