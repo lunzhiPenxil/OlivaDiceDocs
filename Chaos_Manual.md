@@ -124,7 +124,8 @@ Msg.str[1]
 #### dice模块
 
 ---
-- **draw**  
+
+**draw**  
 ```lua
 rv = dice.draw(msg)
 ```
@@ -140,7 +141,8 @@ rv = dice.draw(msg)
 将`msg`经过抽牌堆处理后作为返回值传出。
 
 ---
-- **send**  
+
+**send**  
 ```lua
 dice.send(`msg`,`tergetId`,`msgType`)
 ```
@@ -155,7 +157,8 @@ dice.send(`msg`,`tergetId`,`msgType`)
 实现发送消息。  
 
 ---
-- **int2string**  
+
+**int2string**  
 ```lua
 rv = dice.int2string(str)
 ```
