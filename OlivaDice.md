@@ -218,6 +218,7 @@ Reply模式控制项。
 可供参考的处理方案有[仑质的骰娘列表页面](http://benzencloudhk.xyz/index.php/dicepage/)，如果需要有将自己的骰娘添加到该页面请先使用[青果TOKEN](http://benzencloudhk.xyz/index.php/dicetoken/)获取一个新的`token`，再加入青果核心群与仑质协商相关事宜。    
 
 `POST`表单的上报参数具体如下:    
+
 | 参数键值                        | 上报值                         | 备注                            |
 |:------------------------------|:------------------------------|:--------------------------------|
 | token                         | 身份校验Token                  | `strConfigPulseToken`所设置的值   |
