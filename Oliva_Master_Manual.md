@@ -311,7 +311,7 @@ sb
 
 可用的键值如下表
 
-```C++
+```cpp
 {
 	{"strConfigPulseHost","api.dice.center"},
 	{"strConfigPulseXpath","/dicestatusup/"},
