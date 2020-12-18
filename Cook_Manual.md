@@ -69,7 +69,7 @@ abcdefghi换成你的骰娘密码中间的冒号记得别删
 config.txt  
 如果不出意外,里面有  
 
-```log
+```bash
 DEBUG
 NOUPDATE
 #在----------下面可以添加需要在每次启动时输入得指令
