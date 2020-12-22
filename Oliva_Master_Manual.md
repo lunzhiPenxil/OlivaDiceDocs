@@ -642,6 +642,8 @@ sb
 | LocalJrrpMin            | 1        | 本地Jrrp最小值控制项                                |
 | LocalJrrpRange          | 100      | 本地Jrrp范围宽度控制项                              |
 | JrrpDashesRange         | 25       | 本地Jrrp{dashes}关键词长度控制项                     |
+| CnLocalMode             | 1        | 控制部分输入的简繁转换                               |
+| CnOutputMode            | 0        | 控制所有输出的简繁转换                               |
 | CnmodsMode              | 1        | 魔都模组功能控制项                                  |
 | ReplyMode               | 3        | Reply模式控制项                                    |
 | PulseMode               | 0        | 心跳上报控制项                                      |
@@ -732,8 +734,10 @@ sb
 | DiceData/mod/                    | 模块文件（目前限定帮助文档） | load时读取，不写入 |
 | DiceData/PublicDeck/             | 外置牌堆                     | load时读取，不写入 |
 | DiceData/CardTemp/               | 角色卡模板                   | load时读取，不写入 |
-| DiceData/Update/                 | 更新缓存                     | 修改时写入         |
-| DiceData/Cnmods/                 | 魔都模组缓存                  | 修改时写入         |
+| DiceData/update/                 | 更新缓存                     | 修改时写入         |
+| DiceData/cnmods/                 | 魔都模组缓存                  | 修改时写入         |
+| DiceData/plugin/                 | 魔都模组缓存                  | load时读取，不写入  |
+| DiceData/plugin/lib/             | 魔都模组缓存                  | load时读取，不写入  |
 
 
 #### Mod文件示例
