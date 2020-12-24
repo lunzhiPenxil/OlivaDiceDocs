@@ -736,8 +736,8 @@ sb
 | DiceData/CardTemp/               | 角色卡模板                   | load时读取，不写入 |
 | DiceData/update/                 | 更新缓存                     | 修改时写入         |
 | DiceData/cnmods/                 | 魔都模组缓存                  | 修改时写入         |
-| DiceData/plugin/                 | 魔都模组缓存                  | load时读取，不写入  |
-| DiceData/plugin/lib/             | 魔都模组缓存                  | load时读取，不写入  |
+| DiceData/plugin/                 | 扩展指令脚本                  | load时读取，不写入  |
+| DiceData/plugin/lib/             | 扩展指令脚本依赖库             | load时读取，不写入  |
 
 
 #### Mod文件示例
