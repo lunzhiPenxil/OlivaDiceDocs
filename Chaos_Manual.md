@@ -606,7 +606,7 @@ dice.fSetJson(path,"测试文本1_1","key","Key1","Key1_1")
 
 ---
 
-##### setPcName  
+##### fDownWebPage  
 ```lua
 rv = dice.fDownWebPage(url,file)  
 ```
