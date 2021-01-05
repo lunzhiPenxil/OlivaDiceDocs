@@ -38,16 +38,17 @@ XQ框架由于防火墙会误报
 #### Mirai篇:  
 首先你应该有一个整合包  
 然后解压出来看一下  
-有config文件夹的是新版  
+有config/console/autologin.yml的   
+是新版或者M2版  
 有config.txt的是原始版  
-请自行对号入座  
+根据文件里面的内容查看你用的是哪一个版本  
 
 **Mirai2**
 
 在你的骰娘目录下  
 如果用的是整合包  
 你应该可以看见如下文件路径和文件  
-config\Console\AutoLogin.yml  
+`config\Console\AutoLogin.yml`  
 如果不出意外,里面有
 
 ```yaml
@@ -65,9 +66,9 @@ accounts:
       protocol: ANDROID_PHONE
 ```
 
-修改account: 后面的数字,那个是你的qq号
-修改value: 后面的文字,那个是你的密码
-修改protocol: 后面的文字,那个是你的设备协议
+修改`account: `后面的数字,那个是你的qq号   
+修改`value: `后面的文字,那个是你的密码   
+修改`protocol: `后面的文字,那个是你的设备协议   
 可用协议分别是
 * `ANDROID_PHONE` 手机协议
 * `ANDROID_PAD` 平板协议
@@ -97,7 +98,7 @@ abcdefghi换成你的骰娘密码中间的冒号记得别删
 在你的骰娘目录下  
 如果用的是整合包  
 你应该可以看见如下文件路径和文件  
-config.txt  
+`config.txt`  
 如果不出意外,里面有  
 
 ```bash
@@ -188,7 +189,7 @@ XQ请选中`插件扩展`栏
 
 #### 以下是玄学方法  
 1. 改个密码  
-   * 存粹玄学  
+   * 纯粹玄学  
 2. QQ会员  
    * 这个方法有一定帮助,但是不要迷信  
 
