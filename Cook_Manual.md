@@ -42,6 +42,37 @@ XQ框架由于防火墙会误报
 有config.txt的是原始版  
 请自行对号入座  
 
+**Mirai2**
+
+在你的骰娘目录下  
+如果用的是整合包  
+你应该可以看见如下文件路径和文件  
+config\Console\AutoLogin.yml  
+如果不出意外,里面有
+
+```yaml
+accounts: 
+  - # 账号, 现只支持 QQ 数字账号
+    account: 123456
+    password: 
+      # 密码种类, 可选 PLAIN 或 MD5
+      kind: PLAIN
+      # 密码内容, PLAIN 时为密码文本, MD5 时为 16 进制
+      value: pwd
+    # 账号配置. 可用配置列表 (注意大小写):
+    # "protocol": "ANDROID_PHONE" / "ANDROID_PAD" / "ANDROID_WATCH"
+    configuration: 
+      protocol: ANDROID_PHONE
+```
+
+修改account: 后面的数字,那个是你的qq号
+修改value: 后面的文字,那个是你的密码
+修改protocol: 后面的文字,那个是你的设备协议
+可用协议分别是
+* `ANDROID_PHONE` 手机协议
+* `ANDROID_PAD` 平板协议
+* `ANDROID_WATCH` 手表协议
+
 **Mirai新版**  
 
 在你的骰娘目录下  
