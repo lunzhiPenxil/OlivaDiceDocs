@@ -49,105 +49,139 @@ XQ框架由于防火墙会误报
 
 **Mirai2**
 
-在你的骰娘目录下  
+* 在你的骰娘目录下  
 如果用的是整合包  
 你应该可以看见如下文件路径和文件  
 `config\Console\AutoLogin.yml`  
 如果不出意外,里面有
 
-```yaml
-accounts: 
-  - # 账号, 现只支持 QQ 数字账号
-    account: 123456
-    password: 
-      # 密码种类, 可选 PLAIN 或 MD5
-      kind: PLAIN
-      # 密码内容, PLAIN 时为密码文本, MD5 时为 16 进制
-      value: pwd
-    # 账号配置. 可用配置列表 (注意大小写):
-    # "protocol": "ANDROID_PHONE" / "ANDROID_PAD" / "ANDROID_WATCH"
-    configuration: 
-      protocol: ANDROID_PHONE
-```
+  ```yaml
+  accounts: 
+    - # 账号, 现只支持 QQ 数字账号
+      account: 123456
+      password: 
+        # 密码种类, 可选 PLAIN 或 MD5
+        kind: PLAIN
+        # 密码内容, PLAIN 时为密码文本, MD5 时为 16 进制
+        value: pwd
+      # 账号配置. 可用配置列表 (注意大小写):
+      # "protocol": "ANDROID_PHONE" / "ANDROID_PAD" / "ANDROID_WATCH"
+      configuration: 
+        protocol: ANDROID_PHONE
+  ```
 
-修改`account: `后面的数字,那个是你的qq号   
-修改`value: `后面的文字,那个是你的密码   
-修改`protocol: `后面的文字,那个是你的设备协议   
-可用协议分别是
-* `ANDROID_PHONE` 手机协议
-* `ANDROID_PAD` 平板协议
-* `ANDROID_WATCH` 手表协议
+* Mirai2有两种不同的设置自动登录的方式   
+你可以从里面任选一种进行尝试   
+    * **第一种：直接改文件**   
+修改`account: `后面的数字,那是骰娘的qq号   
+修改`value: `后面的文字,那是骰娘的密码   
+修改`protocol: `后面的`ANDROID_PHONE`为`ANDROID_PAD`   
+那是设备协议   
+然后保存，回到骰娘包的最顶层   
+双击运行`start by jre.bat`启动骰娘   
+一般来说会提示你扫码登录或者是滑动验证码登录
+      * **注意：不要直接用记事本打开修改！会出错！**   
+  * **第二种：通过指令设置**   
+首先运行`start by jre.bat`，你会发现出现了一个命令提示符的窗口   
+输入以下三条命令   
+    ```
+    autologin clear
+    autologin add 123456789 abcdefghi
+    autologin setconfig 123456789 protocol ANDROID_PAD
+    ```
+    `123456789`是你的骰娘`qq号`   
+    `abcdefghi`是你的骰娘`密码`   
+    * NOTE：这里的第三条可以不输入，不过代价就是你无法同时使用手机登录
+    * 以上三条指令的作用分别是：   
+      * 清理模板示例
+      * 设置自动登录账号
+      * 设置登录协议
+  
+    * 当设置完成后，你需要等待**两分钟**让设置生效才能继续关闭窗口（m2无法立即保存你的自动登录设置）   
+    所以趁着这个时间你可以输入   
+    `login 123456789 abcdefghi`   
+    来完成你的骰娘账号的第一次登录   
+    * 一般来说会需要你扫描二维码或者是滑动滑块进行账号验证   
+    当你完成了这些步骤以后一般来说两分钟也已经到了   
+    * 当你下次登录的时候就只要直接打开   
+    `start by jre.bat`就好了
+
+* 三种协议分别是
+  * `ANDROID_PHONE` 手机协议
+  * `ANDROID_PAD` 平板协议
+  * `ANDROID_WATCH` 手表协议
+  这里比较推荐的就是pad协议或者watch协议
 
 **Mirai新版**  
 
-在你的骰娘目录下  
+* 在你的骰娘目录下  
 如果用的是整合包  
 你应该可以看见如下文件路径和文件  
 `config/console/autologin.yml`  
 如果不出意外,里面有  
 
-```yaml
-plainPasswords:  
-    123456789:abcdefghi  
-md5Passwords:  
-    xxxxxxxxxxxxxxxxxxxxxx  
-```
-
-123456789换成你的骰娘qq  
-abcdefghi换成你的骰娘密码中间的冒号记得别删  
-这样就可以自动登录了  
+  ```yaml
+  plainPasswords:  
+      123456789:abcdefghi  
+  md5Passwords:  
+      xxxxxxxxxxxxxxxxxxxxxx  
+  ```
+* 123456789换成你的骰娘qq  
+* abcdefghi换成你的骰娘密码   
+  中间的冒号记得别删，这样就可以自动登录了  
 
 **Mirai原始版**  
 
-在你的骰娘目录下  
+* 在你的骰娘目录下  
 如果用的是整合包  
 你应该可以看见如下文件路径和文件  
 `config.txt`  
 如果不出意外,里面有  
 
-```bash
-DEBUG
-NOUPDATE
-#在----------下面可以添加需要在每次启动时输入得指令
-#请注意，指令部分中#并不起效，miraiOK会原样输入到console
-例如:
-login 123456789 TestMiraiOK
-say 655057127 MiraiOK_published!
-----------
-```  
+  ```bash
+  DEBUG
+  NOUPDATE
+  #在----------下面可以添加需要在每次启动时输入得指令
+  #请注意，指令部分中#并不起效，miraiOK会原样输入到console
+  例如:
+  login 123456789 TestMiraiOK
+  say 655057127 MiraiOK_published!
+  ----------
+  ```  
 
-这样一段话  
-在下面一行输入  
-`login 123456789 abcdefgh`  
-再按一个回车,然后保存即可  
+  这样一段话  
+  在下面一行输入  
+  `login 123456789 abcdefgh`  
+  再按一个回车,然后保存即可  
 
 #### XQ篇:  
-XQ的自动登录只要你登录上了就可以了  
+* XQ的自动登录只要你登录上了就可以了  
 
 ## 3.**怎么设置master**
 #### Mirai篇:
-当骰娘登录以后  
+* 当骰娘登录以后  
 你右键猫猫头  
 此时会跳出一个指令框  
 最下面应该会有  
+
 |Dice!
 |----
 |关于
-选中`Dice！`  
+* 选中`Dice！`  
 往右可以看见`Master模式切换`  
 点下去,如果你能看见`Master模式已开启`  
 那么你就可以私聊你的骰娘发送.master来设置master了  
 或者你也可以选择`综合管理`，这里就不多介绍了  
 #### XQ篇:
-XQ请选中`插件扩展`栏  
-然后`右键`CQXQ插件  
-点击`设置插件`  
-点击`Dice!`  
-点击右边的`菜单`  
-可以看见`Master模式切换`  
-点下去,如果你能看见`Master模式已开启`  
-那么你就可以私聊你的骰娘发送.master来设置master了  
-或者你也可以选择`综合管理`，这里就不多介绍了  
+  * XQ请选中`插件扩展`栏  
+  然后`右键`CQXQ插件  
+  点击`设置插件`  
+  点击`Dice!`  
+  点击右边的`菜单`  
+  可以看见`Master模式切换`  
+  点下去,如果你能看见`Master模式已开启`  
+  那么你就可以私聊你的骰娘发送.master来设置master了  
+  或者你也可以选择`综合管理`，这里就不多介绍了  
 
 ## 4.**怎么放图片和声音等**
 #### Mirai:  
