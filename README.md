@@ -31,7 +31,13 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 维护者:仑质
 
-感谢:Flandre Cirno 回転 他是王家乐。白いとう 哞哞哞哞哞哞哞哞哞哞哞哞 丸子 黯星 一盏大师 初音py2001 Coxxs orzFly 鱼仙 等(排名不分先后)
+感谢:Flandre Cirno 回転 他是王家乐。白いとう 哞哞哞哞哞哞哞哞哞哞哞哞 丸子 黯星 一盏大师 初音py2001 Coxxs orzFly 鱼仙 NULL等(排名不分先后)
+
+## 遗产骰主
+
+感谢:NULL、鱼仙、桑相、鸽雾升平、雨鸣于舟、炎之十月、QCD等
+
+名单还在补完，请加群进行沟通~
 
 ## 编译须知
 
