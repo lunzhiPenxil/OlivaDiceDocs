@@ -35,7 +35,7 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 ## 遗产骰主
 
-感谢:NULL、鱼仙、桑相、鸽雾升平、雨鸣于舟、炎之十月、QCD等
+感谢:NULL、鱼仙、桑相、鸽雾升平、雨鸣于舟、炎之十月、QCD、斯卡洛伊、流云、都筑京香、绫目等
 
 名单还在补完，请加群进行沟通~
 
@@ -57,9 +57,9 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 ## License
 
-Dice! QQ Dice Robot for TRPG
+OlivaDice Robot for TRPG
 
-Copyright (C) 2018-2020 w4123溯洄 Shiki 仑质
+Copyright (C) 2018-2020 仑质
 
 This program is free software: you can redistribute it and/or modify it under the terms
 of the GNU Affero General Public License as published by the Free Software Foundation,
