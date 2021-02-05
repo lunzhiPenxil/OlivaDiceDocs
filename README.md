@@ -31,7 +31,13 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 维护者:仑质
 
-感谢:Flandre Cirno 回転 他是王家乐。白いとう 哞哞哞哞哞哞哞哞哞哞哞哞 丸子 黯星 一盏大师 初音py2001 Coxxs orzFly 鱼仙 等(排名不分先后)
+感谢:Flandre Cirno 回転 他是王家乐。白いとう 哞哞哞哞哞哞哞哞哞哞哞哞 丸子 黯星 一盏大师 初音py2001 Coxxs orzFly 鱼仙 NULL等(排名不分先后)
+
+## 遗产骰主
+
+感谢:NULL、鱼仙、桑相、鸽雾升平、雨鸣于舟、炎之十月、QCD、斯卡洛伊、流云、都筑京香、绫目等
+
+名单还在补完，请加群进行沟通~
 
 ## 编译须知
 
@@ -51,9 +57,9 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 ## License
 
-Dice! QQ Dice Robot for TRPG
+OlivaDice Robot for TRPG
 
-Copyright (C) 2018-2020 w4123溯洄 Shiki 仑质
+Copyright (C) 2018-2020 仑质
 
 This program is free software: you can redistribute it and/or modify it under the terms
 of the GNU Affero General Public License as published by the Free Software Foundation,
