@@ -59,7 +59,7 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 OlivaDice Robot for TRPG
 
-Copyright (C) 2018-2020 仑质
+Copyright (C) 2018-2021 仑质
 
 This program is free software: you can redistribute it and/or modify it under the terms
 of the GNU Affero General Public License as published by the Free Software Foundation,
