@@ -43,12 +43,6 @@ Latest Release: [![GitHub release](https://img.shields.io/github/release-pre/lun
 
 请使用最新版Visual Studio 2019或以上版本 (或其独立编译器)进行编译, 项目主文件为Dice.sln
 
-新增: 现在可以用GCC/Clang编译, 只测试了几个版本, 编译出现问题请反馈, 下面列出编译选项, 正在写cmake
-
-- GCC(9.0.0+): ` g++ -shared -static -std=c++17 -O2 -o com.w4123.dice.dll -Wl,--kill-at -I CQSDK\ -I Dice\ CQSDKCPP\*.cpp Dice\*.cpp Dice\CQP.lib -pthread -lWinInet -luser32 `
-- Clang(4+)+MSVC(VS2019+): ` clang-cl --target=i686-pc-windows-msvc /MT /O2 /EHsc /std:c++17 /D "UNICODE" /LD /link "user32.lib" /o com.w4123.dice.dll /I CQSDK\ /I Dice\ CQSDKCPP\*.cpp Dice\*.cpp Dice\CQP.lib -Wno-invalid-source-encoding  `
-- Clang(4+)+GCC(9.0.0+): ` clang++ --target=i686-pc-windows-gnu -m32 -shared -static -o com.w4123.dice.dll -Xclang -flto-visibility-public-std -Wl,--kill-at -std=c++17 -O2 -I CQSDK\ -I Dice\ CQSDKCPP\*.cpp Dice\*.cpp Dice\CQP.lib -lWinInet -luser32 -pthread -Wno-invalid-source-encoding  `
-
 编译后会得到com.w4123.dice.dll文件! 请从Releases中下载对应的json文件(或自己编写), 放至酷Q/MN/XQ 对应文件夹下使用
 
 ## Issue提交
