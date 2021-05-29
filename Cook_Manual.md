@@ -95,7 +95,7 @@ XQ框架由于杀毒软件会误报
 然后保存，回到骰娘包的最顶层   
 双击运行`start by jre.bat`启动骰娘   
 一般来说会提示你扫码登录或者是滑动验证码登录
-      * **注意：不要直接用记事本打开修改！会出错！**
+      > **注意：不要直接用记事本打开修改！会出错！**
       
   * **第二种：通过指令设置**   
 首先运行`start by jre.bat`，你会发现出现了一个命令提示符的窗口   
@@ -123,8 +123,43 @@ XQ框架由于杀毒软件会误报
     `start by jre.bat`就好了
 
 > **注意：**   
-`Mirai2`需要***Chrome***作为***默认浏览器***才能完成设置   
-Edge、IE等浏览器请自行寻找解决方法   
+`Mirai2`整合包需要***Chrome***作为***默认浏览器***才能完成设置   
+
+ * 无法验证的手动方法：   
+ 如果Mirai2提示   
+ “当前上网环境异常，清更换网络环境或在常用设备上登录或稍后再试。”    
+ 那么你需要的就是手动完成验证了    
+手动的话一般来说任何基于`Chrome内核`的浏览器都可以    
+比如说`Firefox`，`Chrome`，`Edge`等等   
+当然推荐使用`Chrome`作为默认浏览器    
+因为本教程默认使用`Chrome`浏览器作为范例    
+请务必不要使用IE浏览器，否则造成的一切问题请自行解决    
+ 1. 请修改`OlivaDice.bat`内的    
+`jre\bin\java -cp`    
+为    
+`jre\bin\java -Dmirai.slider.captcha.supported -cp`    
+简称在`-cp`前添加` -Dmirai.slider.captcha.supported`    
+2. 删除`plugins`文件夹下的
+`mirai-login-solver-selenium-1.0-dev-16-all.jar`
+3. 重启`OlivaDice.bat`
+之后会跳出一个浏览器窗口，里面有一个滑块验证码   
+4. 先别急着滑，对着浏览器按F12这个按键    
+切换到`Network`标签   
+不会的话去`百度`，`谷歌`等等任何你想得到的搜索引擎里搜索
+`浏览器的F12怎么使用`
+当学会了再继续，或者换成XQ
+5. 滑动滑块通过验证   
+6. 你会看见下方的`Network`里出现了一个名为
+`cap_union_new_verify`的项目    
+左键点击这个项目    
+7. 在右侧点击`Preview`    
+你会看见`ticket: "balabalbalablabalabal"`   
+右键`ticket`，选择`Copy Value`    
+8. 黏贴至Mirai2跳出来的文字输入框内   
+这时Mirai2会再次跳出一个窗口    
+9. 点击设备锁验证   
+10. 手机扫码验证，然后关闭弹出的窗口即可    
+
 
 * 三种协议分别是
   * `ANDROID_PHONE` 手机协议
