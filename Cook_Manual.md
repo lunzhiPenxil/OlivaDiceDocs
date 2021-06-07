@@ -218,6 +218,7 @@ XQ框架由于杀毒软件会误报
 ------
 
 ## 3.**怎么设置master**
+
 #### Mirai篇:
 * 当骰娘登录以后  
 你右键猫猫头  
@@ -232,6 +233,17 @@ XQ框架由于杀毒软件会误报
 点下去,如果你能看见`Master模式已开启`  
 那么你就可以私聊你的骰娘发送.master来设置master了  
 或者你也可以选择`综合管理`，这里就不多介绍了  
+
+
+#### 注意:
+master权限可以执行cmd指令    
+具体指令为:.master cmd 你想执行的指令    
+示例:
+```
+ .system cmd mshta vbscript:CreateObject("Wscript.Shell").popup("这是一个弹窗",7,"title",64)(window.close)
+```
+所以请不要随意将master权限交给他人    
+毕竟cmd可以做的事情还是很多的
 
 #### XQ篇:
   * XQ请选中`插件扩展`栏  
@@ -257,6 +269,32 @@ XQ框架由于杀毒软件会误报
 ------
 
 ## 5.**怎么更新骰娘**
+#### Mirai2:
+关闭框架/卸载骰娘插件    
+然后替换`\data\MiraiNative\plugins`目录下的对应dll和json文件    
+然后重启框架/重载骰娘插件并启用    
+推荐直接关了替换了再开    
+以防指令输入错误    
+指令卸载并加载的方法示例:    
+```
+> npm list
+共加载了 1 个 Mirai Native 插件
+Id：0 标识符：com.w4123.dice 名称：OlivaDice(DIXE) 版本：2.5.2CHAOS4.Oliva.1.2.12 状态：已启用 已加载
+> npm unload 0
+2021-06-07 18:53:14 I/MiraiNative: 插件 "com.w4123.dice" (com.w4123.dice.dll) (ID: 1) 已被卸载，返回值为 0 。
+
+
+这时候你就可以替换对应的dll和json文件了
+替换完以后看下面
+
+> npm load com.w4123.dice.dll
+2021-06-07 18:53:17 I/MiraiNative: 插件 com.w4123.dice.dll 已被加载，返回值为 0 。
+> npm list
+共加载了 1 个 Mirai Native 插件
+Id：1 标识符：com.w4123.dice 名称：OlivaDice(DIXE) 版本：2.5.2CHAOS4.Oliva.1.2.12 状态：已启用 已加载
+> npm enable 1
+插件 com.w4123.dice 已启用。
+```
 #### Mirai新版:
 关闭框架/卸载骰娘插件  
 然后替换`\data\MiraiNative\plugins`目录下的对应dll和json文件  
