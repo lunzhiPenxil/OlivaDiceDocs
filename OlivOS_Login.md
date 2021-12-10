@@ -98,6 +98,12 @@ DoDo网页版暂时只支持手机短信验证码和微信扫码两种登录方�
             123456789123456789,
             "telegram"
         ]
+    ],
+    "pulseUrlList": [
+        [
+            "https://api.dice.center/dicestatusup/",
+            "YUXIANXIAGUOYUXIANXIAGUO"
+        ]
     ]
 }
 ```
