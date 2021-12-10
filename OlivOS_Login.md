@@ -111,6 +111,13 @@ DoDo网页版暂时只支持手机短信验证码和微信扫码两种登录方�
 ### 自定义回复词 | customReply.json
 ```json
 {
+    "strSetStr": "回复词[{tStrName}]已更新",
+    "strBecomeMaster": "口令正确，[{tName}]已成为Master",
+    "strCantBecomeMaster": "口令错误，拒绝认证",
+    "strMasterConsoleShow": "[{tConsoleKey}]当前为[{tConsoleValue}]",
+    "strMasterConsoleSet": "[{tName}]已将[{tConsoleKey}]设置为[{tConsoleValue}]",
+    "strMasterConsoleSetInvalid": "非法的配置值",
+    "strMasterConsoleNotFound": "无法访问的配置项",
     "strNeedMaster": "需要Master权限",
     "strHello": "欢迎使用本机器人! 请使用[.help]查看帮助",
     "strBot": "欢迎使用本机器人! 请使用[.help]查看帮助",
@@ -129,6 +136,10 @@ DoDo网页版暂时只支持手机短信验证码和微信扫码两种登录方�
     "strBotOff" : "关闭成功",
     "strBotAlreadyOff" : "已经处于关闭状态",
     "strBotNotUnderHost" : "无所属主频道",
+    "strBotHostLocalOn" : "本主频道开启成功",
+    "strBotAlreadyHostLocalOn" : "本主频道已经处于开启状态",
+    "strBotHostLocalOff" : "本主频道关闭成功",
+    "strBotAlreadyHostLocalOff" : "本主频道已经处于关闭状态",
     "strBotHostOn" : "本主频道进入默认开启模式",
     "strBotAlreadyHostOn" : "本主频道已经处于默认开启模式",
     "strBotHostOff" : "本主频道进入默认关闭模式",
@@ -150,6 +161,7 @@ DoDo网页版暂时只支持手机短信验证码和微信扫码两种登录方�
     "strRollHideShowWithReason" : "[{tName}]由于[{tRollReason}]掷暗骰",
     "strRollRange" : "表达式: {tRollPara}\n细节: {tRollResultDetail}\n结果: {tRollResultInt}\n范围: {tRollResultIntRange}",
     "strPcInit" : "[{tPcTempName}]人物卡作成:{tPcInitResult}",
+    "strPcUpdateSkillValue" : "[{tName}]的人物卡已更新:\n[{tSkillName}]: {tSkillUpdate}",
     "strPcSetSkillValue" : "[{tName}]的人物卡已保存",
     "strPcGetSingleSkillValue" : "[{tName}]的[{tSkillName}]: {tSkillValue}",
     "strPcShow" : "人物卡[{tName}]:\n{tPcShow}",
@@ -192,7 +204,7 @@ DoDo网页版暂时只支持手机短信验证码和微信扫码两种登录方�
     "strPcSkillCheckFate09" : "[+6 惊异]",
     "strPcSkillCheckFate10" : "[+7 史诗]",
     "strPcSkillCheckFate11" : "[+8 传奇]",
-    "strPcSkillCheckNope" : "无事发生",
+    "strPcSkillCheckNope" : "需要解释",
     "strPcSkillCheckError" : "发生错误"
 }
 ```
