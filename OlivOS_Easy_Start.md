@@ -99,6 +99,8 @@ OlivOS,Mirai,XQ等框架的支持图表
         而且打开后能直接看见`main.py`   
         * 如果不是,可能是你的文件夹套娃了     
         请剪切出来      
+        或者从[releases](https://github.com/OlivOS-Team/OlivaDiceCore/releases/)直接下载以.opk结尾的插件
+        * 下载完成后直接放在`D:\OlivOS\plugin\app\`路径下
     5. 从`Github`的`go-cqhttp/releases`下载[go-cqhttp_windows_amd64.exe](https://github.com/Mrs4s/go-cqhttp/releases)     
         * 如果有qq平台账号登录需求    
         * 或者通过整合包复制一个过来
@@ -148,7 +150,12 @@ OlivOS,Mirai,XQ等框架的支持图表
         当然不继续改端口号也行
 4. 各种常见的骰娘配置疑问
     1. 怎么设置master
-        1. 在OlivOS控制台可以看见
+        1. 在OlivOS控制台可以看见如[.master xxxxxxxx-xxxx-xxxxx-xxxxxx-xxxxxxxx]类似的语句。
+        2. 在私聊窗口向骰娘发送这一句
+    2.如何确认你已经是master了
+        1.在`OlivOS\plugin\data\OlivaDice\unity\console`目录下，有个switch.json文件，以文本文档的形式打开，应该会有你的QQ号
+# 关于骰娘的拓展（如果需要jrrp，draw，helpdoc等非OlivaDiceCore本身有的功能请看此条）
+    从`Github`下载[OlivOS-Team/OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)源码，或者从[releases](https://github.com/OlivOS-Team/OlivaDiceJoy/releases/) 直接下载opk结尾的插件放置在`D:\OlivOS\plugin\app\`路径下
 
 暂时不知道写啥了    
 2021年12月12日 13:38:10     
