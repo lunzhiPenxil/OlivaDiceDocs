@@ -92,19 +92,19 @@ OlivOS,Mirai,XQ等框架的支持图表
             请自行通过搜索引擎寻找更多镜像站（如Baidu,Google）    
         2. 或者在`scrpits\`目录下找到`install.bat`来安装依赖    
         如果安装缓慢可以尝试第一步的第二种方法
-    4. 从`Github`下载[OlivOS-Team/OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)（OlivaDiceCore）源码    
+    5. 从`Github`下载[OlivOS-Team/OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)（OlivaDiceCore）源码    
         * 下载完成后解压压缩包里的`OlivaDiceCore`到   
         `D:\OlivOS\plugin\app\`路径下   
         * 完整路径应该是`D:\OlivOS\plugin\app\OlivaDiceCore\`     
         而且打开后能直接看见`main.py`   
         * 如果不是,可能是你的文件夹套娃了     
         请剪切出来      
-    5. 从`Github`的`go-cqhttp/releases`下载[go-cqhttp_windows_amd64.exe](https://github.com/Mrs4s/go-cqhttp/releases)     
+    6. 从`Github`的`go-cqhttp/releases`下载[go-cqhttp_windows_amd64.exe](https://github.com/Mrs4s/go-cqhttp/releases)     
         * 如果有qq平台账号登录需求    
         * 或者通过整合包复制一个过来
         * 下载完成后放在`lib`目录下 
         * 重命名`go-cqhttp_windows_amd64.exe`为`go-cqhttp.exe`      
-    6. 观看后面的运行章节
+    7. 观看后面的运行章节
 
 ### Win环境的第一次运行
 **前置要求**    
@@ -121,14 +121,14 @@ OlivOS,Mirai,XQ等框架的支持图表
     1. 直接双击OlivOS.exe
 2. 通过源码运行
     1. 第一种方式：   
-    直接使用自带启动脚本           
-    进入`D:\OlivOS\scripts\`文件夹   
-    直接运行`start.bat`即可  
-    3. 第二种方式：手打指令       
-    Win+R    
-    在弹出的窗口输入cmd     
-    点击确定    
-    输入`python D:\OlivOS\main.py`    
+      直接使用自带启动脚本           
+      进入`D:\OlivOS\scripts\`文件夹   
+      直接运行`start.bat`即可  
+    2. 第二种方式：手打指令       
+      Win+R    
+      在弹出的窗口输入cmd     
+      点击确定    
+      输入`python D:\OlivOS\main.py`    
 
 **第一次登录**  
 请观看[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)
@@ -161,7 +161,5 @@ OlivOS,Mirai,XQ等框架的支持图表
     1. 怎么设置master
         1. 在OlivOS控制台可以看见
 
-暂时不知道写啥了    
-2021年12月12日 13:38:10     
-引导补全
-2021年12月12日 20:01:59
+引导补全+更正序号问题 
+2021年12月12日 20:15:10
