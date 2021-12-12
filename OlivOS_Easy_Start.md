@@ -76,14 +76,14 @@ OlivOS,Mirai,XQ等框架的支持图表
     这个不作强制要求,但是推荐使用   
     防止因为浏览器原因导致的无法打开Github
 2. **开始安装**     
-    0. 你需要安装python3.7.5以上版本     
-    Python官网下载地址:https://www.python.org/downloads/    
-    安装过程请记得将添加环境变量(Add Python 3.xx to PATH)的√勾上
-    1. 从`Github`下载[OlivOS-Team/OlivOS](https://github.com/OlivOS-Team/OlivOS)源码      
-    2. 解压到你喜欢的文件夹/路径下面    
+    1. 你需要安装python3.7.5以上版本     
+        Python官网下载地址:https://www.python.org/downloads/    
+        安装过程请记得将添加环境变量(Add Python 3.xx to PATH)的√勾上     
+    2. 从`Github`下载[OlivOS-Team/OlivOS](https://github.com/OlivOS-Team/OlivOS)（OlivOS框架）源码      
+    3. 解压到你喜欢的文件夹/路径下面    
     这里假设你放在了`D:\OlivOS`路径下   
     在此路径下能直接看见`main.py`
-    3. 安装requirements依赖     
+    4. 安装requirements依赖     
         1. 打开cmd输入以下指令然后执行     
         `cd D:\OlivOS && pip install -r requirements.txt`   
         * 如果下载速度缓慢请自行切换镜像站下载，例：  
@@ -92,7 +92,7 @@ OlivOS,Mirai,XQ等框架的支持图表
             请自行通过搜索引擎寻找更多镜像站（如Baidu,Google）    
         2. 或者在`scrpits\`目录下找到`install.bat`来安装依赖    
         如果安装缓慢可以尝试第一步的第二种方法
-    4. 从`Github`下载[OlivOS-Team/OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)源码    
+    4. 从`Github`下载[OlivOS-Team/OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)（OlivaDiceCore）源码    
         * 下载完成后解压压缩包里的`OlivaDiceCore`到   
         `D:\OlivOS\plugin\app\`路径下   
         * 完整路径应该是`D:\OlivOS\plugin\app\OlivaDiceCore\`     
@@ -116,13 +116,19 @@ OlivOS,Mirai,XQ等框架的支持图表
 **启动**    
 这里有两种运行方式   
 自己寻找对应的运行方式即可
+这里假设你主路径是`D:\OlivOS`    
 1. 通过整合包的exe运行
     1. 直接双击OlivOS.exe
 2. 通过源码运行
-    1. Win+R    
+    1. 第一种方式：   
+    直接使用自带启动脚本           
+    进入`D:\OlivOS\scripts\`文件夹   
+    直接运行`start.bat`即可  
+    3. 第二种方式：手打指令       
+    Win+R    
     在弹出的窗口输入cmd     
     点击确定    
-    输入`python D:\OlivOS\main.py`
+    输入`python D:\OlivOS\main.py`    
 
 **第一次登录**  
 请观看[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)
@@ -141,14 +147,21 @@ OlivOS,Mirai,XQ等框架的支持图表
     1. 选择Platform     
     2. 自行选择你想要使用的平台对应的项目
 3. Win下设置登录的时候的保存
-    1. token必须要填
-    2. 不知道`Host`和`Port`填啥就将`Auto`改为`True`     
+    1. token必须要填    
+        * 其他平台请按照[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)里的方式寻找对应的token
+        * qq平台例外    
+        可以填任意字符上去，比如说填一个`1`     
+        当然也可以将`Auto`改为`True`    
+        那样会由`OvO框架`自动为您生成此账号的hash当token
+    3. 不知道`Host`和`Port`填啥就将`Auto`改为`True`     
         再点击`Save`    
         保存完以后再通过`Edit`自行修改`Port`端口号      
-        当然不继续改端口号也行
+        当然不改端口号也行
 4. 各种常见的骰娘配置疑问
     1. 怎么设置master
         1. 在OlivOS控制台可以看见
 
 暂时不知道写啥了    
 2021年12月12日 13:38:10     
+引导补全
+2021年12月12日 19:47:06
