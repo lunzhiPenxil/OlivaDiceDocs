@@ -2,6 +2,7 @@
 
 * [OlivaDice(DIXE)官方文档](README.md)
 * [[Oliva|3]启程手册](OlivOS_Login.md)
+* [[Oliva|3]前进手册](OlivOS_Easy_Start.md)
 * [[Oliva|2]骰主手册](Oliva_Master_Manual.md)
 * [[Oliva|2]进阶手册](OlivaDice.md)
 * [[Oliva|2]食用手册](Cook_Manual.md)
