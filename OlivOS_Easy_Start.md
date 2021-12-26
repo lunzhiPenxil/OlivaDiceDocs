@@ -1,14 +1,14 @@
 # 前置基础知识
 ## 关于框架和插件的部分
-首先知悉一点    
-框架和插件不是平级关系  
-而是上下级关系
-现有框架,再有插件在框架上运行
+首先知悉一点        
+框架和插件不是平级关系      
+而是上下级关系      
+先有框架,再有插件在框架上运行   
 
 至于扩展那是插件的事情,和框架无关   
-以下是常见的
+以下是常见的    
 OlivaDiceCore,溯洄核心,铃心等插件     
-OlivOS,Mirai,XQ等框架的支持图表
+OlivOS,Mirai,XQ等框架的支持图表 
 
 |插件|OlivOS<br>简写:OvO<br>直接运行| Mirai<br>学名:未来<br>需要native | XQ<br>学名:先驱<br>需要额外插件转接 |
 | - | - | - | - |
@@ -173,5 +173,107 @@ OlivOS,Mirai,XQ等框架的支持图表
     从`Github`下载[OlivOS-Team/OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)源码，或者从[releases](https://github.com/OlivOS-Team/OlivaDiceJoy/releases/) 直接下载opk结尾的插件   
     放置在`D:\OlivOS\plugin\app\`路径下
 
-引导补全+更正序号问题 
-2021年12月12日 20:15:10
+# 4.关于手动配置go-cqhttp的那些事
+## 写在前面的：    
+目前qq平台的发消息机制如下：    
+由`go-cqhttp`获取来自腾讯服务器的消息转发给`OlivOS`   
+`OlivOS`上加载的插件处理完毕以后    
+由`OlivOS`发送给`go-cqhttp`   
+再由go-cqhttp发送给腾讯服务器   
+
+>所以需要同时调整OlivOS和go-cqhttp的设置
+
+## 需要配置的文件所在位置
+此处约定~1为`OlivOS`框架所在路径     
+~2为`go-cqhttp`所在路径     
+|  | 文件名 | 所在文件夹位置 |
+| - | - | - |
+| OlivOS | account.json | ~1\conf\account.json |
+| OlivOS | basic.json | ~1\conf\basic.json |
+| go-cqhttp | config.yml | ~2\config.yml |
+
+假设你是win系统     
+~1为`D:\OlivOS\`        
+~2为`D:\OlivOS\lib\`        
+那么对应的文件路径分别为        
+D:\OlivOS\conf\account.json     
+D:\OlivOS\conf\basic.json       
+D:\OlivOS\lib\config.yml        
+
+## 配置之前需要做的
+1. OlivOS
+    1. 运行OlivOS   
+        >(linux用户可以考虑先windows上生成一个以后复制过去,或者熟记结构以后手搓)   
+    2. 按照正常流程设置一遍虚拟账号密码     
+    比如账号为`1`,密码为`1`     
+    设置`auto`,设置`qq`,`onebot`     
+    点击`save`,此时应当看见一个已经保存成功的账号为`1`的条目    
+    点击`commit`
+    3. 关闭`OlivOS`,此时已经生成填写模板了
+2. go-cqhttp
+    1. 运行go-cqhttp 
+    2. 选择0 - HTTP
+
+## 详细配置环节
+所需要配置的文件有三个
+1. OlivOS(框架)  
+    1. account.json（文件）
+        1. id：输入你的骰娘qq
+        2. password：随便填，或者不填也行   
+        账号密码核心设置在go-cqhttp那
+        3. server
+            1. host:你的go-cqhttp所在ip  
+            如果是本机可填127.0.0.1     
+            你接收完消息,处理完毕以后   
+            需要发到go-cqhttp上去   
+            然后交由go-cqhttp发送到腾讯聊天服务器上去
+            2. port:端口号，与go-cqhttp上设置的一致
+            3. access_token:随意编造一个    
+            建议设置的复杂一点  
+            这个可以类比成和go-cqhttp通讯时的密码
+    2. basic.json（文件）
+        1. models
+            1. OlivOS_flash_post_rx
+                1. server
+                    1. port     
+                    设置端口号   
+                    推荐自动以后改手动
+                    2. host就默认0.0.0.0好了  
+2. go-cqhttp(运行文件)    
+    1. config.yml（文件）
+        1. account  
+            1. uin: 输入你的骰娘qq,和上面的一致
+            2. password就留空,扫码登录就好
+        2. default -middlewares
+            1. access-token：这个的填写和`access_token`一致    
+            **在OlivOS发送给gcq的时候gcq会根据这个来鉴权     
+            所以请务必保证这个密钥的强度够高**
+        3. servers
+            1. http
+                1. host：填写你go-cqhttp运行服务器所在ip    
+                如果就是本机的话可以直接输入localhost   
+                如果是远程请务必不要使用localhost或者127.0.0.1  
+                请填写你自己的服务器ip地址      
+                否则回复消息无法送达    
+                    >**举例一：**    
+                    A服务器ip为`192.168.1.10`，运行OlivOS     
+                    B服务器ip为`192.168.1.11`，运行go-cqhttp     
+                    B服务器此处应当填写的是`192.168.1.11`     
+                    或者`0.0.0.0`   
+                    ……………分割线…………………    
+                    **举例二：**      
+                    A服务器ip为`192.168.1.3`      
+                    同时运行OlivOS和go-cqhttp   
+                    那么只要填`127.0.0.1`就好了   
+                    ……………分割线…………………
+                    简单来说就是    
+                    如果你的OlivOS和go-cqhttp不在同一个ip上     
+                    请参照举例一    
+                    如果在同一个电脑上  
+                    请参照举例二
+                2. port：
+                    1. 这个port和上面`account.json`里的`port`保持一致   
+                    否则无法通信
+                2. secret目前似乎不需要填写     
+                等待纠正中  
+                (疑似是发给OlivOS的时候让OlivOS鉴权用的)
