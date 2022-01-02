@@ -139,27 +139,33 @@ OlivOS,Mirai,XQ等框架的支持图表
 ### 以源码模式进行基础文件部署  
 这里有一份来自狐狐的[Linux手动安装OlivOS&Dice](https://www.aobacore.com/archives/OlivOS-OlivaDice-Go-cqhttp.html)   
 
-## 登录完毕以后的各项基础配置
-1. Win下取消登录时候的commit框
+
+# 3.关于骰娘的拓展
+（如果需要jrrp，draw，helpdoc等非OlivaDiceCore本身有的功能请看此条）
+    从`Github`下载[OlivOS-Team/OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)源码，或者从[releases](https://github.com/OlivOS-Team/OlivaDiceJoy/releases/) 直接下载opk结尾的插件   
+    放置在`D:\OlivOS\plugin\app\`路径下
+    
+# 4.登录完毕以后的各项基础配置
+## Win下取消登录时候的commit框
     1. 删除`conf\basic.json`里第七行的  
     `"OlivOS_multiLoginUI",`    
     所在的一整行
     2. 如果想要继续添加这个框就把这一行加回去
-2. Win下设置登录时候的不同平台怎么设置
+## Win下设置登录时候的不同平台怎么设置
     1. 选择Platform     
     2. 自行选择你想要使用的平台对应的项目
-3. Win下设置登录的时候的保存
+## Win下设置登录的时候的保存
     1. token必须要填    
         * 其他平台请按照[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)里的方式寻找对应的token
         * qq平台例外    
         可以填任意字符上去，比如说填一个`1`     
         当然也可以将`Auto`改为`True`    
         那样会由`OvO框架`自动为您生成此账号的hash当token
-    3. 不知道`Host`和`Port`填啥就将`Auto`改为`True`     
+    2. 不知道`Host`和`Port`填啥就将`Auto`改为`True`     
         再点击`Save`    
         保存完以后再通过`Edit`自行修改`Port`端口号      
         当然不改端口号也行
-4. 各种常见的骰娘配置疑问
+## 各种常见的骰娘配置疑问
     1. 怎么设置master
         1. 在OlivOS控制台可以看见如[.master xxxxxxxx-xxxx-xxxxx-xxxxxx-xxxxxxxx]类似的语句。
         2. 在私聊窗口向骰娘发送这一句
@@ -168,12 +174,7 @@ OlivOS,Mirai,XQ等框架的支持图表
         有个switch.json文件，以文本文档的形式打开，应该会有你的QQ号    
         2. {bot_hash}就是形如`098f6bcd4621d373cade4e832627b4f6`的文件夹名称
 
-# 3.关于骰娘的拓展
-（如果需要jrrp，draw，helpdoc等非OlivaDiceCore本身有的功能请看此条）
-    从`Github`下载[OlivOS-Team/OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)源码，或者从[releases](https://github.com/OlivOS-Team/OlivaDiceJoy/releases/) 直接下载opk结尾的插件   
-    放置在`D:\OlivOS\plugin\app\`路径下
-
-# 4.关于手动配置go-cqhttp的那些事
+# 5.关于手动配置go-cqhttp的那些事
 ## 写在前面的：    
 目前qq平台的发消息机制如下：    
 由`go-cqhttp`获取来自腾讯服务器的消息转发给`OlivOS`   
@@ -186,7 +187,7 @@ OlivOS,Mirai,XQ等框架的支持图表
 ## 需要配置的文件所在位置
 此处约定~1为`OlivOS`框架所在路径     
 ~2为`go-cqhttp`所在路径     
-|  | 文件名 | 所在文件夹位置 |
+| · | 文件名 | 所在文件夹位置 |
 | - | - | - |
 | OlivOS | account.json | ~1\conf\account.json |
 | OlivOS | basic.json | ~1\conf\basic.json |
