@@ -187,6 +187,7 @@ OlivOS,Mirai,XQ等框架的支持图表
 ## 需要配置的文件所在位置
 此处约定~1为`OlivOS`框架所在路径     
 ~2为`go-cqhttp`所在路径     
+
 | · | 文件名 | 所在文件夹位置 |
 | - | - | - |
 | OlivOS | account.json | ~1\conf\account.json |
