@@ -151,9 +151,11 @@ OlivOS,Mirai,XQ等框架的支持图表
 `"OlivOS_multiLoginUI",`    
 所在的一整行
 2. 如果想要继续添加这个框就把这一行加回去
+
 ## Win下设置登录时候的不同平台怎么设置
 1. 选择Platform     
 2. 自行选择你想要使用的平台对应的项目
+
 ## Win下设置登录的时候的保存
 1. token必须要填    
     * 其他平台请按照[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)里的方式寻找对应的token
@@ -165,6 +167,7 @@ OlivOS,Mirai,XQ等框架的支持图表
     再点击`Save`    
     保存完以后再通过`Edit`自行修改`Port`端口号      
     当然不改端口号也行
+
 ## 各种常见的骰娘配置疑问
 1. 怎么设置master
     1. 在OlivOS控制台可以看见如[.master xxxxxxxx-xxxx-xxxxx-xxxxxx-xxxxxxxx]类似的语句。
