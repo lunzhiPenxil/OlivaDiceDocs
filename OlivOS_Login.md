@@ -38,6 +38,8 @@ OlivOS目前支持`QQ`、`Telegram`、`Dodo`、`Fanbook`
 为了获取上图中的相关参数，你需要将事先准备好的账号在[DoDo Web](https://dodo.link)上登录。
 
 DoDo网页版暂时只支持手机短信验证码和微信扫码两种登录方式，建议你创建一个小号来进行登录。
+请注意，你需要在搭建的过程中将你所搭建的小号上报给dodo官方，详情参考该频道
+https://www.imdodo.com/channel/108078/130977
 
 完成登录后，请在浏览器打开`开发人员工具`，导航到`应用程序（Application） -> 存储（Storage） -> 本地存储（Local Storage） -> https://dodo.link`。
 成功登录的情况下，你将在右侧的`key`列找到如下两个你需要的参数：
