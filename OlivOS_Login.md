@@ -1,5 +1,7 @@
 # OlivaDice For OlivOS 启程手册
 
+> 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)
+
 ## 获取软件
 你可以从一下页面获取链接：  
 [青果云](http://pan.benzencloudhk.xyz/s/ex9uwmsh)   密码：`LOVEOLIVA`  
