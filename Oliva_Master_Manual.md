@@ -662,7 +662,9 @@ sb
 | ListenGroupAdd          | 1        | 响应入群反馈                                        |
 | ListenFriendRequest     | 1        | 响应好友添加请求                                     |
 | ListenFriendAdd         | 1        | 响应好友添加反馈（由插件通过则不重复）                  |
-| AllowStranger           | 0        | 私用模式下允许非白名单好友申请（公骰作成=1）             |
+|                         | 0        | 配置为0时，仅允许白名单好友申请（私骰作成=0）            |
+| AllowStranger           | 0        | 配置为1时，允许非白名单好友申请（公骰作成=1）             |
+|                         | 0        | 配置为2时，允许同意没有使用记录的好友的申请             |
 | ListenGroupKick         | 1        | 响应群移出事件                                      |
 | ListenGroupBan          | 1        | 响应群禁言事件                                      |
 | ListenSpam              | 1        | 响应刷屏监测                                        |
