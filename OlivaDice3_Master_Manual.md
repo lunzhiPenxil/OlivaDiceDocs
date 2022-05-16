@@ -177,6 +177,8 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 需要特别指出的是，`.help`指令回复的内容不属于自定义回复的范畴，而是属于自定义帮助文档，其内容与`help default`一致，可以通过`helpdoc`指令进行设置  
 
 ##### 自定义回复表
+以下为可以用于`console/customReply.json`文件的内容，其键值对关系也可以用于上文所提到的`str`指令设置  
+
 - OlivaDiceCore 核心模块
 ```json
 {
