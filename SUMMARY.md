@@ -1,10 +1,11 @@
 # Table of contents
 
 * [OlivaDice(DIXE)官方文档](README.md)
-- OlivaDice 3
+- OlivaDice 3 新版手册
+* [[Oliva|3]骰主手册](OlivaDice3_Master_Manual.md)
 * [[Oliva|3]启程手册](OlivOS_Login.md)
 * [[Oliva|3]前进手册](OlivOS_Easy_Start.md)
-- OlivaDice 2
+- OlivaDice 2 旧版手册
 * [[Oliva|2]骰主手册](Oliva_Master_Manual.md)
 * [[Oliva|2]进阶手册](OlivaDice.md)
 * [[Oliva|2]食用手册](Cook_Manual.md)
