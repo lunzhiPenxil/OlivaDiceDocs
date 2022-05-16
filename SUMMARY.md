@@ -11,5 +11,5 @@
 * [• 食用手册](Cook_Manual.md)
 * [• 用户手册](UserDoc.md)
 * [• 喧闹手册](Chaos_Manual.md)
-- @其他工具
+- 其他工具
 * [• Json2Yaml牌堆转换器](Json2Yaml.md)
