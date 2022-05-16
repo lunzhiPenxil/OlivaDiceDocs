@@ -81,7 +81,6 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 ##### 自定义回复表
 - OlivaDiceCore 核心模块
-
 ```python
 {
     "strBotName": "Bot",
