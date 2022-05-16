@@ -3,6 +3,7 @@
 * [OlivaDice(DIXE)官方文档](README.md)
 - OlivaDice 3 新版手册
 * [• 骰主手册](OlivaDice3_Master_Manual.md)
+* [• 用户手册](OlivaDice3_User_Manual.md)
 * [• 启程手册](OlivOS_Login.md)
 * [• 前进手册](OlivOS_Easy_Start.md)
 - OlivaDice 2 旧版手册
