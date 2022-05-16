@@ -71,6 +71,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 更多有关心跳上报的信息请参考[心跳系统](http://benzencloudhk.xyz/dicetoken/)  
 
 ### 远程控制
+`.master exit [群组ID]`  远程退出特定群  
 `.master remote [on/off] [群组ID]`  远程在群中停用  
 `.master remote host [on/off] [频道ID]`  远程在频道中停用  
 `.master remote host default [on/off] [频道ID]`  远程在频道中默认关闭  
