@@ -29,6 +29,17 @@
 [OlivaDiceOdyssey](https://github.com/OlivOS-Team/OlivaDiceOdyssey)提供了一些涉及第三方合作的功能，它们或许是调用了第三方数据库，要么是涉及版权授权，又或者是单纯的过于依赖网络，总之这些功能由于第三方的参与很可能无法由插件开发者保证可靠性，但仍然很强大。例如魔都模组功能。  
 
 
+## 用户策略
+
+### 用户记录
+`.uinfo` 查询自己的用户记录  
+`.uinfo user` 查询自己的用户记录  
+`.uinfo group` 查询本群的群记录  
+`.uinfo host` 查询本频道的记录  
+`.uinfo user [id]` 查询对应的用户记录  
+`.uinfo group [id]` 查询对应的群记录  
+`.uinfo host [id]` 查询对应频道的记录  
+
 ## 管理指令
 
 ### Master绑定/解绑
@@ -49,19 +60,23 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 ### 通知窗口
 `.master notice (del) [群号]`  添加(删除)通知群  
+被作为通知窗口的群会在有邀请时受到邀请请求或通知，如果需要手动验证，则会提供相关指令提示  
 
 ### 心跳上报
 `.master pulse [TOKEN]`  添加心跳TOKEN  
 `.master pulse del [URL/TOKEN]`  删除心跳配置  
 `.master pulse [URL] [TOKEN]`  添加第三方心跳TOKEN  
+更多有关心跳上报的信息请参考[心跳系统](http://benzencloudhk.xyz/dicetoken/)  
 
 ### 远程控制
 `.master remote [on/off] [群组ID]`  远程在群中停用  
 `.master remote host [on/off] [频道ID]`  远程在频道中停用  
 `.master remote host default [on/off] [频道ID]`  远程在频道中默认关闭  
+远程控制提供了一种不需要骰主加入相关多人聊天场所即可操作对应场所这些开关的状态的方法  
 
 ### 修改配置项
 `.master [配置项] [配置值]`  修改配置项  
+修改配置项可以更广泛的调整骰子机器人的全局配置  
 
 #### 配置项目表
 - OlivaDiceCore 核心模块
@@ -93,17 +108,6 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 `.oopm update [插件名称]` 更新特定插件  
 `.oopm show [插件名称]` 检查插件更新状态  
 `.oopm list` 查看所有可选模块  
-
-## 用户策略
-
-### 用户记录
-`.uinfo` 查询自己的用户记录  
-`.uinfo user` 查询自己的用户记录  
-`.uinfo group` 查询本群的群记录  
-`.uinfo host` 查询本频道的记录  
-`.uinfo user [id]` 查询对应的用户记录  
-`.uinfo group [id]` 查询对应的群记录  
-`.uinfo host [id]` 查询对应频道的记录  
 
 ## 个性化定制
 
