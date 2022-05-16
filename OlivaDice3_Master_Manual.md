@@ -5,6 +5,7 @@
 > *世界是属于每一个人的。要创造一个充满逻辑并尊重每一个人的世界。*    
 > *——《Новый Элемент Расселения》A.D.1960 Москва*
 
+
 > 有关基础搭建的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)
 
 ![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
@@ -177,7 +178,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 ##### 自定义回复表
 - OlivaDiceCore 核心模块
-```python
+```json
 {
     "strBotName": "Bot",
     "strForGroupOnly": "此功能仅对群聊开放",
@@ -331,7 +332,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 ```
 
 - OlivaDiceJoy 娱乐模块
-```python
+```json
 {
     "strJoyJrrp": "[{tName}]的今日人品为[{tJrrpResult}]",
     "strJoyZrrp": "[{tName}]的昨日人品为[{tJrrpResult}]",
@@ -340,7 +341,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 ```
 
 - OlivaDiceLogger 日志模块
-```python
+```json
 {
     "strLoggerLogOn": "开始记录日志",
     "strLoggerLogAlreadyOn": "已经正在记录日志",
@@ -355,7 +356,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 ```
 
 - OlivaDiceMaster 大师模块
-```python
+```json
 {
     "strMasterReply": "{tMasterResult}",
     "strMasterOopmApiFailed": "更新源访问失败",
@@ -373,7 +374,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 ```
 
 - OlivaDiceOdyssey 高阶模块
-```python
+```json
 {
     "strOdysseyCnmodsSearch": "魔都模组搜索结果如下:\n{tCnmodsResult}",
     "strOdysseyCnmodsLuck": "魔都模组推荐如下:\n{tCnmodsResult}"
