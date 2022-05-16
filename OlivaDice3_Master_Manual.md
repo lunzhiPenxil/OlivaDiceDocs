@@ -11,22 +11,22 @@
 ![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
 
 ## 插件模块
-基于OlivOS的插件机制，新版的青果骰进行了模块化设计，实现了多个插件模块的协同合作，你可以通过安装这些模块来快速的组合功能。
+基于OlivOS的插件机制，新版的青果骰进行了模块化设计，实现了多个插件模块的协同合作，你可以通过安装这些模块来快速的组合功能。  
 
 ### OlivaDiceCore | 核心模块
-[OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)是整个骰子的核心模块，它提供了所有必须的骰子功能以及基础的管理支持，几乎所有的其它模块都依赖这个模块。
+[OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)是整个骰子的核心模块，它提供了所有必须的骰子功能以及基础的管理支持，几乎所有的其它模块都依赖这个模块。  
 
 ### OlivaDiceJoy | 娱乐模块
-[OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)提供了一些无关紧要的娱乐功能，它们或许是与跑团关系不大、或许只是一些历史原因遗留下来的传统，总之，这些在野蛮生长时期被或是由于开发者无知、或是作为恶性竞争手段、或是用户呼声较大但对于跑团而言意义不明的，被添加进来的小功能，都会被放入这个模块。
+[OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)提供了一些无关紧要的娱乐功能，它们或许是与跑团关系不大、或许只是一些历史原因遗留下来的传统，总之，这些在野蛮生长时期被或是由于开发者无知、或是作为恶性竞争手段、或是用户呼声较大但对于跑团而言意义不明的，被添加进来的小功能，都会被放入这个模块。  
 
 ### OlivaDiceLogger | 日志模块
-[OlivaDiceLogger](https://github.com/OlivOS-Team/OlivaDiceLogger)提供了跑团日志记录器，它可以在跑团过程中对日志进行记录，并由结果生成跑团日志，与在线的跑团日志渲染器进行联动、或发送日志邮件。
+[OlivaDiceLogger](https://github.com/OlivOS-Team/OlivaDiceLogger)提供了跑团日志记录器，它可以在跑团过程中对日志进行记录，并由结果生成跑团日志，与在线的跑团日志渲染器进行联动、或发送日志邮件。  
 
 ### OlivaDiceMaster | 大师模块
-- [OlivaDiceMaster](https://github.com/OlivOS-Team/OlivaDiceMaster)提供了更高级的骰主管理功能，其中的功能可能不是必须的，但是却是强大的，这些功能包括但不限于更新和安装新的模块。
+[OlivaDiceMaster](https://github.com/OlivOS-Team/OlivaDiceMaster)提供了更高级的骰主管理功能，其中的功能可能不是必须的，但是却是强大的，这些功能包括但不限于更新和安装新的模块。  
 
 ### OlivaDiceOdyssey | 高阶模块
-- [OlivaDiceOdyssey](https://github.com/OlivOS-Team/OlivaDiceOdyssey)提供了一些涉及第三方合作的功能，它们或许是调用了第三方数据库，要么是涉及版权授权，又或者是单纯的过于依赖网络，总之这些功能由于第三方的参与很可能无法由插件开发者保证可靠性，但仍然很强大。例如魔都模组功能。
+[OlivaDiceOdyssey](https://github.com/OlivOS-Team/OlivaDiceOdyssey)提供了一些涉及第三方合作的功能，它们或许是调用了第三方数据库，要么是涉及版权授权，又或者是单纯的过于依赖网络，总之这些功能由于第三方的参与很可能无法由插件开发者保证可靠性，但仍然很强大。例如魔都模组功能。  
 
 
 ## 管理指令
