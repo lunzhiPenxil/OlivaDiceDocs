@@ -45,6 +45,7 @@
 `.uinfo host [id]` 查询对应频道的记录  
 
 > 以下功能需要`OlivaDiceMaster 大师模块`  
+
 `.trust [user/group/host] [id]` 对某个[用户/多人聊天/频道]设置信任等级  
 `.trustlevel [user/group/host] [id]` 对某个[用户/多人聊天/频道]设置信任等级  
 `.trustrank [user/group/host] [id]` 对某个[用户/多人聊天/频道]设置信任评分  
