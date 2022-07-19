@@ -3,7 +3,7 @@
 *For 2.5.2CHAOS4*
 
 > *世界是属于每一个人的。要创造一个充满逻辑并尊重每一个人的世界。*    
-> *——《Новый Элемент Расселения》A.D.1960 Москва*
+> *——《[Новый Элемент Расселения](https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82_%D1%80%D0%B0%D1%81%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)》A.D.1960 Москва*
 
 ![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
 

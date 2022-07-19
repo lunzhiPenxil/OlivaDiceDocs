@@ -1,0 +1,49 @@
+site_name: OlivaDice(DIXE)官方文档
+#repo_name: OlivOS-Team/OlivOS
+#repo_url: https://github.com/OlivOS-Team/OlivOS
+edit_uri: ""
+
+theme:
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tabs
+    #- navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.expand
+plugins:
+  - search:
+      lang: jp
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 概述: README.md
+  - 新版:
+    - 骰主手册: OlivaDice3_Master_Manual.md
+    - 用户手册: OlivaDice3_User_Manual.md
+    - 启程手册: OlivOS_Login.md
+    - 前进手册: OlivOS_Easy_Start.md
+  - 旧版:
+    - 骰主手册: Oliva_Master_Manual.md
+    - 进阶手册: OlivaDice.md
+    - 食用手册: Cook_Manual.md
+    - 用户手册: UserDoc.md
+    - 喧闹手册: Chaos_Manual.md
+  - 其它工具:
+    - Json2Yaml牌堆转换器: Json2Yaml.md
+  - 论坛: https://forum.olivos.run
+  - 捐助: https://afdian.net/@OlivOS
