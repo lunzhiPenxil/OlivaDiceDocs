@@ -335,6 +335,11 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
     "strPcGetSingleSkillValue" : "[{tName}]的[{tSkillName}]: {tSkillValue}",
     "strPcShow" : "人物卡[{tName}]:\n{tPcShow}",
     "strPcList" : "[{tName}]的人物卡:\n{tPcList}\n当前选择:{tPcSelection}",
+    "strPcLock" : "已在此成功锁定人物卡[{tName}]",
+    "strPcLockError" : "在此锁定人物卡[{tName}]失败",
+    "strPcLockNone" : "试图锁定的人物卡不存在",
+    "strPcUnLock" : "已在此成功解除锁定人物卡[{tName}]",
+    "strPcUnLockNone" : "当前没有已锁定的人物卡",
     "strPcInitSt" : "人物卡[{tName}]已按照[{tPcTempName}]完成人物卡作成:{tPcInitResult}",
     "strPcSet" : "人物卡已切换至[{tPcSelection}]",
     "strPcSetError" : "试图切入的人物卡不存在",
@@ -438,8 +443,22 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
     "strMasterOopmUpdateNotNeed": "所有模块已为最新版本，无需更新",
     "strMasterOopmUpdateNotSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
     "strMasterOopmUpdateNotSkipDev": "{tMasterOopkNameList}\n模块为开发模式，已跳过",
+    "strMasterOopmGet": "{tMasterOopkNameList}\n模块已安装成功，请使用[.system restart]应用安装",
+    "strMasterOopmGetNone": "{tMasterOopkNameList}\n模块不存在，请先使用[.oopm list]指令查看受支持的模块",
+    "strMasterOopmGetSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
     "strMasterOopmDownloadFailed": "{tMasterOopkNameList}\n模块下载失败",
-    "strMasterOopmCopyFailed": "{tMasterOopkNameList}\n模块安装失败"
+    "strMasterOopmCopyFailed": "{tMasterOopkNameList}\n模块安装失败",
+    "strMasterSendFromMaster": "来自Master的消息：\n{tResult}",
+    "strMasterSendToMaster": "[{tGroupName}]({tGroupId})中[{tUserName}]({tUserId})发来的消息：\n{tResult}",
+    "strMasterSendToMasterAlready": "已将消息发送至Master",
+    "strMasterTrustSet": "[{tName}]({tId})的{tMasterTrustName}已设置为：{tResult}",
+    "strMasterTrustGet": "[{tName}]({tId})的{tMasterTrustName}为：{tResult}",
+    "strMasterPlatformNo": "该功能在此平台不受支持",
+    "strMasterGroupClearShow": "已检查[{tMasterCount01}]个群:\n{tResult}\n已经决定清除[{tMasterCount02}]个群\n请使用[.group clear do (天数)]指令执行这项操作",
+    "strMasterGroupClearDoUnit": "已经清除群:\n{tResult}",
+    "strMasterGroupClearDoUnitSend": "检测到在此处最后发言为{tResult}，即将自动退出",
+    "strMasterGroupClearDo": "已检查[{tMasterCount01}]个群\n已经清除[{tMasterCount02}]个群",
+    "strMasterGroupClearUnit": "[{tName}] - ({tId}): {tResult}"
 }
 ```
 
