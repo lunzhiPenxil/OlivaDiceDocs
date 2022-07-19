@@ -1,7 +1,7 @@
 site_name: OlivaDice(DIXE)官方文档
-#repo_name: OlivOS-Team/OlivOS
-#repo_url: https://github.com/OlivOS-Team/OlivOS
-edit_uri: ""
+repo_name: lunzhiPenxil/OlivaDiceDocs
+repo_url: https://github.com/lunzhiPenxil/OlivaDiceDocs
+edit_uri: edit/master/docs
 
 theme:
   logo: assets/logo.png
