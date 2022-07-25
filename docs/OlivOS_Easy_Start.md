@@ -9,13 +9,12 @@
 以下是常见的      
 OlivaDiceCore,溯洄核心,铃心等插件      
 OlivOS,Mirai,XQ等框架的支持图表      
-
-|插件|OlivOS<br>简写:OvO<br>直接运行| Mirai<br>学名:未来<br>需要native | XQ<br>学名:先驱<br>需要额外插件转接 |
+|插件|OlivOS<br>下文中所有的OvO都指代此<br>直接运行| Mirai<br>学名:未来<br>需要native | XQ<br>学名:先驱<br>需要额外插件转接 |
 | - | - | - | - |
 | OlivaDiceCore | √ | × | × |
 | 溯系核心 | × | √ | √ |
-| 铃心 | × | √ | √ |
-
+| 铃心自定义 | √ | √ | √ |
+| 程心自定义 | √ | × | × |
 ## 关于骰娘核心的部分
 这一段在其他地方      
 已经有详细的叙述了      
@@ -71,7 +70,7 @@ OlivOS,Mirai,XQ等框架的支持图表
 ## Windows下的基础文件部署
 ###  以整合包进行基础文件部署
 0. 将整个整合包解压到你想要的文件夹里去      
-建议路径全英文，中文也行
+建议路径全英文（虽然中文也行但为了避免发生奇怪的错误还是建议全英文）
 1. 观察是否满足整合包要求
     1. 在整合包的`根目录`下有一个`OlivOS.exe`
     2. 在整合包的`lib`目录下有一个`go-cqhttp.exe`
@@ -137,7 +136,7 @@ OlivOS,Mirai,XQ等框架的支持图表
 那么开始下一步,启动      
 这里有两种运行方式      
 自己寻找对应的运行方式即可      
-这里假设你主路径是`D:\OlivOS`      
+这里及以下假设你OlivOS的路径是`D:\OlivOS`      
 
 ### 通过整合包的exe运行
 直接双击OlivOS.exe      
@@ -158,30 +157,23 @@ OlivOS,Mirai,XQ等框架的支持图表
 
 # 4.Win环境的登录      
 > 这里仅说QQ端的，      
-其他端请参考[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)进行类比   
+其他端请参考[Oliva|3启程手册](https://wiki.dice.center/OlivOS_Login.html)进行类比或者前往论坛
 
 
-## 4.1设置登录账号
-1. 点击开启`OlivOS`后出现的窗口内的`NEW`按钮
-1. 账号密码应该是常识   
-1. PLATFORM：选择平台，应该是常识
-1. SDK：选你顺眼的
-1. MODEL：`gocqhttp-show`
-1. Auto：`True`
-    到这就好了
-1. 点击`Save`
-1. 如果需要`go-cqhttp`与`OlivOS`分离运行的可以看第六段      
-    **关于手动配置go-cqhttp的那些事**   
-    这里建议登录成功后再去看    
-    还没学会走路就想着跑步只会摔个大跟头
-1. 可以重复此操作直到所有账号全录入完毕
-    1. 如果有多个qq的需求   
-    建议在成功登录一个以后      
-    学习使用分离运行的方法
+## 4.1登录
+1.双击`OlivOS.exe` 
 
-## 4.2登录
-1. 点击Commit
-2. 在`go-cqhttp`的窗口内扫描二维码（一般是这样）    
+2.新建
+
+3.账号类型：`传统qq`
+
+4.输入用户名密码
+
+5.确认
+
+请注意，此时你应该有两个窗口，一个为`OlivOS本体`，一个为`go-cqhttp`请不要自作聪明的关掉一个然后跑来问，“为什么我的bot开不起来”
+
+在`go-cqhttp`的窗口内扫描二维码（一般是这样）    
 如果二维码显示不全可以去这个路径    
 `conf\gocqhttp\{Hash}\qrcode.png`       
 打开这个二维码使用qq扫描登录    
@@ -190,10 +182,11 @@ OlivOS,Mirai,XQ等框架的支持图表
 # 5.客制化
 
 ## 插件的安装
-（如果需要jrrp，draw，helpdoc等非OlivaDiceCore本身有的功能请看此条）
-从`Github`下载[OlivOS-Team/OlivaDiceJoy](https://github.com/OlivOS-Team/OlivaDiceJoy)源码，      
-或者从[releases](https://github.com/OlivOS-Team/OlivaDiceJoy/releases/) 直接下载opk结尾的插件      
-放置在`D:\OlivOS\plugin\app\`路径下
+OlivOS有非常多官方插件，如OlivaDiceCore，ChanceCustom，OlivaDiceJoy，OlivaDiceLogger，OlivaDiceMaster，OlivaDiceOdyssey不排除以后会有更多的情况
+讲道理如果你下的是整合包，可以先看看在`\plugin\app\`下有没有任何以OPK结尾的文件
+如果没有，你可以前往论坛获取文件[OlivOS论坛](https://forum.olivos.run/)
+放置在`\plugin\app\`路径下，
+每一个OPK文件都是一个插件
       
 ## Win下取消登录时候的commit框
 1. 删除`conf\basic.json`里第七行的      
