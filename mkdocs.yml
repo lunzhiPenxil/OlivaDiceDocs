@@ -20,7 +20,7 @@ theme:
     - navigation.expand
 plugins:
   - search:
-      lang: jp
+      separator: '[\s\u200b\-]'
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
