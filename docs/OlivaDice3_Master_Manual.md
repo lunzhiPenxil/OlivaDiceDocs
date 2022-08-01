@@ -109,7 +109,6 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 | 关键词                   |  默认状态  | 说明                                              |
 |:------------------------|:--------:|:--------------------------------------------------|
-| BelieveOlivaDicelist    | 0        | 控制是否拉取OlivaDicelist                           |
 | autoAcceptFriendAdd     | 1        | 自动同意好友添加请求                                 |
 | autoAcceptGroupAdd      | 1        | 自动同意群邀请                                      |
 | messageFliterMode       | 0        | 事件过滤器<br/>`1`时屏蔽普通群消息<br/>`2`时屏蔽频道消息<br/>`3`时屏蔽所有多人窗口消息 |
