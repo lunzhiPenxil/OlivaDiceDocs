@@ -260,7 +260,7 @@ AcBmC
 ```
 AfB
 ```
-
+理论上，`FATE`规则发展自`Fudge`规则。
 也有一种说法是`f`来自`摇摆骰`的英文`flap dice`  
 
 先来看看`OneDice`怎么说：  
