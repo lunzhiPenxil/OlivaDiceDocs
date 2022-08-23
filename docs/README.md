@@ -14,7 +14,7 @@ Multi-Platform Dice Robot For TRPG Based on OlivOS
 
 ## 简介
 
-`OlivaDice 青果跑团核心机器人`是一款基于`OlivOS`的跑团掷骰机器人，由仑质创建并维护，全栈开源。
+`OlivaDice 青果跑团核心机器人`是一款基于`OlivOS`的跑团掷骰机器人，由仑质创建并维护，采用了先进的`onedice`技术，全栈开源，永久免费。
 
 欢迎加入开发群: [青果铺] `661366095`  
 或是官方骰娘[小青果酱]的用户群: [青果批发车间] `828786809`  

@@ -32,6 +32,9 @@
 ### OlivaDiceOdyssey | 高阶模块
 [OlivaDiceOdyssey](https://github.com/OlivOS-Team/OlivaDiceOdyssey)提供了一些涉及第三方合作的功能，它们或许是调用了第三方数据库，要么是涉及版权授权，又或者是单纯的过于依赖网络，总之这些功能由于第三方的参与很可能无法由插件开发者保证可靠性，但仍然很强大。例如魔都模组功能。  
 
+### OlivaDiceNativeGUI | 设置面板
+[OlivaDiceNativeGUI](https://github.com/OlivOS-Team/OlivaDiceNativeGUI)提供了传统UI模块，可以对骰子进行简单的可视化设置。  
+
 
 ## 用户策略
 
