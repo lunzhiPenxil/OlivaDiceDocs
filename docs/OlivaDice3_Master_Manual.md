@@ -39,6 +39,13 @@
 [ChanceCustom](https://github.com/OlivOS-Team/ChanceCustom)此插件为`酷Q(CoolQ)`时代的知名插件`铃心自定义(club.myepk.customReply)`的OlivOS版本，采用Python重构，可独立于青果核心基于OlivOS运行，但也可以进行一定程度的双向联动，通常来说可用于对骰子功能的扩展。  
 
 
+## 图形设置面板
+
+> 以下功能需要`OlivaDiceNativeGUI 设置面板`  
+
+(https://github.com/OlivOS-Team/OlivaDiceNativeGUI)提供了传统UI模块，可以对骰子进行简单的可视化设置。  
+
+你可以在任务栏右下角托盘区域，找到OlivOS的图标，`右键`打开菜单后 `插件菜单 > OlivaDice设置面板 > 打开设置`，来打开这个图形设置面板。  
 
 ## 用户策略
 
@@ -549,4 +556,6 @@ default:
 ```
 
 ### 自定义指令/自定义问答/reply
-青果核心将类似 塔系和溯洄系 的自定义问答功能(reply)与自定义指令功能单独集成为了一个OlivOS插件——[程心自定义](https://forum.olivos.run/p/1)，其实际上已经是铃心自定义的重做版本，相比旧时代传统的骰子内置的`reply功能`更加完备，功能更加强大。
+青果核心将类似 塔系和溯洄系 的自定义问答功能(reply)与自定义指令功能单独集成为了一个OlivOS插件——[程心自定义](https://forum.olivos.run/p/1)，其实际上已经是铃心自定义的重做版本，相比旧时代传统的骰子内置的`reply功能`更加完备，功能更加强大。  
+
+你可以在任务栏右下角托盘区域，找到OlivOS的图标，`右键`打开菜单后 `插件菜单 > 程心自定义 > 设置`，来打开这个插件的设置面板。  
