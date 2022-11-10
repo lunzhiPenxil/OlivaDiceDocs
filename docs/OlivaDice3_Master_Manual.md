@@ -39,6 +39,15 @@
 [ChanceCustom](https://github.com/OlivOS-Team/ChanceCustom)此插件为`酷Q(CoolQ)`时代的知名插件`铃心自定义(club.myepk.customReply)`的OlivOS版本，采用Python重构，可独立于青果核心基于OlivOS运行，但也可以进行一定程度的双向联动，通常来说可用于对骰子功能的扩展。  
 
 
+## 特别事项
+对于当前版本的`OlivOS`，当在`Windows`操作系统上运行`QQ`平台的机器人时，会在`gocqhttp终端`中出现提示  
+> [2022-10-13 16:55:18] [WARNING]: 上报 Event 数据 ... 失败: Post “http://127.0.0.1:55001/OlivOSMsgApi/qq/onebot/gocqhttp”: context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+
+这类警告是由于`Windows`与`GNU`通用范式在中文编码上不兼容，需要你将`计算机全名`修改为纯英文，在某些厂商的笔记本电脑中，该设置默认带有中文（例如小米笔记本）。  
+
+对于`Windows11`，修改流程为：`右键 此电脑（我的电脑）` -> `选择 属性` -> `选择 高级系统设置` -> `选择 计算机名` -> `点击 “要重命名这台计算机... 旁的 更改”`  
+
+
 ## 图形设置面板
 
 > 以下功能需要`OlivaDiceNativeGUI 设置面板`  
