@@ -213,11 +213,11 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 ### 扩展牌堆
 扩展牌堆可以扩展`draw`指令可抽取的牌堆种类，目前支持：  
-+ json 青果/溯洄系牌堆
-+ yaml 塔系牌堆
++ json 青果/溯洄系牌堆  
++ yaml 塔系牌堆  
 
 #### json 青果/溯洄系牌堆
-`扩展牌堆应当放置于`extend/deckclassic`路径下，其本质为格式如下的json文本文件  
+扩展牌堆应当放置于`extend/deckclassic`路径下，其本质为格式如下的json文本文件  
 ```json
 {
   "!密教模拟器牌堆By仑质":[
