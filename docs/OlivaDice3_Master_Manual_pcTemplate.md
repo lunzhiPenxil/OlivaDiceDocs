@@ -1,4 +1,4 @@
-# OlivaDice For OlivOS 自定义人物卡模板手册
+# OlivaDice For OlivOS 自定义人物卡模板编写指南
 
 *For Ver.3.3.8(1058)*  
 ***未完工***
