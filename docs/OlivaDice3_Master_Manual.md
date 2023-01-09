@@ -1,6 +1,6 @@
 # OlivaDice For OlivOS 骰主手册
 
-*For Ver.3.2.13(1043)*
+*For Ver.3.3.8(1058)*
 
 > *世界是属于每一个人的。要创造一个充满逻辑并尊重每一个人的世界。*    
 > *——《[Новый Элемент Расселения](https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82_%D1%80%D0%B0%D1%81%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)》A.D.1960 Москва*
@@ -218,31 +218,33 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 #### json 青果/溯洄系牌堆
 扩展牌堆应当放置于`extend/deckclassic`路径下，其本质为格式如下的json文本文件  
-```json
-{
-  "!密教模拟器牌堆By仑质":[
-    "密教模拟器牌堆By仑质"
-  ],
-  "密教影响":[
-    "推迟行刑\n肉体皆会衰败。但我得到了保证，我的肉体会衰败得稍晚一点。[此卡是在你没有“健康”时对付生病的最后一道保险。]",
-    "躁动\n我为一种躁动的向往所俘。我似乎产生了某种……企图。究竟是何企图？",
-    "恐惧\n我已经见得太多了。不知名的恐惧正在用利齿啃噬着我的希望；一种关于存在本身的的恐惧。",
-    "入迷\n光透过裂缝漏入。我的头脑比任何时候都更清晰。我升得越高，见得越多。",
-    "安逸\n我很开心，大概吧。[安逸可以抵御恐惧，但安逸难以久存。]",
-    "一瞬追忆\n回首某个瞬间。下个瞬间即告消逝。",
-    "活力\n锻炼，或者其他更少见的东西，令我精神振奋。[与另一张“活力”一同使用可提升技能。如果不使用，将会在三分钟后消失。]",
-    "活力：学有所成\n我已经准备好改变了。[与“力量”技能一同使用可升级该技能并获得“健康”。五分钟后将会退化回“活力”。]",
-    "博闻\n我如饥似渴地吸收着知识，仿佛影子吸收光线。也许我离提升不远了。[研究“博闻”能获得更多“理性”。如果不使用，将会在三分钟后消失。]",
-    "博闻：学有所成\n我已经准备好改变了。[与“学识”技能一起使用可提升该技能并获得“理性”。五分钟后会退化回“博闻”。]",
-    "灵感\n我的情绪比平常更为高昂。有些事物我永远也不会理解，因而永远都那么珍贵，而如今我离它们更近了一点。[在研究中使用“灵感”可获得“激情”。如果不使用，将会在三分钟后消失。]",
-    "灵感：学有所成\n我已经准备好改变了。[与“想象”技能一起使用可升级该技能并获得“激情”。五分钟后将退化回“灵感”。]",
-    "名声：秘氛\n离奇之感残留不去。[“秘氛”可能引起猎人注意。猎人没法用它立案调查你，但这会促使他们更努力地寻找证据。]",
-    "名声：邪名\n有些行为会长久留存于人们的记忆中。[“邪名”可能使猎人立案调查你。]",
-    "证据：不确凿证据\n一名猎人发现了我的罪证——或许为真实，或许为臆造。[拥有密教活动“证据”的猎人会变得更加危险。证据在制作它的猎人死后仍继续存在。]",
-    "证据：确凿证据\n“大地啊，开裂吧！哦，不，它不会收容我的。”[掌握密教活动“确凿证据”后，防剿局会以之给你定罪。证据在制作它的猎人死后仍继续存在。]"
-  ]
-}
-```
+
+??? json青果溯洄系牌堆
+    ```json
+    {
+      "!密教模拟器牌堆By仑质":[
+        "密教模拟器牌堆By仑质"
+      ],
+      "密教影响":[
+        "推迟行刑\n肉体皆会衰败。但我得到了保证，我的肉体会衰败得稍晚一点。[此卡是在你没有“健康”时对付生病的最后一道保险。]",
+        "躁动\n我为一种躁动的向往所俘。我似乎产生了某种……企图。究竟是何企图？",
+        "恐惧\n我已经见得太多了。不知名的恐惧正在用利齿啃噬着我的希望；一种关于存在本身的的恐惧。",
+        "入迷\n光透过裂缝漏入。我的头脑比任何时候都更清晰。我升得越高，见得越多。",
+        "安逸\n我很开心，大概吧。[安逸可以抵御恐惧，但安逸难以久存。]",
+        "一瞬追忆\n回首某个瞬间。下个瞬间即告消逝。",
+        "活力\n锻炼，或者其他更少见的东西，令我精神振奋。[与另一张“活力”一同使用可提升技能。如果不使用，将会在三分钟后消失。]",
+        "活力：学有所成\n我已经准备好改变了。[与“力量”技能一同使用可升级该技能并获得“健康”。五分钟后将会退化回“活力”。]",
+        "博闻\n我如饥似渴地吸收着知识，仿佛影子吸收光线。也许我离提升不远了。[研究“博闻”能获得更多“理性”。如果不使用，将会在三分钟后消失。]",
+        "博闻：学有所成\n我已经准备好改变了。[与“学识”技能一起使用可提升该技能并获得“理性”。五分钟后会退化回“博闻”。]",
+        "灵感\n我的情绪比平常更为高昂。有些事物我永远也不会理解，因而永远都那么珍贵，而如今我离它们更近了一点。[在研究中使用“灵感”可获得“激情”。如果不使用，将会在三分钟后消失。]",
+        "灵感：学有所成\n我已经准备好改变了。[与“想象”技能一起使用可升级该技能并获得“激情”。五分钟后将退化回“灵感”。]",
+        "名声：秘氛\n离奇之感残留不去。[“秘氛”可能引起猎人注意。猎人没法用它立案调查你，但这会促使他们更努力地寻找证据。]",
+        "名声：邪名\n有些行为会长久留存于人们的记忆中。[“邪名”可能使猎人立案调查你。]",
+        "证据：不确凿证据\n一名猎人发现了我的罪证——或许为真实，或许为臆造。[拥有密教活动“证据”的猎人会变得更加危险。证据在制作它的猎人死后仍继续存在。]",
+        "证据：确凿证据\n“大地啊，开裂吧！哦，不，它不会收容我的。”[掌握密教活动“确凿证据”后，防剿局会以之给你定罪。证据在制作它的猎人死后仍继续存在。]"
+      ]
+    }
+    ```
 
 #### yaml 塔系牌堆
 扩展牌堆应当放置于`extend/deckyaml`路径下，其本质为格式如下的yaml文本文件  
@@ -252,46 +254,47 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
  - 如下`密教影响`牌堆，需要以`.draw 密教 密教影响`或`.draw 密教:密教影响`来抽取牌堆  
  - 如下`default`牌堆，需要以`.draw 密教`或`.draw 密教 default`或`.draw 密教:default`来抽取牌堆  
 
-```yaml
-#必要信息
-name: 密教
-author: 仑质
-version: 200323
-command: 密教
-desc: 密教模拟器卡牌抽取
-includes:
-  - "default"
-  - "密教影响"
+??? yaml塔系牌堆
+    ```yaml
+    #必要信息
+    name: 密教
+    author: 仑质
+    version: 200323
+    command: 密教
+    desc: 密教模拟器卡牌抽取
+    includes:
+      - "default"
+      - "密教影响"
 
-#作者信息
-info:
-  - "本牌堆使用Json2Yaml(By BenzenPenxil)自动转换生成\n转换器版本号：1.0.8.20200122.1\n牌堆原作者：仑质\n全部文案来自密教模拟器wiki，版权归WeatherFactory所有。"
+    #作者信息
+    info:
+      - "本牌堆使用Json2Yaml(By BenzenPenxil)自动转换生成\n转换器版本号：1.0.8.20200122.1\n牌堆原作者：仑质\n全部文案来自密教模拟器wiki，版权归WeatherFactory所有。"
 
-#牌堆部分
-default:
-  - "影响|{%密教影响}"
+    #牌堆部分
+    default:
+      - "影响|{%密教影响}"
 
-密教:
-  - "影响|{%密教影响}"
+    密教:
+      - "影响|{%密教影响}"
 
-密教影响:
-  - "推迟行刑\n肉体皆会衰败。但我得到了保证，我的肉体会衰败得稍晚一点。[此卡是在你没有“健康”时对付生病的最后一道保险。]",
-  - "躁动\n我为一种躁动的向往所俘。我似乎产生了某种……企图。究竟是何企图？",
-  - "恐惧\n我已经见得太多了。不知名的恐惧正在用利齿啃噬着我的希望；一种关于存在本身的的恐惧。",
-  - "入迷\n光透过裂缝漏入。我的头脑比任何时候都更清晰。我升得越高，见得越多。",
-  - "安逸\n我很开心，大概吧。[安逸可以抵御恐惧，但安逸难以久存。]",
-  - "一瞬追忆\n回首某个瞬间。下个瞬间即告消逝。",
-  - "活力\n锻炼，或者其他更少见的东西，令我精神振奋。[与另一张“活力”一同使用可提升技能。如果不使用，将会在三分钟后消失。]",
-  - "活力：学有所成\n我已经准备好改变了。[与“力量”技能一同使用可升级该技能并获得“健康”。五分钟后将会退化回“活力”。]",
-  - "博闻\n我如饥似渴地吸收着知识，仿佛影子吸收光线。也许我离提升不远了。[研究“博闻”能获得更多“理性”。如果不使用，将会在三分钟后消失。]",
-  - "博闻：学有所成\n我已经准备好改变了。[与“学识”技能一起使用可提升该技能并获得“理性”。五分钟后会退化回“博闻”。]",
-  - "灵感\n我的情绪比平常更为高昂。有些事物我永远也不会理解，因而永远都那么珍贵，而如今我离它们更近了一点。[在研究中使用“灵感”可获得“激情”。如果不使用，将会在三分钟后消失。]",
-  - "灵感：学有所成\n我已经准备好改变了。[与“想象”技能一起使用可升级该技能并获得“激情”。五分钟后将退化回“灵感”。]",
-  - "名声：秘氛\n离奇之感残留不去。[“秘氛”可能引起猎人注意。猎人没法用它立案调查你，但这会促使他们更努力地寻找证据。]",
-  - "名声：邪名\n有些行为会长久留存于人们的记忆中。[“邪名”可能使猎人立案调查你。]",
-  - "证据：不确凿证据\n一名猎人发现了我的罪证——或许为真实，或许为臆造。[拥有密教活动“证据”的猎人会变得更加危险。证据在制作它的猎人死后仍继续存在。]",
-  - "证据：确凿证据\n“大地啊，开裂吧！哦，不，它不会收容我的。”[掌握密教活动“确凿证据”后，防剿局会以之给你定罪。证据在制作它的猎人死后仍继续存在。]"
-```
+    密教影响:
+      - "推迟行刑\n肉体皆会衰败。但我得到了保证，我的肉体会衰败得稍晚一点。[此卡是在你没有“健康”时对付生病的最后一道保险。]",
+      - "躁动\n我为一种躁动的向往所俘。我似乎产生了某种……企图。究竟是何企图？",
+      - "恐惧\n我已经见得太多了。不知名的恐惧正在用利齿啃噬着我的希望；一种关于存在本身的的恐惧。",
+      - "入迷\n光透过裂缝漏入。我的头脑比任何时候都更清晰。我升得越高，见得越多。",
+      - "安逸\n我很开心，大概吧。[安逸可以抵御恐惧，但安逸难以久存。]",
+      - "一瞬追忆\n回首某个瞬间。下个瞬间即告消逝。",
+      - "活力\n锻炼，或者其他更少见的东西，令我精神振奋。[与另一张“活力”一同使用可提升技能。如果不使用，将会在三分钟后消失。]",
+      - "活力：学有所成\n我已经准备好改变了。[与“力量”技能一同使用可升级该技能并获得“健康”。五分钟后将会退化回“活力”。]",
+      - "博闻\n我如饥似渴地吸收着知识，仿佛影子吸收光线。也许我离提升不远了。[研究“博闻”能获得更多“理性”。如果不使用，将会在三分钟后消失。]",
+      - "博闻：学有所成\n我已经准备好改变了。[与“学识”技能一起使用可提升该技能并获得“理性”。五分钟后会退化回“博闻”。]",
+      - "灵感\n我的情绪比平常更为高昂。有些事物我永远也不会理解，因而永远都那么珍贵，而如今我离它们更近了一点。[在研究中使用“灵感”可获得“激情”。如果不使用，将会在三分钟后消失。]",
+      - "灵感：学有所成\n我已经准备好改变了。[与“想象”技能一起使用可升级该技能并获得“激情”。五分钟后将退化回“灵感”。]",
+      - "名声：秘氛\n离奇之感残留不去。[“秘氛”可能引起猎人注意。猎人没法用它立案调查你，但这会促使他们更努力地寻找证据。]",
+      - "名声：邪名\n有些行为会长久留存于人们的记忆中。[“邪名”可能使猎人立案调查你。]",
+      - "证据：不确凿证据\n一名猎人发现了我的罪证——或许为真实，或许为臆造。[拥有密教活动“证据”的猎人会变得更加危险。证据在制作它的猎人死后仍继续存在。]",
+      - "证据：确凿证据\n“大地啊，开裂吧！哦，不，它不会收容我的。”[掌握密教活动“确凿证据”后，防剿局会以之给你定罪。证据在制作它的猎人死后仍继续存在。]"
+    ```
 
 
 
@@ -303,26 +306,26 @@ default:
 
 #### 扩展帮助文档
 扩展帮助文档应当放置于`extend/helpdoc`路径下，其本质为格式如下的json文本文件
-
-```json
-{
-  "mod":"黑暗之魂查询文档",
-  "author":"仑质",
-  "brief":"黑暗之魂查询文档",
-  "comment":"黑暗之魂查询文档",
-  "helpdoc":{
-    "ds":"黑暗之魂查询文档\n包含黑暗之魂三部曲中的武器、装备、道具、戒指、法术、生物\n全部文案来自黑暗之魂游戏数据解包，版权归FromSoftware所有。\n作者：仑质\n\n查询指令：.help ds[1/2/3] [所查词条] [序号]\n序号项通常不需要，在需要时将会提示。",
-    "ds1 白标记蜡石":"白标记蜡石\n效果：书写召唤记号\n联机游玩专用道具，能书写召唤记号。\n\n可从记号处受召前往其他世界，并以灵体姿态行动，\n只要成功打倒受召前往区域的主人，就能获得人性。\n（游魂状态时无法使用召唤。）\n\n这是在时间停滞不动的罗德兰一地，\n不死人照应彼此的手段。",
-    "ds1 红标记蜡石":"红标记蜡石\n效果：书写侵入记号\n联机游玩专用道具，能书写侵入记号。\n（游魂状态时无法使用。）\n\n可从记号处受召前往其他世界，并以暗灵姿态行动，\n成功打倒召唤者，就可以获得人性。\n\n在化为吸魂鬼，堕入黑暗的人之中，\n也有无法抛下身为人的荣耀，以及骑士道的人，\n这正是为了他们所准备的手段。",
-    "ds1 血红眼眸宝珠":"血红眼眸宝珠\n效果：侵入其他世界\n联机游玩专用道具，能侵入其他世界。\n（订立誓约者才可使用，游魂状态无法使用。）\n\n只要在侵入的世界中，\n打倒该世界的主人，就能获得人性。\n\n此乃遭到卡斯唆使的吸魂鬼之常见行径，\n他们越是追求人性，越会堕入更深层的黑暗。\n或许该说，这才是人类真正会有的作为呢？",
-    "ds1 诀别黑水晶":"诀别黑水晶\n效果：使灵体回到原来的世界、从其他世界回到原来的世界\n成为不死人的放逐者所拿到的黑水晶，\n自古以来就代表着诀别。\n召唤者可借此让召唤出的灵体回到原来的世界，\n灵体则能借此从其他世界回到原来的世界。\n\n但若珍惜人与人的缘分，\n就不该轻率地使用这项道具。",
-    "ds1 橘建言蜡石":"橘建言蜡石\n效果：书写、确认、评价讯息\n联机游玩专用道具，\n能够书写、确认、评价讯息。\n\n写出的讯息将被送往其他世界，并受他人评价，\n也可以评价来自其他世界的讯息。\n\n这是在时间停滞不动的罗德兰一地，\n不死人照应彼此的手段，\n同时，也是种互相欺骗的手段。",
-    "ds1 罪人录":"罪人录\n效果：确认世界的罪人名单\n联机游玩专用道具，\n能够确认世界的罪人名单。\n\n此为罪业女神蓓尔嘉管理的纪录本。\n所谓的罪人，便是那些藐视诸神与誓约之人，\n他们无法逃过遭暗月之刃制裁的命运。",
-    "ds1 死者眼眸":"死者眼眸\n效果：将灵体从其他世界引诱过来\n联机游玩专用道具，能够将灵体从其他世界引诱过来。\n（订立誓约者才可使用，游魂状态无法使用。）\n\n带有祸患气息的“死者眼眸”可以对其他世界散播灾厄，\n是种将其他灵体化为牺牲者，引诱至自身世界的手段。\n而牺牲者也会产生“死者眼眸，”使得灾厄更加扩散。",
-    "ds1 龟裂血红眼眸宝珠":"龟裂血红眼眸宝珠\n效果：侵入其他世界\n联机游玩专用道具，能侵入其他世界。\n（游魂状态无法使用。）\n\n只要在侵入的世界中，\n打倒该世界的主人，就能获得人性。\n\n此乃遭到卡斯唆使的吸魂鬼之常见行径，\n可以借由这已经裂开的红色宝珠，\n暂时模仿他们的所作所为。"
+??? 扩展帮助文档
+    ```json
+    {
+      "mod":"黑暗之魂查询文档",
+      "author":"仑质",
+      "brief":"黑暗之魂查询文档",
+      "comment":"黑暗之魂查询文档",
+      "helpdoc":{
+        "ds":"黑暗之魂查询文档\n包含黑暗之魂三部曲中的武器、装备、道具、戒指、法术、生物\n全部文案来自黑暗之魂游戏数据解包，版权归FromSoftware所有。\n作者：仑质\n\n查询指令：.help ds[1/2/3] [所查词条] [序号]\n序号项通常不需要，在需要时将会提示。",
+        "ds1 白标记蜡石":"白标记蜡石\n效果：书写召唤记号\n联机游玩专用道具，能书写召唤记号。\n\n可从记号处受召前往其他世界，并以灵体姿态行动，\n只要成功打倒受召前往区域的主人，就能获得人性。\n（游魂状态时无法使用召唤。）\n\n这是在时间停滞不动的罗德兰一地，\n不死人照应彼此的手段。",
+        "ds1 红标记蜡石":"红标记蜡石\n效果：书写侵入记号\n联机游玩专用道具，能书写侵入记号。\n（游魂状态时无法使用。）\n\n可从记号处受召前往其他世界，并以暗灵姿态行动，\n成功打倒召唤者，就可以获得人性。\n\n在化为吸魂鬼，堕入黑暗的人之中，\n也有无法抛下身为人的荣耀，以及骑士道的人，\n这正是为了他们所准备的手段。",
+        "ds1 血红眼眸宝珠":"血红眼眸宝珠\n效果：侵入其他世界\n联机游玩专用道具，能侵入其他世界。\n（订立誓约者才可使用，游魂状态无法使用。）\n\n只要在侵入的世界中，\n打倒该世界的主人，就能获得人性。\n\n此乃遭到卡斯唆使的吸魂鬼之常见行径，\n他们越是追求人性，越会堕入更深层的黑暗。\n或许该说，这才是人类真正会有的作为呢？",
+        "ds1 诀别黑水晶":"诀别黑水晶\n效果：使灵体回到原来的世界、从其他世界回到原来的世界\n成为不死人的放逐者所拿到的黑水晶，\n自古以来就代表着诀别。\n召唤者可借此让召唤出的灵体回到原来的世界，\n灵体则能借此从其他世界回到原来的世界。\n\n但若珍惜人与人的缘分，\n就不该轻率地使用这项道具。",
+        "ds1 橘建言蜡石":"橘建言蜡石\n效果：书写、确认、评价讯息\n联机游玩专用道具，\n能够书写、确认、评价讯息。\n\n写出的讯息将被送往其他世界，并受他人评价，\n也可以评价来自其他世界的讯息。\n\n这是在时间停滞不动的罗德兰一地，\n不死人照应彼此的手段，\n同时，也是种互相欺骗的手段。",
+        "ds1 罪人录":"罪人录\n效果：确认世界的罪人名单\n联机游玩专用道具，\n能够确认世界的罪人名单。\n\n此为罪业女神蓓尔嘉管理的纪录本。\n所谓的罪人，便是那些藐视诸神与誓约之人，\n他们无法逃过遭暗月之刃制裁的命运。",
+        "ds1 死者眼眸":"死者眼眸\n效果：将灵体从其他世界引诱过来\n联机游玩专用道具，能够将灵体从其他世界引诱过来。\n（订立誓约者才可使用，游魂状态无法使用。）\n\n带有祸患气息的“死者眼眸”可以对其他世界散播灾厄，\n是种将其他灵体化为牺牲者，引诱至自身世界的手段。\n而牺牲者也会产生“死者眼眸，”使得灾厄更加扩散。",
+        "ds1 龟裂血红眼眸宝珠":"龟裂血红眼眸宝珠\n效果：侵入其他世界\n联机游玩专用道具，能侵入其他世界。\n（游魂状态无法使用。）\n\n只要在侵入的世界中，\n打倒该世界的主人，就能获得人性。\n\n此乃遭到卡斯唆使的吸魂鬼之常见行径，\n可以借由这已经裂开的红色宝珠，\n暂时模仿他们的所作所为。"
+        }
     }
-}
-```
+    ```
 
 ### 自定义回复词
 `.str[配置项] [配置值]`  修改对应的自定义配置  
@@ -362,227 +365,565 @@ default:
 以下为可以用于`console/customReply.json`文件的内容，其键值对关系也可以用于上文所提到的`str`指令设置  
 
 - OlivaDiceCore 核心模块
-```json
-{
-    "strBotName": "Bot",
-    "strForGroupOnly": "此功能仅对群聊开放",
-    "strSetStr": "回复词[{tStrName}]已更新",
-    "strBecomeMaster": "口令正确，[{tName}]已成为Master",
-    "strCantBecomeMaster": "无Master权限且口令错误，拒绝认证",
-    "strMasterSystemRestart": "[{tName}]远程调用重载",
-    "strMasterConsoleShow": "[{tConsoleKey}]当前为[{tConsoleValue}]",
-    "strMasterConsoleShowList": "[{tConsoleKey}]当前为:\n{tConsoleValue}",
-    "strMasterConsoleSet": "[{tName}]已将[{tConsoleKey}]设置为[{tConsoleValue}]",
-    "strMasterConsoleAppend": "[{tName}]已修改[{tConsoleKey}]条目",
-    "strMasterConsoleSetInvalid": "非法的配置值",
-    "strMasterConsoleNotFound": "无法访问的配置项",
-    "strMasterRemoteOn": "已在[{tId}]远程开启",
-    "strMasterRemoteOff": "已在[{tId}]远程关闭",
-    "strMasterRemoteOnAlready": "[{tId}]已处于开启状态",
-    "strMasterRemoteOffAlready": "[{tId}]已处于关闭状态",
-    "strMasterRemoteDefaultOn": "已在[{tId}]远程默认开启",
-    "strMasterRemoteDefaultOff": "已在[{tId}]远程默认关闭",
-    "strMasterRemoteDefaultOnAlready": "[{tId}]已处于默认开启状态",
-    "strMasterRemoteDefaultOffAlready": "[{tId}]已处于默认关闭状态",
-    "strMasterRemoteNone": "设置失败，未找到[{tId}]的相关记录",
-    "strNeedMaster": "需要Master权限",
-    "strHello": "欢迎使用本机器人! 请使用[.help]查看帮助",
-    "strBot": "欢迎使用本机器人! 请使用[.help]查看帮助",
-    "strBotExit": "即将退出本群",
-    "strBotExitRemote": "收到远程控制, 即将退出本群",
-    "strBotExitRemoteShow" : "即将远程退出群[{tGroupId}]",
-    "strBotAddFriendNotice": "好友添加请求, 来自[{tUserId}]\n备注:{tComment}\n{tResult}",
-    "strBotAddGroupNotice" : "群添加请求，来自群[{tGroupId}], 邀请者[{tInvaterId}]\n{tResult}",
-    "strBotAddGroupNoticeIgnoreResult" : "已忽略\n请输入[{tAcceptCommand}]以远程接受请求",
-    "strBotAddGroupRemoteAcceptShow" : "已远程接受请求[{tInvateFlag}]",
-    "strAccept" : "已接受",
-    "strIgnore" : "已忽略",
-    "strReject" : "已驳回",
-    "strBotOn" : "开启成功",
-    "strBotAlreadyOn" : "已经处于开启状态",
-    "strBotOff" : "关闭成功",
-    "strBotAlreadyOff" : "已经处于关闭状态",
-    "strBotNotUnderHost" : "无所属主频道",
-    "strBotHostLocalOn" : "本主频道开启成功",
-    "strBotAlreadyHostLocalOn" : "本主频道已经处于开启状态",
-    "strBotHostLocalOff" : "本主频道关闭成功",
-    "strBotAlreadyHostLocalOff" : "本主频道已经处于关闭状态",
-    "strBotHostOn" : "本主频道进入默认开启模式",
-    "strBotAlreadyHostOn" : "本主频道已经处于默认开启模式",
-    "strBotHostOff" : "本主频道进入默认关闭模式",
-    "strBotAlreadyHostOff" : "本主频道已经处于默认关闭模式",
-    "strHelpDoc" : "已为你找到以下以下条目:\n{tHelpDocResult}",
-    "strHelpDocRecommend" : "已为你找到以下以下相似条目:\n{tHelpDocResult}",
-    "strHelpDocNotFound" : "未找到匹配条目",
-    "strDrawTi" : "[{tName}]疯狂发作-临时症状:\n{tResult}",
-    "strDrawLi" : "[{tName}]疯狂发作-总结症状:\n{tResult}",
-    "strDrawName" : "[{tName}]的随机名称:\n{tResult}",
-    "strDrawDeck" : "你抽到了:\n{tDrawDeckResult}",
-    "strDrawDeckHideShow" : "[{tName}]进行了暗抽牌",
-    "strDrawDeckNotFound" : "牌堆未找到",
-    "strRoll" : "[{tName}]掷骰: {tRollResult}",
-    "strRollWithReason" : "[{tName}]由于[{tRollReason}]掷骰: {tRollResult}",
-    "strRollHide" : "于群[{tGroupId}]中[{tName}]掷骰: {tRollResult}",
-    "strRollHideWithReason" : "于群[{tGroupId}]中[{tName}]由于[{tRollReason}]掷骰: {tRollResult}",
-    "strRollHideShow" : "[{tName}]掷暗骰",
-    "strRollHideShowWithReason" : "[{tName}]由于[{tRollReason}]掷暗骰",
-    "strRollRange" : "表达式: {tRollPara}\n细节: {tRollResultDetail}\n结果: {tRollResultInt}\n范围: {tRollResultIntRange}",
-    "strRollError01" : "表达式[{tRollPara}]掷骰错误！无法解析的表达式！",
-    "strRollError02" : "表达式[{tRollPara}]掷骰错误！无法计算的表达式！",
-    "strRollError03" : "表达式[{tRollPara}]掷骰错误！输入了非法的表达式！",
-    "strRollError04" : "表达式[{tRollPara}]掷骰错误！输入了非法的子参数！",
-    "strRollError05" : "表达式[{tRollPara}]掷骰错误！输入了非法的运算符！",
-    "strRollError06" : "表达式[{tRollPara}]掷骰错误！发现未定义运算符！",
-    "strRollError07" : "表达式[{tRollPara}]掷骰错误！解析到空语法树！",
-    "strRollError08" : "表达式[{tRollPara}]掷骰错误！错误的左值！",
-    "strRollError09" : "表达式[{tRollPara}]掷骰错误！错误的右值！",
-    "strRollError10" : "表达式[{tRollPara}]掷骰错误！错误的子参数！",
-    "strRollError11" : "表达式[{tRollPara}]掷骰错误！计算极值时出错！",
-    "strRollError12" : "表达式[{tRollPara}]掷骰错误！解析技能变量时出错！",
-    "strRollErrorUnknown" : "表达式[{tRollPara}]掷骰错误！未知的错误: {tResult}",
-    "strRollErrorHelp" : "\n请使用[.help r]查看掷骰帮助，或使用[.help onedice]查看先进的OneDice标准。",
-    "strSetGroupTempRule" : "已设置本群套用模板[{tPcTempName}]的规则[{tPcTempRuleName}]{tLazyResult}",
-    "strDelGroupTempRule" : "已清除本群套用模板与规则，将按照人物卡设置各自进行检定",
-    "strPcInit" : "[{tPcTempName}]人物卡作成:{tPcInitResult}",
-    "strPcUpdateSkillValue" : "[{tName}]的人物卡已更新:\n[{tSkillName}]: {tSkillUpdate}",
-    "strPcSetSkillValue" : "[{tName}]的人物卡已保存",
-    "strPcGetSingleSkillValue" : "[{tName}]的[{tSkillName}]: {tSkillValue}",
-    "strPcShow" : "人物卡[{tName}]:\n{tPcShow}",
-    "strPcList" : "[{tName}]的人物卡:\n{tPcList}\n当前选择:{tPcSelection}",
-    "strPcLock" : "已在此成功锁定人物卡[{tName}]",
-    "strPcLockError" : "在此锁定人物卡[{tName}]失败",
-    "strPcLockNone" : "试图锁定的人物卡不存在",
-    "strPcUnLock" : "已在此成功解除锁定人物卡[{tName}]",
-    "strPcUnLockNone" : "当前没有已锁定的人物卡",
-    "strPcInitSt" : "人物卡[{tName}]已按照[{tPcTempName}]完成人物卡作成:{tPcInitResult}",
-    "strPcSet" : "人物卡已切换至[{tPcSelection}]",
-    "strPcSetError" : "试图切入的人物卡不存在",
-    "strPcDel" : "人物卡[{tPcSelection}]已删除",
-    "strPcDelError" : "试图删除的人物卡不存在",
-    "strPcDelNone" : "人物卡列表为空",
-    "strPcClear" : "当前人物卡[{tPcSelection}]已清空",
-    "strPcClearNone" : "当前没有人物卡",
-    "strPcRm" : "人物卡[{tPcSelection}]的[{tSkillName}]已删除",
-    "strPcRmNone" : "人物卡[{tPcSelection}]的[{tSkillName}]不存在",
-    "strPcRmCardNone" : "人物卡不存在",
-    "strPcTemp" : "人物卡[{tPcSelection}]套用模板[{tPcTempName}]",
-    "strPcTempShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]",
-    "strPcTempError" : "试图套用的模板不存在，或是未设置人物卡",
-    "strPcTempRule" : "人物卡[{tPcSelection}]套用模板[{tPcTempName}]的规则[{tPcTempRuleName}]",
-    "strPcTempRuleShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]\n规则[{tPcTempRuleName}]",
-    "strPcTempRuleError" : "试图套用的模板规则不存在，或是未设置人物卡",
-    "strPcRename" : "[{tPcSelection}]已重命名为[{tPcSelectionNew}]",
-    "strPcSkillCheck" : "[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-    "strPcSkillCheckHide" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-    "strPcSkillCheckHideShow" : "[{tName}]进行技能[{tSkillValue}]暗检定",
-    "strPcSkillCheckWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-    "strPcSkillCheckHideWithSkillName" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-    "strPcSkillCheckHideShowWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]暗检定",
-    "strPcSkillEnhanceCheck" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]成长检定: {tRollResult} {tSkillCheckReasult}",
-    "strPcSkillEnhanceContent" : "\n该技能发生了增长: {tRollSubResult}",
-    "strPcSkillEnhanceAll" : "[{tName}]进行技能自动成长检定:\n共有[{tSkillEnhanceCount}]个技能进行了检定，其中成功[{tSkillEnhanceSucceedCount}]个: {tSkillEnhanceSucceedList}",
-    "strPcSkillEnhanceError" : "未设置人物卡，无法进行自动成长检定",
-    "strSanCheck" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}点,当前剩余[{tSkillValueNew}]点",
-    "strSanCheckGreatFailed" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}的最大值[{tRollSubResultIntMax}]点,当前剩余[{tSkillValueNew}]点",
-    "strIntPositiveInfinite" : "正无穷大",
-    "strIntNegativeInfinite" : "负无穷大",
-    "strPcSkillCheckSucceed" : "成功",
-    "strPcSkillCheckHardSucceed" : "困难成功",
-    "strPcSkillCheckExtremeHardSucceed" : "极难成功",
-    "strPcSkillCheckGreatSucceed" : "大成功",
-    "strPcSkillCheckFailed" : "失败",
-    "strPcSkillCheckGreatFailed" : "大失败",
-    "strPcSkillCheckFate01" : "[-2 拙劣]",
-    "strPcSkillCheckFate02" : "[-1 差劲]",
-    "strPcSkillCheckFate03" : "[+0 二流]",
-    "strPcSkillCheckFate04" : "[+1 一般]",
-    "strPcSkillCheckFate05" : "[+2 尚可]",
-    "strPcSkillCheckFate06" : "[+3 良好]",
-    "strPcSkillCheckFate07" : "[+4 极佳]",
-    "strPcSkillCheckFate08" : "[+5 卓越]",
-    "strPcSkillCheckFate09" : "[+6 惊异]",
-    "strPcSkillCheckFate10" : "[+7 史诗]",
-    "strPcSkillCheckFate11" : "[+8 传奇]",
-    "strPcSkillCheckNope" : "需要解释",
-    "strPcSkillCheckError" : "发生错误",
-    "strHelpdocSet" : "自定义帮助文档已设置",
-    "strHelpdocDel" : "自定义帮助文档已删除",
-    "strObList" : "当前旁观列表:\n{tResult}",
-    "strObListNone" : "当前旁观列表为空",
-    "strObUserObList" : "当前旁观列表:\n{tResult}",
-    "strObUserObListNone" : "当前旁观列表为空",
-    "strObJoin" : "[{tUserName}]现已加入旁观",
-    "strObJoinAlready" : "[{tUserName}]已在旁观中",
-    "strObExit" : "[{tUserName}]现已退出旁观",
-    "strObExitAlready" : "[{tUserName}]不在旁观中",
-    "strObExitAll" : "[{tUserName}]现已退出所有旁观",
-    "strObClear" : "已清空旁观列表"
-}
-```
+??? 核心模块
+    ```json
+    {
+        "strBotName": "Bot",
+        "strForGroupOnly": "此功能仅对群聊开放",
+        "strSetStr": "回复词[{tStrName}]已更新",
+        "strBecomeMaster": "口令正确，[{tName}]已成为Master",
+        "strCantBecomeMaster": "无Master权限且口令错误，拒绝认证",
+        "strMasterSystemRestart": "[{tName}]远程调用重载",
+        "strMasterConsoleShow": "[{tConsoleKey}]当前为[{tConsoleValue}]",
+        "strMasterConsoleShowList": "[{tConsoleKey}]当前为:\n{tConsoleValue}",
+        "strMasterConsoleSet": "[{tName}]已将[{tConsoleKey}]设置为[{tConsoleValue}]",
+        "strMasterConsoleAppend": "[{tName}]已修改[{tConsoleKey}]条目",
+        "strMasterConsoleSetInvalid": "非法的配置值",
+        "strMasterConsoleNotFound": "无法访问的配置项",
+        "strMasterRemoteOn": "已在[{tId}]远程开启",
+        "strMasterRemoteOff": "已在[{tId}]远程关闭",
+        "strMasterRemoteOnAlready": "[{tId}]已处于开启状态",
+        "strMasterRemoteOffAlready": "[{tId}]已处于关闭状态",
+        "strMasterRemoteDefaultOn": "已在[{tId}]远程默认开启",
+        "strMasterRemoteDefaultOff": "已在[{tId}]远程默认关闭",
+        "strMasterRemoteDefaultOnAlready": "[{tId}]已处于默认开启状态",
+        "strMasterRemoteDefaultOffAlready": "[{tId}]已处于默认关闭状态",
+        "strMasterRemotenull": "设置失败，未找到[{tId}]的相关记录",
+        "strNeedMaster": "需要Master权限",
+        "strHello": "欢迎使用本机器人! 请使用[.help]查看帮助",
+        "strBot": "欢迎使用本机器人! 请使用[.help]查看帮助",
+        "strBotExit": "即将退出本群",
+        "strBotExitRemote": "收到远程控制, 即将退出本群",
+        "strBotExitRemoteShow" : "即将远程退出群[{tGroupId}]",
+        "strBotAddFriendNotice": "好友添加请求, 来自[{tUserId}]\n备注:{tComment}\n{tResult}",
+        "strBotAddGroupNotice" : "群添加请求，来自群[{tGroupId}], 邀请者[{tInvaterId}]\n{tResult}",
+        "strBotAddGroupNoticeIgnoreResult" : "已忽略\n请输入[{tAcceptCommand}]以远程接受请求",
+        "strBotAddGroupRemoteAcceptShow" : "已远程接受请求[{tInvateFlag}]",
+        "strAccept" : "已接受",
+        "strIgnore" : "已忽略",
+        "strReject" : "已驳回",
+        "strBotOn" : "开启成功",
+        "strBotAlreadyOn" : "已经处于开启状态",
+        "strBotOff" : "关闭成功",
+        "strBotAlreadyOff" : "已经处于关闭状态",
+        "strBotNotUnderHost" : "无所属主频道",
+        "strBotHostLocalOn" : "本主频道开启成功",
+        "strBotAlreadyHostLocalOn" : "本主频道已经处于开启状态",
+        "strBotHostLocalOff" : "本主频道关闭成功",
+        "strBotAlreadyHostLocalOff" : "本主频道已经处于关闭状态",
+        "strBotHostOn" : "本主频道进入默认开启模式",
+        "strBotAlreadyHostOn" : "本主频道已经处于默认开启模式",
+        "strBotHostOff" : "本主频道进入默认关闭模式",
+        "strBotAlreadyHostOff" : "本主频道已经处于默认关闭模式",
+        "strHelpDoc" : "已为你找到以下以下条目:\n{tHelpDocResult}",
+        "strHelpDocRecommend" : "已为你找到以下以下相似条目:\n{tHelpDocResult}",
+        "strHelpDocNotFound" : "未找到匹配条目",
+        "strDrawTi" : "[{tName}]疯狂发作-临时症状:\n{tResult}",
+        "strDrawLi" : "[{tName}]疯狂发作-总结症状:\n{tResult}",
+        "strDrawName" : "[{tName}]的随机名称:\n{tResult}",
+        "strDrawDeck" : "你抽到了:\n{tDrawDeckResult}",
+        "strDrawDeckHideShow" : "[{tName}]进行了暗抽牌",
+        "strDrawDeckNotFound" : "牌堆未找到",
+        "strRoll" : "[{tName}]掷骰: {tRollResult}",
+        "strRollWithReason" : "[{tName}]由于[{tRollReason}]掷骰: {tRollResult}",
+        "strRollHide" : "于群[{tGroupId}]中[{tName}]掷骰: {tRollResult}",
+        "strRollHideWithReason" : "于群[{tGroupId}]中[{tName}]由于[{tRollReason}]掷骰: {tRollResult}",
+        "strRollHideShow" : "[{tName}]掷暗骰",
+        "strRollHideShowWithReason" : "[{tName}]由于[{tRollReason}]掷暗骰",
+        "strRollRange" : "表达式: {tRollPara}\n细节: {tRollResultDetail}\n结果: {tRollResultInt}\n范围: {tRollResultIntRange}",
+        "strRollError01" : "表达式[{tRollPara}]掷骰错误！无法解析的表达式！",
+        "strRollError02" : "表达式[{tRollPara}]掷骰错误！无法计算的表达式！",
+        "strRollError03" : "表达式[{tRollPara}]掷骰错误！输入了非法的表达式！",
+        "strRollError04" : "表达式[{tRollPara}]掷骰错误！输入了非法的子参数！",
+        "strRollError05" : "表达式[{tRollPara}]掷骰错误！输入了非法的运算符！",
+        "strRollError06" : "表达式[{tRollPara}]掷骰错误！发现未定义运算符！",
+        "strRollError07" : "表达式[{tRollPara}]掷骰错误！解析到空语法树！",
+        "strRollError08" : "表达式[{tRollPara}]掷骰错误！错误的左值！",
+        "strRollError09" : "表达式[{tRollPara}]掷骰错误！错误的右值！",
+        "strRollError10" : "表达式[{tRollPara}]掷骰错误！错误的子参数！",
+        "strRollError11" : "表达式[{tRollPara}]掷骰错误！计算极值时出错！",
+        "strRollError12" : "表达式[{tRollPara}]掷骰错误！解析技能变量时出错！",
+        "strRollErrorUnknown" : "表达式[{tRollPara}]掷骰错误！未知的错误: {tResult}",
+        "strRollErrorHelp" : "\n请使用[.help r]查看掷骰帮助，或使用[.help onedice]查看先进的OneDice标准。",
+        "strSetGroupTempRule" : "已设置本群套用模板[{tPcTempName}]的规则[{tPcTempRuleName}]{tLazyResult}",
+        "strDelGroupTempRule" : "已清除本群套用模板与规则，将按照人物卡设置各自进行检定",
+        "strPcInit" : "[{tPcTempName}]人物卡作成:{tPcInitResult}",
+        "strPcUpdateSkillValue" : "[{tName}]的人物卡已更新:\n[{tSkillName}]: {tSkillUpdate}",
+        "strPcSetSkillValue" : "[{tName}]的人物卡已保存",
+        "strPcGetSingleSkillValue" : "[{tName}]的[{tSkillName}]: {tSkillValue}",
+        "strPcShow" : "人物卡[{tName}]:\n{tPcShow}",
+        "strPcList" : "[{tName}]的人物卡:\n{tPcList}\n当前选择:{tPcSelection}",
+        "strPcLock" : "已在此成功锁定人物卡[{tName}]",
+        "strPcLockError" : "在此锁定人物卡[{tName}]失败",
+        "strPcLocknull" : "试图锁定的人物卡不存在",
+        "strPcUnLock" : "已在此成功解除锁定人物卡[{tName}]",
+        "strPcUnLocknull" : "当前没有已锁定的人物卡",
+        "strPcInitSt" : "人物卡[{tName}]已按照[{tPcTempName}]完成人物卡作成:{tPcInitResult}",
+        "strPcSet" : "人物卡已切换至[{tPcSelection}]",
+        "strPcSetError" : "试图切入的人物卡不存在",
+        "strPcDel" : "人物卡[{tPcSelection}]已删除",
+        "strPcDelError" : "试图删除的人物卡不存在",
+        "strPcDelnull" : "人物卡列表为空",
+        "strPcClear" : "当前人物卡[{tPcSelection}]已清空",
+        "strPcClearnull" : "当前没有人物卡",
+        "strPcRm" : "人物卡[{tPcSelection}]的[{tSkillName}]已删除",
+        "strPcRmnull" : "人物卡[{tPcSelection}]的[{tSkillName}]不存在",
+        "strPcRmCardnull" : "人物卡不存在",
+        "strPcTemp" : "人物卡[{tPcSelection}]套用模板[{tPcTempName}]",
+        "strPcTempShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]",
+        "strPcTempError" : "试图套用的模板不存在，或是未设置人物卡",
+        "strPcTempRule" : "人物卡[{tPcSelection}]套用模板[{tPcTempName}]的规则[{tPcTempRuleName}]",
+        "strPcTempRuleShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]\n规则[{tPcTempRuleName}]",
+        "strPcTempRuleError" : "试图套用的模板规则不存在，或是未设置人物卡",
+        "strPcRename" : "[{tPcSelection}]已重命名为[{tPcSelectionNew}]",
+        "strPcSkillCheck" : "[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHide" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideShow" : "[{tName}]进行技能[{tSkillValue}]暗检定",
+        "strPcSkillCheckWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideWithSkillName" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideShowWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]暗检定",
+        "strPcSkillEnhanceCheck" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]成长检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillEnhanceContent" : "\n该技能发生了增长: {tRollSubResult}",
+        "strPcSkillEnhanceAll" : "[{tName}]进行技能自动成长检定:\n共有[{tSkillEnhanceCount}]个技能进行了检定，其中成功[{tSkillEnhanceSucceedCount}]个: {tSkillEnhanceSucceedList}",
+        "strPcSkillEnhanceError" : "未设置人物卡，无法进行自动成长检定",
+        "strSanCheck" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}点,当前剩余[{tSkillValueNew}]点",
+        "strSanCheckGreatFailed" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}的最大值[{tRollSubResultIntMax}]点,当前剩余[{tSkillValueNew}]点",
+        "strIntPositiveInfinite" : "正无穷大",
+        "strIntNegativeInfinite" : "负无穷大",
+        "strPcSkillCheckSucceed" : "成功",
+        "strPcSkillCheckHardSucceed" : "困难成功",
+        "strPcSkillCheckExtremeHardSucceed" : "极难成功",
+        "strPcSkillCheckGreatSucceed" : "大成功",
+        "strPcSkillCheckFailed" : "失败",
+        "strPcSkillCheckGreatFailed" : "大失败",
+        "strPcSkillCheckFate01" : "[-2 拙劣]",
+        "strPcSkillCheckFate02" : "[-1 差劲]",
+        "strPcSkillCheckFate03" : "[+0 二流]",
+        "strPcSkillCheckFate04" : "[+1 一般]",
+        "strPcSkillCheckFate05" : "[+2 尚可]",
+        "strPcSkillCheckFate06" : "[+3 良好]",
+        "strPcSkillCheckFate07" : "[+4 极佳]",
+        "strPcSkillCheckFate08" : "[+5 卓越]",
+        "strPcSkillCheckFate09" : "[+6 惊异]",
+        "strPcSkillCheckFate10" : "[+7 史诗]",
+        "strPcSkillCheckFate11" : "[+8 传奇]",
+        "strPcSkillCheckNope" : "需要解释",
+        "strPcSkillCheckError" : "发生错误",
+        "strHelpdocSet" : "自定义帮助文档已设置",
+        "strHelpdocDel" : "自定义帮助文档已删除",
+        "strObList" : "当前旁观列表:\n{tResult}",
+        "strObListnull" : "当前旁观列表为空",
+        "strObUserObList" : "当前旁观列表:\n{tResult}",
+        "strObUserObListnull" : "当前旁观列表为空",
+        "strObJoin" : "[{tUserName}]现已加入旁观",
+        "strObJoinAlready" : "[{tUserName}]已在旁观中",
+        "strObExit" : "[{tUserName}]现已退出旁观",
+        "strObExitAlready" : "[{tUserName}]不在旁观中",
+        "strObExitAll" : "[{tUserName}]现已退出所有旁观",
+        "strObClear" : "已清空旁观列表"
+    }
+    ```
 
 - OlivaDiceJoy 娱乐模块
-```json
-{
-    "strJoyJrrp": "[{tName}]的今日人品为[{tJrrpResult}]",
-    "strJoyZrrp": "[{tName}]的昨日人品为[{tJrrpResult}]",
-    "strJoyMrrp": "[{tName}]的明日人品为[{tJrrpResult}]"
-}
-```
+??? 娱乐模块
+    ```json
+    {
+        "strJoyJrrp": "[{tName}]的今日人品为[{tJrrpResult}]",
+        "strJoyZrrp": "[{tName}]的昨日人品为[{tJrrpResult}]",
+        "strJoyMrrp": "[{tName}]的明日人品为[{tJrrpResult}]"
+    }
+    ```
 
 - OlivaDiceLogger 日志模块
-```json
-{
-    "strLoggerLogOn": "开始记录日志",
-    "strLoggerLogAlreadyOn": "已经正在记录日志",
-    "strLoggerLogContinue": "继续记录日志",
-    "strLoggerLogOff": "暂停记录日志",
-    "strLoggerLogAlreadyOff": "没有正在进行的日志",
-    "strLoggerLogEnd": "停止记录日志",
-    "strLoggerLogAlreadyEnd": "没有正在进行的日志",
-    "strLoggerLogSave": "日志[{tLogName}]已保存",
-    "strLoggerLogUrl": "日志已上传，请在[{tLogUrl}]提取日志"
-}
-```
+??? 日志模块
+    ```json
+    {
+        "strLoggerLogOn": "开始记录日志",
+        "strLoggerLogAlreadyOn": "已经正在记录日志",
+        "strLoggerLogContinue": "继续记录日志",
+        "strLoggerLogOff": "暂停记录日志",
+        "strLoggerLogAlreadyOff": "没有正在进行的日志",
+        "strLoggerLogEnd": "停止记录日志",
+        "strLoggerLogAlreadyEnd": "没有正在进行的日志",
+        "strLoggerLogSave": "日志[{tLogName}]已保存",
+        "strLoggerLogUrl": "日志已上传，请在[{tLogUrl}]提取日志"
+    }
+    ```
 
 - OlivaDiceMaster 大师模块
-```json
-{
-    "strMasterReply": "{tMasterResult}",
-    "strMasterOopmApiFailed": "更新源访问失败",
-    "strMasterOopmNotMatch": "未找到匹配模块条目",
-    "strMasterOopmDownload": "{tMasterOopkNameList}\n模块已下载成功",
-    "strMasterOopmCopy": "{tMasterOopkNameList}\n模块已安装成功",
-    "strMasterOopmUpdate": "{tMasterOopkNameList}\n模块已更新成功",
-    "strMasterOopmUpdateAllDone": "所选模块已更新成功，即将重载",
-    "strMasterOopmUpdateNotNeed": "所有模块已为最新版本，无需更新",
-    "strMasterOopmUpdateNotSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
-    "strMasterOopmUpdateNotSkipDev": "{tMasterOopkNameList}\n模块为开发模式，已跳过",
-    "strMasterOopmGet": "{tMasterOopkNameList}\n模块已安装成功，请使用[.system restart]应用安装",
-    "strMasterOopmGetNone": "{tMasterOopkNameList}\n模块不存在，请先使用[.oopm list]指令查看受支持的模块",
-    "strMasterOopmGetSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
-    "strMasterOopmDownloadFailed": "{tMasterOopkNameList}\n模块下载失败",
-    "strMasterOopmCopyFailed": "{tMasterOopkNameList}\n模块安装失败",
-    "strMasterSendFromMaster": "来自Master的消息：\n{tResult}",
-    "strMasterSendToMaster": "[{tGroupName}]({tGroupId})中[{tUserName}]({tUserId})发来的消息：\n{tResult}",
-    "strMasterSendToMasterAlready": "已将消息发送至Master",
-    "strMasterTrustSet": "[{tName}]({tId})的{tMasterTrustName}已设置为：{tResult}",
-    "strMasterTrustGet": "[{tName}]({tId})的{tMasterTrustName}为：{tResult}",
-    "strMasterPlatformNo": "该功能在此平台不受支持",
-    "strMasterGroupClearShow": "已检查[{tMasterCount01}]个群:\n{tResult}\n已经决定清除[{tMasterCount02}]个群\n请使用[.group clear do (天数)]指令执行这项操作",
-    "strMasterGroupClearDoUnit": "已经清除群:\n{tResult}",
-    "strMasterGroupClearDoUnitSend": "检测到在此处最后发言为{tResult}，即将自动退出",
-    "strMasterGroupClearDo": "已检查[{tMasterCount01}]个群\n已经清除[{tMasterCount02}]个群",
-    "strMasterGroupClearUnit": "[{tName}] - ({tId}): {tResult}"
-}
-```
+??? 大师模块
+    ```json
+    {
+        "strMasterReply": "{tMasterResult}",
+        "strMasterOopmApiFailed": "更新源访问失败",
+        "strMasterOopmNotMatch": "未找到匹配模块条目",
+        "strMasterOopmDownload": "{tMasterOopkNameList}\n模块已下载成功",
+        "strMasterOopmCopy": "{tMasterOopkNameList}\n模块已安装成功",
+        "strMasterOopmUpdate": "{tMasterOopkNameList}\n模块已更新成功",
+        "strMasterOopmUpdateAllDone": "所选模块已更新成功，即将重载",
+        "strMasterOopmUpdateNotNeed": "所有模块已为最新版本，无需更新",
+        "strMasterOopmUpdateNotSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
+        "strMasterOopmUpdateNotSkipDev": "{tMasterOopkNameList}\n模块为开发模式，已跳过",
+        "strMasterOopmGet": "{tMasterOopkNameList}\n模块已安装成功，请使用[.system restart]应用安装",
+        "strMasterOopmGetnull": "{tMasterOopkNameList}\n模块不存在，请先使用[.oopm list]指令查看受支持的模块",
+        "strMasterOopmGetSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
+        "strMasterOopmDownloadFailed": "{tMasterOopkNameList}\n模块下载失败",
+        "strMasterOopmCopyFailed": "{tMasterOopkNameList}\n模块安装失败",
+        "strMasterSendFromMaster": "来自Master的消息：\n{tResult}",
+        "strMasterSendToMaster": "[{tGroupName}]({tGroupId})中[{tUserName}]({tUserId})发来的消息：\n{tResult}",
+        "strMasterSendToMasterAlready": "已将消息发送至Master",
+        "strMasterTrustSet": "[{tName}]({tId})的{tMasterTrustName}已设置为：{tResult}",
+        "strMasterTrustGet": "[{tName}]({tId})的{tMasterTrustName}为：{tResult}",
+        "strMasterPlatformNo": "该功能在此平台不受支持",
+        "strMasterGroupClearShow": "已检查[{tMasterCount01}]个群:\n{tResult}\n已经决定清除[{tMasterCount02}]个群\n请使用[.group clear do (天数)]指令执行这项操作",
+        "strMasterGroupClearDoUnit": "已经清除群:\n{tResult}",
+        "strMasterGroupClearDoUnitSend": "检测到在此处最后发言为{tResult}，即将自动退出",
+        "strMasterGroupClearDo": "已检查[{tMasterCount01}]个群\n已经清除[{tMasterCount02}]个群",
+        "strMasterGroupClearUnit": "[{tName}] - ({tId}): {tResult}"
+    }
+    ```
 
 - OlivaDiceOdyssey 高阶模块
-```json
-{
-    "strOdysseyCnmodsSearch": "魔都模组搜索结果如下:\n{tCnmodsResult}",
-    "strOdysseyCnmodsLuck": "魔都模组推荐如下:\n{tCnmodsResult}"
-}
-```
+??? 高阶模块
+    ```json
+    {
+        "strOdysseyCnmodsSearch": "魔都模组搜索结果如下:\n{tCnmodsResult}",
+        "strOdysseyCnmodsLuck": "魔都模组推荐如下:\n{tCnmodsResult}"
+    }
+    ```
+
+### 自定义人物卡模板
+青果核心在底层将主骰表达式、检定规则、人物卡作成、技能初始化、技能分类等一系列会随着规则发生变化的设置，统合成了与人物卡绑定的人物卡模板功能，可以通过`.st temp`与`.st rule`指令来进行切换。OlivOS已经内置了`default`、`COC7`、`DND5E`、`FATE`、`DX3`、`COC6`等人物卡模板。  
+与此同时，人物卡模板还可以通过扩展文件的方式进行扩展，该部分的详细说明请查看[自定义人物卡模板编写指南](OlivaDice3_Master_Manual_pcTemplate.md)，以下为可以用于`template/`目录的人物卡模板文件内容：  
+??? 人物卡模板扩展文件
+    ```json
+    {
+        "default": {
+            "mainDice": "1D100",
+            "customDefault": {
+                "d": {
+                    "leftD": 1,
+                    "rightD": 100,
+                    "sub": {
+                        "k": null,
+                        "q": null,
+                        "p": null,
+                        "b": null
+                    },
+                    "subD": {
+                        "p": 1,
+                        "b": 1
+                    }
+                }
+            },
+            "skill": {
+                "属性": [
+                    "STR",
+                    "CON",
+                    "SIZ",
+                    "DEX",
+                    "APP",
+                    "INT",
+                    "POW",
+                    "EDU",
+                    "LUC",
+                    "SAN",
+                    "SANMAX",
+                    "HP",
+                    "HPMAX",
+                    "MP",
+                    "MPMAX"
+                ],
+                "技能": [
+                    "会计",
+                    "人类学",
+                    "估价",
+                    "考古学",
+                    "取悦",
+                    "攀爬",
+                    "计算机使用",
+                    "信用",
+                    "克苏鲁神话",
+                    "乔装",
+                    "闪避",
+                    "汽车驾驶",
+                    "电气维修",
+                    "电子学",
+                    "话术",
+                    "急救",
+                    "历史",
+                    "恐吓",
+                    "跳跃",
+                    "法律",
+                    "图书馆",
+                    "聆听",
+                    "锁匠",
+                    "机械维修",
+                    "医学",
+                    "博物",
+                    "导航",
+                    "神秘学",
+                    "操作重型机械",
+                    "说服",
+                    "精神分析",
+                    "心理学",
+                    "骑乘",
+                    "妙手",
+                    "侦查",
+                    "潜行",
+                    "游泳",
+                    "投掷",
+                    "追踪",
+                    "驯兽",
+                    "潜水",
+                    "爆破",
+                    "读唇",
+                    "催眠",
+                    "炮术",
+                    "母语"
+                ]
+            },
+            "skillConfig": {
+                "skipEnhance": [
+                    "STR",
+                    "CON",
+                    "SIZ",
+                    "DEX",
+                    "APP",
+                    "INT",
+                    "POW",
+                    "EDU",
+                    "LUC",
+                    "SAN",
+                    "SANMAX",
+                    "HP",
+                    "HPMAX",
+                    "MP",
+                    "MPMAX",
+                    "克苏鲁神话",
+                    "信用"
+                ]
+            },
+            "init": {
+                "STR": "3d6x5",
+                "CON": "3d6x5",
+                "SIZ": "(2d6+6)x5",
+                "DEX": "3d6x5",
+                "APP": "3d6x5",
+                "INT": "(2d6+6)x5",
+                "POW": "3d6x5",
+                "EDU": "(2d6+6)x5",
+                "LUC": "3d6x5"
+            },
+            "mapping": {
+                "闪避": "{DEX}/2",
+                "母语": "{EDU}",
+                "SAN": "{POW}",
+                "HP": "({CON}+{SIZ})/10",
+                "HPMAX": "({CON}+{SIZ})/10",
+                "MP": "{POW}/5",
+                "MPMAX": "{POW}/5"
+            },
+            "synonyms":{
+                "STR": ["力量", "STR"],
+                "CON": ["体质", "CON"],
+                "SIZ": ["体型", "SIZ"],
+                "DEX": ["敏捷", "DEX"],
+                "APP": ["外貌", "APP"],
+                "INT": ["智力", "INT"],
+                "POW": ["意志", "POW"],
+                "EDU": ["教育", "EDU"],
+                "LUC": ["幸运", "LUC"],
+                "SAN": ["理智", "SAN","Sanity"],
+                "SANMAX": ["理智上限", "SANMAX","SanityMAX"],
+                "HP": ["生命值","HP","HitPoints"],
+                "HPMAX": ["生命值上限","HPMAX","HitPointsMAX"],
+                "MP": ["魔法","MP","MagicPoints"],
+                "MPMAX": ["魔法上限","MPMAX","MagicPointsMAX"],
+                "MOV": ["移动力","MOV"],
+                "会计": ["会计","Accounting"],
+                "人类学": ["人类学","Anthropology"],
+                "估价": ["估价","Aooraise"],
+                "考古学": ["考古学","Archaeology"],
+                "取悦": ["取悦","魅惑","Charm"],
+                "攀爬": ["攀爬","Climb"],
+                "计算机使用": ["计算机使用","计算机","电脑","电脑使用","Computer_Use"],
+                "信用": ["信用评级","CR","信誉","信用度","信用","信誉度","Credit_Rating"],
+                "克苏鲁神话": ["克苏鲁神话","CM","克苏鲁","Cthulhu_Mythos"],
+                "乔装": ["乔装","Disguise"],
+                "闪避": ["闪避","Dodge"],
+                "汽车驾驶": ["汽车驾驶","Drive_Auto"],
+                "电气维修": ["电气维修","电器维修","Electical_Repair"],
+                "电子学": ["电子学","Electronics"],
+                "话术": ["话术","快速交谈","Fast_Talk"],
+                "急救": ["急救","First_Aid"],
+                "历史": ["历史","History"],
+                "恐吓": ["恐吓","Intimidate"],
+                "跳跃": ["跳跃","Jump"],
+                "法律": ["法律","Law"],
+                "图书馆": ["图书馆使用","图书馆","Library_Use"],
+                "聆听": ["聆听","Listen"],
+                "锁匠": ["锁匠","Locksmith"],
+                "机械维修": ["机械维修","Mechanical_Repair"],
+                "医学": ["医学","Medicine"],
+                "博物": ["博物", "博物学","自然学","自然史","Natural_World"],
+                "导航": ["导航","领航","Navigate"],
+                "神秘学": ["神秘学","Occult"],
+                "操作重型机械": ["操作重型机械","Operate_Heavy_Machinery"],
+                "说服": ["说服","Persuade"],
+                "精神分析": ["精神分析","Psychoanalysis"],
+                "心理学": ["心理学","Psychology"],
+                "骑乘": ["骑术","骑乘","Ride"],
+                "妙手": ["妙手","Sleight_of_Hand"],
+                "侦查": ["侦查","Spot_Hidden"],
+                "潜行": ["潜行","Stealth"],
+                "游泳": ["游泳","Swim"],
+                "投掷": ["投掷","Throw"],
+                "追踪": ["追踪","Track"],
+                "驯兽": ["驯兽","Beast_Training"],
+                "潜水": ["潜水","Diving"],
+                "爆破": ["爆破","Demolitions"],
+                "读唇": ["读唇","Read_Lips"],
+                "催眠": ["催眠","Hypnosis"],
+                "炮术": ["炮术","Artillery"]
+            },
+            "redirect": {
+                "力量": "STR",
+                "体质": "CON",
+                "体型": "SIZ",
+                "敏捷": "DEX",
+                "外貌": "APP",
+                "智力": "INT",
+                "意志": "POW",
+                "教育": "EDU",
+                "幸运": "LUC",
+                "理智": "SAN",
+            },
+            "showName": {
+                "STR": "力量",
+                "CON": "体质",
+                "SIZ": "体型",
+                "DEX": "敏捷",
+                "APP": "外貌",
+                "INT": "智力",
+                "POW": "意志",
+                "EDU": "教育",
+                "LUC": "幸运"
+            },
+            "defaultSkillValue": {
+                "会计": 5,
+                "人类学": 1,
+                "估价": 5,
+                "考古学": 1,
+                "取悦": 15,
+                "攀爬": 20,
+                "计算机使用": 5,
+                "信用": 0,
+                "克苏鲁神话": 0,
+                "乔装": 5,
+                "汽车驾驶": 20,
+                "电气维修": 10,
+                "电子学": 1,
+                "话术": 5,
+                "急救": 30,
+                "历史": 5,
+                "恐吓": 15,
+                "跳跃": 20,
+                "法律": 5,
+                "图书馆": 20,
+                "聆听": 20,
+                "锁匠": 1,
+                "机械维修": 10,
+                "医学": 1,
+                "博物": 10,
+                "导航": 10,
+                "神秘学": 5,
+                "操作重型机械": 1,
+                "说服": 10,
+                "精神分析": 1,
+                "心理学": 10,
+                "骑乘": 5,
+                "妙手": 10,
+                "侦查": 25,
+                "潜行": 20,
+                "游泳": 20,
+                "投掷": 20,
+                "追踪": 10,
+                "驯兽": 5,
+                "潜水": 1,
+                "爆破": 1,
+                "读唇": 1,
+                "催眠": 1,
+                "炮术": 1
+            },
+            "checkRules": {
+                "default": {
+                    "checkList": [
+                        "success",
+                        "hardSuccess",
+                        "extremeHardSuccess",
+                        "greatSuccess",
+                        "fail",
+                        "greatFail"
+                    ],
+                    "success": {
+                        ".<=": ["$roll", "$skill"]
+                    },
+                    "fail": {
+                        ".>": ["$roll", "$skill"]
+                    },
+                    "hardSuccess": {
+                        ".<=": [
+                            "$roll",
+                            {
+                                "./": ["$skill", 2]
+                            }
+                        ]
+                    },
+                    "extremeHardSuccess": {
+                        ".<=": [
+                            "$roll",
+                            {
+                                "./": ["$skill", 5]
+                            }
+                        ]
+                    },
+                    "greatSuccess": {
+                        ".==": ["$roll", 1]
+                    },
+                    "greatFail": {
+                        ".or": [
+                            {
+                                ".and": [
+                                    {
+                                        ".<": ["$skill", 50]
+                                    },
+                                    {
+                                        ".>=": ["$roll", 96]
+                                    },
+                                    {
+                                        ".<=": ["$roll", 100]
+                                    }
+                                ]
+                            },
+                            {
+                                ".and": [
+                                    {
+                                        ".>=": ["$skill", 50]
+                                    },
+                                    {
+                                        ".==": ["$roll", 100]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+    ```
+
 
 ### 自定义指令/自定义问答/reply
 青果核心将类似 塔系和溯洄系 的自定义问答功能(reply)与自定义指令功能单独集成为了一个OlivOS插件——[程心自定义](https://forum.olivos.run/p/1)，其实际上已经是铃心自定义的重做版本，相比旧时代传统的骰子内置的`reply功能`更加完备，功能更加强大。  

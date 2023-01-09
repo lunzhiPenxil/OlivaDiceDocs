@@ -37,20 +37,24 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+  - admonition
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.details
 extra_css:
   - stylesheets/extra.css
 
 nav:
-  - 概述: README.md
   - 新版:
+    - 新版: README.md
     - 用户手册: OlivaDice3_User_Manual.md
     - 骰主手册: OlivaDice3_Master_Manual.md
+    - 人物卡模板: OlivaDice3_Master_Manual_pcTemplate.md
     - 启程手册: OlivOS_Login.md
     - 前进手册: OlivOS_Easy_Start.md
   - 旧版:
+    - 概述: OLD_README.md
     - 骰主手册: Oliva_Master_Manual.md
     - 进阶手册: OlivaDice.md
     - 食用手册: Cook_Manual.md
