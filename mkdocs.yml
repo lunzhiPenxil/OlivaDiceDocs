@@ -42,6 +42,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
+  - footnotes
 extra_css:
   - stylesheets/extra.css
 
@@ -60,7 +61,9 @@ nav:
     - 食用手册: Cook_Manual.md
     - 用户手册: UserDoc.md
     - 喧闹手册: Chaos_Manual.md
-  - 其它工具:
+  - 资料:
+    - Json快速入门: JsonHelp.md
+  - 工具:
     - Json2Yaml牌堆转换器: Json2Yaml.md
   - 论坛: https://forum.olivos.run
   - 捐助: https://afdian.net/@OlivOS
