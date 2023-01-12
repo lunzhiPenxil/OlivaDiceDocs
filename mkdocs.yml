@@ -1,22 +1,9 @@
-site_name: OlivaDice(DIXE)官方文档
+site_name: OlivaDice(DIXE) 青果骰官方文档
 repo_name: lunzhiPenxil/OlivaDiceDocs
 repo_url: https://github.com/lunzhiPenxil/OlivaDiceDocs
 edit_uri: edit/master/docs
 
 theme:
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   logo: assets/logo.png
   favicon: assets/favicon.png
   icon:
@@ -31,6 +18,19 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.expand
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 plugins:
   - search:
       separator: '[\s\u200b\-]'
@@ -54,6 +54,10 @@ nav:
     - 人物卡模板: OlivaDice3_Master_Manual_pcTemplate.md
     - 启程手册: OlivOS_Login.md
     - 前进手册: OlivOS_Easy_Start.md
+  - 资料:
+    - Json快速入门: JsonHelp.md
+  - 工具:
+    - Json2Yaml牌堆转换器: Json2Yaml.md
   - 旧版:
     - 概述: OLD_README.md
     - 骰主手册: Oliva_Master_Manual.md
@@ -61,9 +65,5 @@ nav:
     - 食用手册: Cook_Manual.md
     - 用户手册: UserDoc.md
     - 喧闹手册: Chaos_Manual.md
-  - 资料:
-    - Json快速入门: JsonHelp.md
-  - 工具:
-    - Json2Yaml牌堆转换器: Json2Yaml.md
   - 论坛: https://forum.olivos.run
   - 捐助: https://afdian.net/@OlivOS
