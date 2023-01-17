@@ -52,8 +52,9 @@ nav:
     - 用户手册: OlivaDice3_User_Manual.md
     - 骰主手册: OlivaDice3_Master_Manual.md
     - 人物卡模板: OlivaDice3_Master_Manual_pcTemplate.md
-    - 启程手册: OlivOS_Login.md
-    - 前进手册: OlivOS_Easy_Start.md
+    - 扩充说明:
+      - 启程手册: OlivOS_Login.md
+      - 前进手册: OlivOS_Easy_Start.md
   - 资料:
     - Json快速入门: JsonHelp.md
   - 工具:
