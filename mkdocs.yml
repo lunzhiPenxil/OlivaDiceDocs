@@ -58,6 +58,7 @@ nav:
       - 前进手册: OlivOS_Easy_Start.md
   - 资料:
     - Json快速入门: JsonHelp.md
+    - Json5快速入门: Json5Help.md
   - 工具:
     - Json2Yaml牌堆转换器: Json2Yaml.md
   - 旧版:
