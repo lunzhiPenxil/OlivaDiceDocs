@@ -1,6 +1,6 @@
 # OlivaDice For OlivOS 骰主手册
 
-*For Ver.3.3.8(1058)*
+*For Ver.3.3.11(1061)*
 
 > *世界是属于每一个人的。要创造一个充满逻辑并尊重每一个人的世界。*    
 > *——《[Новый Элемент Расселения](https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82_%D1%80%D0%B0%D1%81%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)》A.D.1960 Москва*
@@ -210,9 +210,11 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 | console/customReply.json         | 自定义回复词                  | 默认              |
 | console/switch.json              | 自定义配置项                  | 默认              |
 | console/helpdocDefault.json      | 自定义帮助文档                | 默认              |
-| extend/deckclassic               | json扩展牌堆                 | 默认              |
-| extend/deckyaml                  | yaml扩展牌堆                 | 默认              |
-| extend/helpdoc                   | 扩展帮助文档                  | 默认              |
+| extend/deckclassic               | json扩展牌堆                 | 加载时只读         |
+| extend/deckyaml                  | yaml扩展牌堆                 | 加载时只读         |
+| extend/deckexcel                 | excel扩展牌堆                | 加载时只读         |
+| extend/helpdoc                   | 扩展帮助文档                  | 加载时只读         |
+| extend/template                  | 扩展人物卡模板                | 加载时只读         |
 | pcCard                           | 自定义配置项                  | 默认              |
 | user                             | 用户记录                     | 默认              |
 
@@ -224,8 +226,9 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 ### 扩展牌堆
 扩展牌堆可以扩展`draw`指令可抽取的牌堆种类，目前支持：  
-+ json 青果/溯洄系牌堆  
-+ yaml 塔系牌堆  
++ json  青果/溯洄系牌堆  
++ yaml  塔系牌堆  
++ excel 梨系牌堆  
 
 #### json 青果/溯洄系牌堆
 扩展牌堆应当放置于`extend/deckclassic`路径下，其本质为格式如下的json文本文件  
@@ -307,6 +310,9 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
       - "证据：确凿证据\n“大地啊，开裂吧！哦，不，它不会收容我的。”[掌握密教活动“确凿证据”后，防剿局会以之给你定罪。证据在制作它的猎人死后仍继续存在。]"
     ```
 
+#### excel 梨系牌堆
+扩展牌堆应当放置于`extend/deckyaml`路径下，其本质为格式Office的Excel格式表格文件  
+详细格式请参考梨系官方
 
 
 ### 自定义帮助文档
