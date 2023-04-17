@@ -57,6 +57,7 @@ nav:
       - 启程手册: OlivOS_Login.md
       - 前进手册: OlivOS_Easy_Start.md
   - 资料:
+    - 提问指南: helpHelp.md
     - Json快速入门: JsonHelp.md
     - Json5快速入门: Json5Help.md
   - 工具:
