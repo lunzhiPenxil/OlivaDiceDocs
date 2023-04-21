@@ -79,7 +79,7 @@ https://t.me/+P0h50c7U9zQ2NmU1
 
 
 ## 2.2Linux下的部署      
-说实话,你都用Linux了,我不太好说你需不需要这篇教学说实话,你都用Linux了,我不太好说你需不需要这篇教学,但还是稍微讲一下流程吧,安装python,安装依赖,启动.sh结尾的文件,然后应该就可以了
+说实话,你都用Linux了,我不太好说你需不需要这篇教学，但还是稍微讲一下流程吧,安装python,安装依赖,启动.sh结尾的文件,然后应该就可以了
  
 这里有一份来自狐狐的[Linux手动安装OlivOS&Dice](https://www.aobacore.com/archives/OlivOS-OlivaDice-Go-cqhttp.html)      
 
