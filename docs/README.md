@@ -13,9 +13,14 @@ Multi-Platform Dice Robot For TRPG Based on OlivOS
 [![GitHub last commit](https://img.shields.io/github/last-commit/OlivOS-Team/OlivaDiceCore.svg)](https://github.com/OlivOS-Team/OlivaDiceCore/commits)
 
 ## 兼容
+[![OnebotV11](https://img.shields.io/badge/-OnebotV11-111111?style=flat-square&logoColor=white)](https://github.com/botuniverse/onebot)
+[![OnebotV12](https://img.shields.io/badge/-OnebotV12-111111?style=flat-square&logoColor=white)](https://github.com/botuniverse/onebot)
+[![QQ](https://img.shields.io/badge/-QQ-EB1923?style=flat-square&logo=Tencent%20QQ&logoColor=white)](https://im.qq.com/index/)
 [![QQGuild](https://img.shields.io/badge/-QQGuild-EB1923?style=flat-square&logo=Tencent%20QQ&logoColor=white)](https://bot.q.qq.com/wiki/)
-[![Onebot](https://img.shields.io/badge/-Onebot-EB1923?style=flat-square&logo=Tencent%20QQ&logoColor=white)](https://github.com/botuniverse/onebot)
 [![Go-CQHttp](https://img.shields.io/badge/-GoCQHttp-EB1923?style=flat-square&logo=Tencent%20QQ&logoColor=white)](https://github.com/Mrs4s/go-cqhttp)
+[![Walle-Q](https://img.shields.io/badge/-WalleQ-EB1923?style=flat-square&logo=Tencent%20QQ&logoColor=white)](https://github.com/onebot-walle/walle-q)
+[![WeChat](https://img.shields.io/badge/-WeChat-07C160?style=flat-square&logo=wechat&logoColor=white)](https://weixin.qq.com/)
+[![ComWeChatBotClient](https://img.shields.io/badge/-ComWeChatBotClient-07C160?style=flat-square&logo=wechat&logoColor=white)](https://github.com/JustUndertaker/ComWeChatBotClient)
 [![Discord](https://img.shields.io/badge/-Discord-6666CC?style=flat-square&logo=Discord&logoColor=white)](https://discord.com/)
 [![Bilibili](https://img.shields.io/badge/-Bilibili-FB7299?style=flat-square&logo=Bilibili&logoColor=white)](http://www.bilibili.com/)
 [![Telegram](https://img.shields.io/badge/-Telegram-26A5E4?style=flat-square&logo=Telegram&logoColor=white)](https://telegram.org/)
@@ -23,6 +28,7 @@ Multi-Platform Dice Robot For TRPG Based on OlivOS
 [![Dodo](https://img.shields.io/badge/-Dodo-00B8AA?style=flat-square&logo=%2Fe%2F&logoColor=white)](https://dodo.link/)
 [![Fanbook](https://img.shields.io/badge/-Fanbook-1A52F3?style=flat-square&logo=sharp&logoColor=white)](https://fanbook.mobi/)
 [![Hack.Chat](https://img.shields.io/badge/-Hack.Chat-20201D?style=flat-square&logo=Hetzner&logoColor=white)](https://hack.chat/)
+[![FF14ACT](https://img.shields.io/badge/-FF14ACT-ED1C24?style=flat-square&logo=squareenix&logoColor=white)](https://advancedcombattracker.com/download.php)
 
 ## 简介
 
