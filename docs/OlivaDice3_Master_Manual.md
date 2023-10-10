@@ -106,6 +106,12 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 
 更多有关心跳上报的信息请参考[心跳系统](http://benzencloudhk.xyz/dicetoken/)  
 
+#### KOOK机器人开放市场心跳上报
+如果你知道这是什么的话，你应当能在后台获得一个可以被刷新的`UUID`  
+你需要将它填写至`strOdysseyKOOKBotMarketPulseUUID`的自定义文本中  
+此外，你还需要将`odysseyKOOKBotMarketPulseEnable`配置项置为`1`  
+如果你在日志中看到了`KOOK机器人服务平台心跳上报成功！`的字样，则说明你设置成功了  
+
 ### 远程控制
 `.master exit [群组ID]`  远程退出特定群  
 `.master remote [on/off] [群组ID]`  远程在群中停用  
