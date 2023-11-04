@@ -4,6 +4,14 @@
 {% block tabs %}
 {{ super() }}
 <style>
+    body {
+        background-color: var(--md-primary-fg-color);
+    }
+
+    .md-header--shadow {
+        box-shadow: none;
+        transition: transform .25s cubic-bezier(.1,.7,.1,1),box-shadow .25s;
+    }
 
     .md-main {
         flex-grow: 0
@@ -11,12 +19,12 @@
 
     .md-main__inner {
         display: flex;
-        height: 100%;
+        bottom: 0;
     }
 
     .tx-container {
         padding-top: .0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg,47%,55%,1) 99%,#fff 99%)
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), var(--md-primary-fg-color) 100%)
     }
 
     .tx-hero {
@@ -125,7 +133,7 @@
         .tx-hero__content {
             max-width: 22rem;
             margin-top: 3.5rem;
-            margin-bottom: 10rem;
+            margin-bottom: 1.0rem;
             margin-left: 1.0rem;
             margin-right: 4.0rem;
             align-items: center;
@@ -273,5 +281,7 @@
 </div>
 -->
 {% endblock %}
+<!--
 {% block content %}{% endblock %}
 {% block footer %}{% endblock %}
+-->
