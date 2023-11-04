@@ -4,6 +4,7 @@ repo_url: https://github.com/lunzhiPenxil/OlivaDiceDocs
 edit_uri: edit/master/docs
 
 theme:
+  custom_dir: docs/overrides
   logo: assets/logo.png
   favicon: assets/favicon.png
   icon:
@@ -47,8 +48,9 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
+  - 首页: index.md
   - 新版:
-    - 新版: README.md
+    - 新版: OlivaDice3_README.md
     - 用户手册: OlivaDice3_User_Manual.md
     - 骰主手册: OlivaDice3_Master_Manual.md
     - 牌堆指南: OlivaDice3_Master_Manual_customDeck.md
