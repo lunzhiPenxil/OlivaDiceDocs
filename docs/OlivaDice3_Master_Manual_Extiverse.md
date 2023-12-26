@@ -2,6 +2,8 @@
 
 本仓库用于供应扩展文件内容和对应的接口
 
+[仓库地址](https://github.com/OlivOS-Team/Extiverse)
+
 ## 牌堆
 ### 目录结构
 ```
