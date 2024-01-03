@@ -1,7 +1,7 @@
 # 关于文档
 本文档为OlivaDice(DIXE)官方文档，内含仑质所维护的Oliva版本的使用方法。
 
-![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
+![DIXE(OLIVADICE)](/_static/DIXE_OLIVADICE.jpg)
 
 # OlivaDice 青果跑团核心机器人
 Multi-Platform Dice Robot For TRPG Based on OlivOS

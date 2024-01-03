@@ -8,7 +8,7 @@
 
 > 有关骰子的更多疑问欢迎前往[OlivOS论坛 - 青果铺](https://forum.olivos.run)提出
 
-![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
+![DIXE(OLIVADICE)](/_static/DIXE_OLIVADICE.jpg)
 
 ## 前言
 **“骰子机器人”**的本质，是一个通过或非官方（QQ）协议以及工具，或官方（Telegram、开黑啦等）开放平台接口，实现的一个部分或者全部由骰子机器人软件及其控制的普通用户账号或特殊账号的集合体，而“骰子”一词则，将该集合体的目标功能，限定为服务发生于这些场景的跑团中，提供模拟掷骰的功能以及其他与跑团相关的功能。  

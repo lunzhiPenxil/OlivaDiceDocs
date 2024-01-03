@@ -59,23 +59,23 @@ https://t.me/+P0h50c7U9zQ2NmU1
 
 ## 2.1用于Windows系统的QQ机器人搭建
 
-里面有一个名为OlivOS的文件和一个lib文件夹,单击那个名为OlivOS的文件![OlivOS文件图](_static/OlivOS文件图.png)
+里面有一个名为OlivOS的文件和一个lib文件夹,单击那个名为OlivOS的文件![OlivOS文件图](/_static/OlivOS文件图.png)
 
 就会有一个写着OlivOS登录器的东西弹出来
 
-![OlivOS登录器](_static/OlivOS登录器.png)
+![OlivOS登录器](/_static/OlivOS登录器.png)
 
-新建![新建](_static/新建.png),会弹出一个
+新建![新建](/_static/新建.png),会弹出一个
 
-![OlivOS账号编辑器](_static/OlivOS账号编辑器.png)
+![OlivOS账号编辑器](/_static/OlivOS账号编辑器.png)
 
 我们一行一行的看过来,账号类型,代表着你要选用什么平台来创建一个BOT,格式为 `平台名` - `以什么方式登录` - `登录协议`,这里暂时只提供`QQ`的创建方式,想知道另外的创建方法,可以去[论坛](forum.OlivOS.run)寻找其余软件的创建方式,或者加入OlivOS官方用户群与其他用户以及OlivOS官方获取相关方法.
 
 再输入你的账号密码,点保存接着你的
 
-![OlivOS登录器1](_static/OlivOS登录器1.png)
+![OlivOS登录器1](/_static/OlivOS登录器1.png)
 
-就有了第一条内容,确认,就会弹出OlivOS的本体窗口![OlivOS终端](_static\OlivOS终端.png),和GoCqhttp终端![GoCqhttp终端](_static/GoCqhttp终端.png),到这里为止,恭喜你,你已经有独属于自己的`QQ`机器人了
+就有了第一条内容,确认,就会弹出OlivOS的本体窗口![OlivOS终端](/_static\OlivOS终端.png),和GoCqhttp终端![GoCqhttp终端](/_static/GoCqhttp终端.png),到这里为止,恭喜你,你已经有独属于自己的`QQ`机器人了
 
 
 ## 2.2Linux下的部署      
