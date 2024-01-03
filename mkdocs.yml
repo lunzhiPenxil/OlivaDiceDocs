@@ -35,6 +35,26 @@ theme:
 plugins:
   - search:
       separator: '[\s\u200b\-]'
+  - redirects:
+      redirect_maps:
+        'OlivaDice3_README.md': 'Intro.md'
+        'OlivaDice3_User_Manual.md': 'User/Manual.md'
+        'OlivaDice3_Master_Manual.md': 'Master/Manual.md'
+        'OlivaDice3_Master_Manual_customDeck.md': 'Master/customDeck.md'
+        'OlivaDice3_Master_Manual_Extiverse.md': 'Master/Extiverse.md'
+        'OlivaDice3_Master_Manual_pcTemplate.md': 'Master/pcTemplate.md'
+        'OlivOS_Login.md': 'Master/OlivOS/Login.md'
+        'OlivOS_Easy_Start.md': 'Master/OlivOS/EasyStart.md'
+        'helpHelp.md': 'help/helpHelp.md'
+        'JsonHelp.md': 'help/Json.md'
+        'Json5Help.md': 'help/Json5.md'
+        'Json2Yaml.md': 'tools/Json2Yaml.md'
+        'OLD_README.md': 'old/OLD_README.md'
+        'Oliva_Master_Manual.md': 'old/Oliva_Master_Manual.md'
+        'OlivaDice.md': 'old/OlivaDice.md'
+        'Cook_Manual.md': 'old/Cook_Manual.md'
+        'UserDoc.md': 'old/UserDoc.md'
+        'Chaos_Manual.md': 'old/Chaos_Manual.md'
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -50,28 +70,28 @@ extra_css:
 nav:
   - 首页: index.md
   - 新版:
-    - 新版: OlivaDice3_README.md
-    - 用户手册: OlivaDice3_User_Manual.md
-    - 骰主手册: OlivaDice3_Master_Manual.md
-    - 牌堆指南: OlivaDice3_Master_Manual_customDeck.md
-    - 牌堆市场: OlivaDice3_Master_Manual_Extiverse.md
-    - 人物卡模板: OlivaDice3_Master_Manual_pcTemplate.md
+    - 新版: Intro.md
+    - 用户手册: User/Manual.md
+    - 骰主手册: Master/Manual.md
+    - 牌堆指南: Master/customDeck.md
+    - 牌堆市场: Master/Extiverse.md
+    - 人物卡模板: Master/pcTemplate.md
     - 扩充说明:
-      - 启程手册: OlivOS_Login.md
-      - 前进手册: OlivOS_Easy_Start.md
+      - 启程手册: Master/OlivOS/Login.md
+      - 前进手册: Master/OlivOS/EasyStart.md
   - 资料:
-    - 提问指南: helpHelp.md
-    - Json快速入门: JsonHelp.md
-    - Json5快速入门: Json5Help.md
+    - 提问指南: help/helpHelp.md
+    - Json快速入门: help/Json.md
+    - Json5快速入门: help/Json5.md
   - 工具:
-    - Json2Yaml牌堆转换器: Json2Yaml.md
+    - Json2Yaml牌堆转换器: tools/Json2Yaml.md
   - 旧版:
-    - 概述: OLD_README.md
-    - 骰主手册: Oliva_Master_Manual.md
-    - 进阶手册: OlivaDice.md
-    - 食用手册: Cook_Manual.md
-    - 用户手册: UserDoc.md
-    - 喧闹手册: Chaos_Manual.md
+    - 概述: old/OLD_README.md
+    - 骰主手册: old/Oliva_Master_Manual.md
+    - 进阶手册: old/OlivaDice.md
+    - 食用手册: old/Cook_Manual.md
+    - 用户手册: old/UserDoc.md
+    - 喧闹手册: old/Chaos_Manual.md
   - 论坛: https://forum.olivos.run
   - OlivOS: https://doc.olivos.wiki
   - 捐助: https://afdian.net/@OlivOS
