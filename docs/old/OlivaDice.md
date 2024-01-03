@@ -5,7 +5,7 @@
 > *世界是属于每一个人的。要创造一个充满逻辑并尊重每一个人的世界。*    
 > *——《[Новый Элемент Расселения](https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82_%D1%80%D0%B0%D1%81%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)》A.D.1960 Москва*
 
-![DIXE(OLIVADICE)](_static/DIXE_OLIVADICE.jpg)
+![DIXE(OLIVADICE)](/_static/DIXE_OLIVADICE.jpg)
 
 欢迎使用由`仑质(BenzenPenxil)`所发布的`青果掷骰核心 OlivaDice!`，在使用本核心前，你应当已经是一个能够处理较为复杂问题的骰主，并且已经充分阅读了[OlivaDice 骰主手册](\Oliva_Master_Mamual)，如果没有，请先阅读那份文档，本文档将不会对那份文档中所提到的各类特性进行说明，日后会考虑单独编写文档，这要取决于实际情况。
 
