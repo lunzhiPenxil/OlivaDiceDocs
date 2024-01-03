@@ -7,7 +7,7 @@
 
 ![DIXE(OLIVADICE)](/_static/DIXE_OLIVADICE.jpg)
 
-> 注：本文只针对基本使用功能，更多优化细节与复杂进阶功能请参考[青果扩充手册(进阶)](OlivaDice.md)
+> 注：本文只针对基本使用功能，更多优化细节与复杂进阶功能请参考[青果扩充手册(进阶)](/OlivaDice)
 
 ### Master模式
 
