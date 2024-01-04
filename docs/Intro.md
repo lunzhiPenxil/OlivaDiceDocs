@@ -31,7 +31,9 @@ Multi-Platform Dice Robot For TRPG Based on OlivOS
 
 ## 欢迎点击Star，这对我们将带来很大的支持！
 [![Star History Chart](https://api.star-history.com/svg?repos=OlivOS-Team/OlivOS,OlivOS-Team/OlivaDiceCore&type=Date)](https://star-history.com/#OlivOS-Team/OlivOS&OlivOS-Team/OlivaDiceCore&Date)
+
 [前往项目主页](https://github.com/OlivOS-Team/OlivaDiceCore)
+
 [前往OlivOS项目主页](https://github.com/OlivOS-Team/OlivOS)
 
 ## 简介
