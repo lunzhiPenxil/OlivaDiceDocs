@@ -29,6 +29,11 @@ Multi-Platform Dice Robot For TRPG Based on OlivOS
 [![Hack.Chat](https://img.shields.io/badge/-Hack.Chat-20201D?style=flat-square&logo=Hetzner&logoColor=white)](https://hack.chat/)
 [![FF14ACT](https://img.shields.io/badge/-FF14ACT-ED1C24?style=flat-square&logo=squareenix&logoColor=white)](https://advancedcombattracker.com/download.php)
 
+## 欢迎点击Star，这对我们将带来很大的支持！
+[![Star History Chart](https://api.star-history.com/svg?repos=OlivOS-Team/OlivOS,OlivOS-Team/OlivaDiceCore&type=Date)](https://star-history.com/#OlivOS-Team/OlivOS&OlivOS-Team/OlivaDiceCore&Date)
+[前往项目主页](https://github.com/OlivOS-Team/OlivaDiceCore)
+[前往OlivOS项目主页](https://github.com/OlivOS-Team/OlivOS)
+
 ## 简介
 
 `OlivaDice 青果跑团核心机器人`是一款基于`OlivOS`的跑团掷骰机器人，由仑质创建并维护，采用了先进的`onedice`技术，全栈开源，永久免费。
