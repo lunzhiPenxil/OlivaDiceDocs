@@ -1,4 +1,4 @@
-site_name: OlivaDice(DIXE) 青果骰官方文档
+site_name: OlivaDice·青果核心官方文档
 repo_name: lunzhiPenxil/OlivaDiceDocs
 repo_url: https://github.com/lunzhiPenxil/OlivaDiceDocs
 edit_uri: edit/master/docs
@@ -69,7 +69,7 @@ extra_css:
 
 nav:
   - 首页: index.md
-  - 新版:
+  - 手册:
     - 新版: Intro.md
     - 用户手册: User/Manual.md
     - 骰主手册: Master/Manual.md
@@ -86,7 +86,7 @@ nav:
     - Json5快速入门: help/Json5.md
   - 工具:
     - Json2Yaml牌堆转换器: tools/Json2Yaml.md
-  - 旧版:
+  - 归档:
     - 概述: old/OLD_README.md
     - 骰主手册: old/Oliva_Master_Manual.md
     - 进阶手册: old/OlivaDice.md
