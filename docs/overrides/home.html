@@ -63,20 +63,23 @@
     .tx-hero .md-button {
         margin-top: .5rem;
         margin-right: .5rem;
-        color: var(--md-primary-bg-color)
+        border-radius: 0;
+        color: var(--md-primary-fg-color);
+        box-shadow: 0px 8px 20px 2px var(--md-primary-bg-color);
     }
-
+    
     .tx-hero .md-button--primary {
         background-color: var(--md-primary-bg-color);
-        color: hsla(280deg, 37%, 48%, 1);
+        color: var(--md-primary-fg-color);
         border-color: var(--md-primary-bg-color)
     }
 
     .tx-hero .md-button:focus,
     .tx-hero .md-button:hover {
         background-color: var(--md-accent-fg-color);
-        color: var(--md-default-bg-color);
-        border-color: var(--md-accent-fg-color)
+        color: var(--md-primary-bg-color);
+        border-color: var(--md-accent-fg-color);
+        box-shadow: 0px 8px 20px 2px var(--md-accent-fg-color);
     }
 
     .feature-item h2 svg {
@@ -321,7 +324,7 @@
           <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
             快速开始
           </a>
-          <a href="https://github.com/OlivOS-Team/OlivaDiceCore" title="{{ lang.t('source.link.title') }}" class="md-button">
+          <a href="https://github.com/OlivOS-Team/OlivaDiceCore" title="{{ lang.t('source.link.title') }}" class="md-button md-button--primary">
             访问仓库
           </a>
         </div>
