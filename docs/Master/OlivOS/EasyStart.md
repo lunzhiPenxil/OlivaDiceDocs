@@ -45,9 +45,9 @@ https://t.me/+P0h50c7U9zQ2NmU1
 
 # 2.如何搭建OlivOS框架下的骰娘
 
-> 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)
-> 注意：此教程的Windows搭建方法已过时，推荐使用Lagrange进行分离部署，请参考[【教程】小白可学的用 Lagrange.OneBot 对接 OlivOS](https://forum.olivos.run/d/705-lagrangeonebot-olivos/)
-> 或者参考上面Lagrange的搭建教程进行[LLOneBot](https://llonebot.com/zh-CN/guide/getting-started)的分离部署
+> 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)  
+> 注意：此教程的Windows搭建方法已过时，推荐使用Lagrange进行分离部署，请参考[【教程】小白可学的用 Lagrange.OneBot 对接 OlivOS](https://forum.olivos.run/d/705-lagrangeonebot-olivos/)  
+> 或者参考上面Lagrange的搭建教程进行[LLOneBot](https://llonebot.com/zh-CN/guide/getting-started)的分离部署  
 
 在许多次版本迭代后,OlivOS的步骤已经简化到了有手就行的地步,但是不可能人人都是天才,总会有人需要帮助,因此也有了本文档.
 ## 那软件从哪里来呢?
