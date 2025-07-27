@@ -1,8 +1,8 @@
 # OlivaDice For OlivOS 启程手册
 
-> 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)
-> 注意：此教程的Windows搭建方法已过时，推荐使用Lagrange进行分离部署，请参考[【教程】小白可学的用 Lagrange.OneBot 对接 OlivOS](https://forum.olivos.run/d/705-lagrangeonebot-olivos/)
-> 或者参考上面Lagrange的搭建教程进行[LLOneBot](https://llonebot.com/zh-CN/guide/getting-started)的分离部署
+> 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)  
+> 注意：此教程的Windows搭建方法已过时，推荐使用Lagrange进行分离部署，请参考[【教程】小白可学的用 Lagrange.OneBot 对接 OlivOS](https://forum.olivos.run/d/705-lagrangeonebot-olivos/)  
+> 或者参考上面Lagrange的搭建教程进行[LLOneBot](https://llonebot.com/zh-CN/guide/getting-started)的分离部署  
 
 ## 获取软件
 你可以从一下页面获取链接：  
@@ -358,6 +358,8 @@ https://www.imdodo.com/channel/108078/130977
     "strTeamSkillUpdate": "小队[{tTeamName}]的技能更新:\n{tResults}",
     "strTeamCheckResult": "小队[{tTeamName}]进行技能[{tSkillName}]检定:\n{tResult}",
     "strTeamSCResult": "小队[{tTeamName}]进行理智检定:\n{tResult}",
+    "strTeamRoll": "小队[{tTeamName}]掷骰:\n{tRollResult}",
+    "strTeamRollWithReason": "小队[{tTeamName}]由于[{tReason}]掷骰:\n{tRollResult}",
     "strNoActiveTeam": "当前群组没有活跃小队",
     "strTeamNotFound": "小队[{tTeamName}]不存在",
     "strNoTeams": "当前群组没有创建任何小队",
