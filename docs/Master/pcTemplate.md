@@ -21,10 +21,10 @@
                     "leftD": 1,
                     "rightD": 100,
                     "sub": {
-                        "k": None,
-                        "q": None,
-                        "p": None,
-                        "b": None
+                        "k": null,
+                        "q": null,
+                        "p": null,
+                        "b": null
                     },
                     "subD": {
                         "p": 1,
