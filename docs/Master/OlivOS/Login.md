@@ -3,6 +3,7 @@
 > 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)  
 > 注意：此教程的Windows搭建方法已过时，推荐使用Lagrange进行分离部署，请参考[【教程】小白可学的用 Lagrange.OneBot 对接 OlivOS](https://forum.olivos.run/d/705-lagrangeonebot-olivos/)  
 > 或者参考上面Lagrange的搭建教程进行[LLOneBot](https://llonebot.com/zh-CN/guide/getting-started)的分离部署  
+> 又或者参考这个教程进行NapCat的分离部署：[【教程】小白可用的 OlivaDice 对接 NapCat 分离部署](https://forum.olivos.run/d/832-olivadice-napcat)  
 
 ## 获取软件
 你可以从一下页面获取链接：  
