@@ -2,3 +2,9 @@
     --md-primary-fg-color: #00A0EA;
     --md-accent-fg-color: #27bbff;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  font-display: swap;
+}
