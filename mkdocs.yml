@@ -10,6 +10,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   name: material
+  font: false
   language: zh
   features:
     - navigation.instant
