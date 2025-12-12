@@ -1,6 +1,6 @@
 # OlivaDice For OlivOS 骰主手册
 
-*For Ver.3.4.0(1080)*
+*For Ver.3.4.45(1125)*
 
 > *世界是属于每一个人的。要创造一个充满逻辑并尊重每一个人的世界。*    
 > *——《[Новый Элемент Расселения](https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82_%D1%80%D0%B0%D1%81%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)》A.D.1960 Москва*
@@ -203,6 +203,64 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 - 对于骰主  
 `.send [回复消息]` 发送消息到当前窗口  
 `.send (user/group) [ID] [回复消息]` 发送消息到指定窗口  
+
+### 数据备份
+
+> 以下功能需要`OlivaDiceMaster 大师模块`
+
+骰子支持定时自动备份和手动备份数据，备份文件保存在`./plugin/backup`目录下。
+
+`.backup` 查看备份配置和状态
+`.backup start` 手动触发数据备份
+`.backup change 配置项 配置值` 修改备份配置
+`.backup 配置项` 查看指定配置项的值
+
+#### 可用配置项及默认值
+| 配置项 | 默认值 | 说明 |
+|:------|:------|:-----|
+| isBackup | 0 | 自动备份开关 (0=开启, 1=关闭) |
+| startDate | 当前日期 | 备份开始日期 (yyyy-MM-dd格式) |
+| passDay | 1 | 备份间隔天数 (整数，每隔几天备份一次) |
+| backupTime | 04:00:00 | 自动备份时间 (HH:mm:ss格式) |
+| maxBackupCount | 1 | 最大备份数量 (整数，超过将自动删除旧备份) |
+
+备份文件格式为：`data_yyyy-MM-dd_HH-mm-ss.zip`
+
+> 示例：
+> `.backup change startDate 2024-01-01` 设置备份开始日期
+> `.backup change passDay 7` 设置每7天备份一次
+> `.backup change backupTime 03:00:00` 设置凌晨3点进行备份
+> `.backup change maxBackupCount 5` 设置最多保留5个备份文件
+
+### 多账号连接管理
+
+> 以下功能需要`OlivaDiceMaster 大师模块`  
+
+骰子支持多账号间建立主从关系，从账号可以使用主账号的数据。这在需要切换账号或导入数据时非常有用。  
+
+`.account link [从账号Hash] [主账号Hash]` 建立主从关系  
+`.account unlink [从账号Hash]` 断开主从关系  
+`.account list` 列出所有账号和主从关系  
+`.account show (账号Hash)` 显示账号详细信息  
+`.account import path [路径] (源账号Hash)` 从压缩包导入账号数据  
+`.account import hash [源账号Hash]` 从指定账号导入数据  
+`.account export (账号Hash)` 导出账号数据  
+
+#### 功能说明
+- **建立主从关系**：从账号和主账号可用空格、分号、逗号分隔，系统会自动检测循环依赖并阻止  
+- **断开主从关系**：断开后，从账号将恢复为独立账号  
+- **列出账号**：显示所有账号的Hash和对应的主从关系状态  
+- **显示账号信息**：不指定Hash时显示当前账号，否则查询指定账号的连接状态和数据重定向状态  
+- **导入数据**：  
+  - 从压缩包导入：路径和源账号Hash可用空格、分号、逗号分隔，源账号Hash可选，如未提供则尝试从文件名自动识别  
+  - 从指定账号导入：将源账号的数据复制到当前账号  
+  - 操作前会自动备份目标账号数据  
+- **导出数据**：不指定Hash时导出当前账号数据，否则导出指定账号的数据到压缩包（默认路径：`./plugin/export`）  
+
+> 示例：  
+> `.account link abc123 def456` 将abc123设为从账号，def456设为主账号  
+> `.account show` 查看当前账号的连接状态  
+> `.account export` 导出当前账号数据  
 
 
 ## 个性化定制
@@ -424,7 +482,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strHello": "欢迎使用本机器人! 请使用[.help]查看帮助",
         "strBot": "欢迎使用本机器人! 请使用[.help]查看帮助",
         "strBotExit": "即将退出本群",
-        "strBotExitRemote": "收到远程控制, 即将退出本群",
+        "strBotExitRemote": "收到远程控制, 即将退出本群，骰主附加消息：{tExtraMsg}",
         "strBotExitRemoteShow" : "即将远程退出群[{tGroupId}]",
         "strBotAddFriendNotice": "好友添加请求, 来自[{tUserId}]\n备注:{tComment}\n{tResult}",
         "strBotAddGroupNotice" : "群添加请求，来自群[{tGroupId}], 邀请者[{tInvaterId}]\n{tResult}",
@@ -446,24 +504,24 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strBotAlreadyHostOn" : "本主频道已经处于默认开启模式",
         "strBotHostOff" : "本主频道进入默认关闭模式",
         "strBotAlreadyHostOff" : "本主频道已经处于默认关闭模式",
-        "strHelpDoc" : "已为你找到以下条目:\n{tHelpDocResult}",
-        "strHelpDocRecommend" : "已为你找下相似条目:\n{tHelpDocResult}",
+        "strHelpDoc" : "已为[{tUserName}]找到以下条目:\n{tHelpDocResult}",
+        "strHelpDocRecommend" : "已为[{tUserName}]找到以下相似条目:\n{tHelpDocResult}",
         "strHelpDocNotFound" : "未找到匹配条目",
         "strDrawTi" : "[{tName}]疯狂发作-临时症状:\n{tResult}",
         "strDrawLi" : "[{tName}]疯狂发作-总结症状:\n{tResult}",
-        "strDrawName" : "[{tName}]的随机名称:\n{tResult}",
-        "strDrawDeck" : "你抽到了:\n{tDrawDeckResult}",
-        "strDrawDeckHideShow" : "[{tName}]进行了暗抽牌",
-        "strDrawDeckRecommend" : "已为你找到以下相似牌堆:\n{tDrawDeckResult}",
+        "strDrawName" : "[{tUserName}]的随机名称:\n{tResult}",
+        "strDrawDeck" : "[{tUserName}]抽到了:\n{tDrawDeckResult}",
+        "strDrawDeckHideShow" : "[{tUserName}]进行了暗抽牌",
+        "strDrawDeckRecommend" : "已为[{tUserName}]找到以下相似牌堆:\n{tDrawDeckResult}",
         "strDrawDeckNotFound" : "牌堆未找到",
         "strRollRecord" : "按照[{tRollFormatType}]重新显示的上次掷骰:\n{tRollResult}",
         "strRoll" : "[{tName}]掷骰: {tRollResult}",
         "strRollWithReason" : "[{tName}]由于[{tRollReason}]掷骰: {tRollResult}",
         "strRollHide" : "于群[{tGroupId}]中[{tName}]掷骰: {tRollResult}",
-        "strRollHideWithReason" : "于群[{tGroupId}]中[{tName}]由于[{tRollReason}]掷骰: {tRollResult}    ",
+        "strRollHideWithReason" : "于群[{tGroupId}]中[{tName}]由于[{tRollReason}]掷骰: {tRollResult}",
         "strRollHideShow" : "[{tName}]掷暗骰",
         "strRollHideShowWithReason" : "[{tName}]由于[{tRollReason}]掷暗骰",
-        "strRollRange" : "表达式: {tRollPara}\n细节: {tRollResultDetail}\n结果: {tRollResultInt}\n范    围: {tRollResultIntRange}",
+        "strRollRange" : "表达式: {tRollPara}\n细节: {tRollResultDetail}\n结果: {tRollResultInt}\n范围: {tRollResultIntRange}",
         "strRollError01" : "表达式[{tRollPara}]掷骰错误！无法解析的表达式！",
         "strRollError02" : "表达式[{tRollPara}]掷骰错误！无法计算的表达式！",
         "strRollError03" : "表达式[{tRollPara}]掷骰错误！输入了非法的表达式！",
@@ -477,16 +535,18 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strRollError11" : "表达式[{tRollPara}]掷骰错误！计算极值时出错！",
         "strRollError12" : "表达式[{tRollPara}]掷骰错误！解析技能变量时出错！",
         "strRollErrorUnknown" : "表达式[{tRollPara}]掷骰错误！未知的错误: {tResult}",
-        "strRollErrorHelp" : "\n请使用[.help r]查看掷骰帮助，或使用[.help onedice]查看先进的OneDice标   准。",
-        "strSetGroupTempRule" : "已设置本群套用模板[{tPcTempName}]的规则[{tPcTempRuleName}] {tLazyResult}",
+        "strRollErrorHelp" : "\n请使用[.help r]查看掷骰帮助，或使用[.help onedice]查看先进的OneDice标准。",
+        "strSetGroupTempRule" : "已设置本群套用模板[{tPcTempName}]的规则[{tPcTempRuleName}]{tLazyResult}",
         "strDelGroupTempRule" : "已清除本群套用模板与规则，将按照人物卡设置各自进行检定",
         "strSetGroupTempError" : "试图套用的模板不存在",
         "strSetGroupTempRuleError" : "试图套用的模板规则不存在",
+        "strSetGroupRavRule" : "已设置本群RAV判定规则[{tRavRuleName}]{tLazyResult}",
+        "strDelGroupRavRule" : "已清除本群RAV判定规则，将使用默认规则（规则1：官方规则）",
         "strSetGroupMainDice" : "已设置本群套用主骰[{tResult}]",
         "strShowGroupMainDice" : "本群已套用主骰[{tResult}]",
         "strShowGroupMainDiceNone" : "本群未设置主骰",
         "strDelGroupMainDice" : "已清除本群套用主骰",
-        "strSnSet" : "已将[{tUserName}]的群名片修改为[{tResult}]\n若误设置群名片，请使用指令 .st note   rm 名片 来清除自定义名片",
+        "strSnSet" : "已将[{tUserName}]的群名片修改为[{tResult}]\n若误设置群名片，请使用指令[.st blockrm 记录]来清除自定义名片\n若需开启自动更改群名片功能，请使用命令[.sn auto on]",
         "strSnPcCardNone" : "[{tUserName}]未设置人物卡，无法进行名片设置",
         "strSnSetAtOther" : "已将[{tUserName01}]的群名片修改为[{tResult}]",
         "strSnPcCardNoneAtOther" : "[{tUserName01}]未设置人物卡，无法进行名片设置",
@@ -496,31 +556,45 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strSnAutoAlreadyOff" : "[{tUserName}]的自动群名片功能已处于关闭状态",
         "strPcSetMapValueError" : "[{tResult}]不是合法的表达式",
         "strPcInitSet" : "先攻列表已设置:\n{tResult}",
-        "strPcInitShow" : "当前先攻列表:\n{tResult}",
+        "strPcInitShow" : "当前先攻列表（第{tRound}轮）:\n{tResult}",
         "strPcInitReset" : "重新生成先攻列表:\n{tResult}",
         "strPcInitClear" : "已清空先攻列表",
         "strPcInitShowNode" : "{tId}. [{tSubName}]: {tSubResult}",
+        "strPcInitShowNodeSpecial" : "-> {tId}. [{tSubName}]: {tSubResult}",
         "strPcInitDel" : "已从先攻列表中删除[{tName}]",
+        "strPcInitEnd" : "回合结束！现在轮到[{tSubName}]{tAtUser}行动了！（先攻值：{tSubResult}，第{tRound}轮）",
+        "strPcInitEndNoList" : "当前没有先攻列表",
         "strPcInit" : "[{tPcTempName}]人物卡作成:{tPcInitResult}",
         "strPcInitErrorRange" : "[{tPcTempName}]人物卡作成失败:\n错误的人物卡作成范围(需为1-10)",
         "strPcUpdateSkillValue" : "[{tName}]的人物卡已更新:\n{tSkillUpdate}",
-        "strPcUpdateSkillValueAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]的人物卡更新   :\n{tSkillUpdate}",
+        "strPcUpdateSkillValueAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]的人物卡更新:\n{tSkillUpdate}",
         "strPcSetSkillValue" : "[{tUserName}]的人物卡[{tName}]已保存",
         "strPcSetSkillValueAtOther" : "[{tUserName01}]的人物卡[{tName}]已保存",
-        "strPcSetSpecialSkills" : "\n\n检测到特殊技能{tSpecialSkills}，这些技能会根据相关属性的值进行自 动计算。如果手动设置值将覆盖自动计算。若需要自动计算请删除这些技能。",
+        "strPcSetSpecialSkills" : "\n\n检测到特殊技能{tSpecialSkills}，这些技能会根据相关属性的值进行自动计算。如果手动设置值将覆盖自动计算。若需要自动计算请删除这些技能。",
         "strPcGetSingleSkillValue" : "[{tName}]的[{tSkillName}]: {tSkillValue}",
-        "strPcGetSingleSkillValueAtOther" : "[{tUserName}]帮[{tUserName01}]查询人物卡[{tName}]的    [{tSkillName}]: {tSkillValue}",
+        "strPcGetSingleSkillValueAtOther" : "[{tUserName}]帮[{tUserName01}]查询人物卡[{tName}]的[{tSkillName}]: {tSkillValue}",
         "strPcGetMultiSkillValue": "[{tName}]的技能属性查询结果如下:\n{tSkillValue}",
-        "strPcGetMultiSkillValueAtOther": "[{tUserName}]帮[{tUserName01}]进行的技能属性查询结果如下:\n  {tSkillValue}",
-        "strPcShow" : "[{tUserName}]的人物卡[{tName}]:\n{tPcShow}",
-        "strPcShowAtOther" : "[{tUserName01}]的人物卡[{tName}]:\n{tPcShow}",
-        "strPcList" : "[{tName}]的人物卡:\n{tPcList}\n当前选择:{tPcSelection}",
-        "strPcLock" : "本群人物卡已锁定(当前人物卡：{tName})，其他群切换人物卡将不影响本群人物卡状态",
+        "strPcGetMultiSkillValueAtOther": "[{tUserName}]帮[{tUserName01}]进行的技能属性查询结果如下:\n{tSkillValue}",
+        "strPcShow" : "[{tUserName}]的人物卡[{tName}]:\n{tPcShow}\n\n{tDefaultShow}",
+        "strPcShowAtOther" : "[{tUserName01}]的人物卡[{tName}]:\n{tPcShow}\n\n{tDefaultShow}",
+        "strPcShowNone" : "当前没有人物卡",
+        "strPcShowNoneAtOther" : "目标人物没有人物卡",
+        "strShowDefaultOn" : "[{tUserName}]已开启非默认值显示模式，st show将只显示与模板默认值不同的技能",
+        "strShowDefaultAlreadyOn" : "[{tUserName}]的非默认值显示模式已处于开启状态",
+        "strShowDefaultOff" : "[{tUserName}]已关闭非默认值显示模式，st show将显示所有技能",
+        "strShowDefaultAlreadyOff" : "[{tUserName}]的非默认值显示模式已处于关闭状态",
+        "strDefaultShowOff": "[*]为使用en自动成长技能\n输入[.st defaultshow on]只显示非默认值技能",
+        "strDefaultShowOn" : "[*]为使用en自动成长技能\n输入[.st defaultshow off]显示所有技能",
+        "strPcList" : "[{tUserName}]的人物卡:\n{tPcList}\n\n当前选择:[{tPcSelection}]",
+        "strPcListLocked" : "[{tUserName}]的人物卡:\n{tPcList}\n\n本群选择:[{tPcSelection}]\n全局选择:[{tGlobalPcSelection}]",
+        "strPcListNone" : "当前没有人物卡",
+        "strPcLock" : "本群人物卡已锁定(当前人物卡：{tName})，其他群切换人物卡将不影响本群人物卡状态，本群切换人物卡也不会影响其他群状态",
         "strPcLockError" : "本群锁定人物卡失败，请重试(当前人物卡：{tName})",
-        "strPcLockNone" : "试图锁定的人物卡不存在",
+        "strPcLockNone" : "[{tUserName}]未设置人物卡，无法锁定",
         "strPcUnLock" : "本群人物卡锁定已解除(当前人物卡：{tName})，其他群切换人物卡将同步至本群",
         "strPcUnLockNone" : "本群未启用人物卡锁定功能",
         "strPcInitSt" : "人物卡[{tName}]已按照[{tPcTempName}]完成人物卡作成:{tPcInitResult}",
+        "strPcSetRecommend" : "未找到人物卡[{tPcSelection}]，你是想找以下人物卡吗？\n{tSearchResult}\n请输入序号以切换对应人物卡",
         "strPcSet" : "人物卡已切换至[{tPcSelection}]",
         "strPcSetError" : "试图切入的人物卡不存在",
         "strPcNew" : "[{tUserName}]的人物卡[{tPcSelection}]已创建",
@@ -532,16 +606,16 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strPcClear" : "当前人物卡[{tPcSelection}]已清空",
         "strPcClearNone" : "当前没有人物卡",
         "strPcRm" : "人物卡[{tPcSelection}]的以下{tLenSkillName}条技能已删除: \n{tSkillName}",
-        "strPcRmPartialSuccess" : "人物卡[{tPcSelection}]的以下{tLenSkillName}条技能已删除: \n  {tSkillName}\n同时以下{tLenFailedSkills}条技能不存在，无法删除: \n{tFailedSkills}",
-        "strPcRmNone" : "人物卡[{tPcSelection}]的以下{tLenFailedSkills}条技能不存在，无法删除: \n   {tFailedSkills}",
+        "strPcRmPartialSuccess" : "人物卡[{tPcSelection}]的以下{tLenSkillName}条技能已删除: \n{tSkillName}\n同时以下{tLenFailedSkills}条技能不存在，无法删除: \n{tFailedSkills}",
+        "strPcRmNone" : "人物卡[{tPcSelection}]的以下{tLenFailedSkills}条技能不存在，无法删除: \n{tFailedSkills}",
         "strPcRmCardNone" : "人物卡不存在",
         "strPcTemp" : "人物卡[{tPcSelection}]套用模板[{tPcTempName}]",
         "strPcTempShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]{tResult}",
         "strPcTempError" : "试图套用的模板不存在，或是未设置人物卡",
         "strPcTempRule" : "人物卡[{tPcSelection}]套用模板[{tPcTempName}]的规则[{tPcTempRuleName}]",
-        "strPcTempRuleShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]\n规则[{tPcTempRuleName}]    {tResult}",
+        "strPcTempRuleShow" : "人物卡[{tPcSelection}]:\n模板[{tPcTempName}]\n规则[{tPcTempRuleName}]{tResult}",
         "strPcTempRuleError" : "试图套用的模板规则不存在，或是未设置人物卡",
-        "strPcGroupTempRuleShow" : "\n\n但本群已全局套用:\n模板[{tPcTempName}]\n规则    [{tPcTempRuleName}]",
+        "strPcGroupTempRuleShow" : "\n\n但本群已全局套用:\n模板[{tPcTempName}]\n规则[{tPcTempRuleName}]",
         "strPcRecRm" : "已删除人物卡[{tName}]的映射[{tSkillName}]",
         "strPcNoteRm" : "已删除人物卡[{tName}]的记录[{tSkillName}]",
         "strPcRecError" : "未找到人物卡[{tName}]对应的映射[{tSkillName}]",
@@ -554,31 +628,49 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strPcBlockRmNone": "人物卡[{tName}]未找到[{tBlockName}]技能块内容",
         "strPcBlockList": "人物卡[{tName}]包含以下技能块:\n{tBlockList}",
         "strPcRename" : "[{tPcSelection}]已重命名为[{tPcSelectionNew}]",
-        "strPcSkillCheck" : "[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}   ",
-        "strPcSkillCheckHide" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillValue}]检定:    {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckNone" : "请指定需要检定的技能",
+        "strPcSkillCheckNoneAtOther" : "请指定他人需要检定的技能",
+        "strPcSkillCheck" : "[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHide" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
         "strPcSkillCheckHideShow" : "[{tName}]进行技能[{tSkillValue}]暗检定",
-        "strPcSkillCheckWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定:    {tRollResult} {tSkillCheckReasult}",
-        "strPcSkillCheckHideWithSkillName" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillName}: {tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-        "strPcSkillCheckHideShowWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]暗检定   ",
-        "strPcSkillCheckAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能 [{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-        "strPcSkillCheckHideAtOther" : "于群[{tGroupId}]中[{tUserName}]帮[{tUserName01}]的人物卡    [{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-        "strPcSkillCheckHideShowAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能 [{tSkillValue}]暗检定",
-        "strPcSkillCheckWithSkillNameAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行    技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
-        "strPcSkillCheckHideWithSkillNameAtOther" : "于群[{tGroupId}]中[{tUserName}]帮  [{tUserName01}]的人物卡[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult}   {tSkillCheckReasult}",
-        "strPcSkillCheckHideShowWithSkillNameAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡 [{tName}]进行技能[{tSkillName}:{tSkillValue}]暗检定",
-        "strPcSkillEnhanceCheck" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]成长检定:  {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideWithSkillName" : "于群[{tGroupId}]中[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideShowWithSkillName" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]暗检定",
+        "strPcSkillCheckAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideAtOther" : "于群[{tGroupId}]中[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能[{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideShowAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能[{tSkillValue}]暗检定",
+        "strPcSkillCheckWithSkillNameAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideWithSkillNameAtOther" : "于群[{tGroupId}]中[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能[{tSkillName}:{tSkillValue}]检定: {tRollResult} {tSkillCheckReasult}",
+        "strPcSkillCheckHideShowWithSkillNameAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行技能[{tSkillName}:{tSkillValue}]暗检定",
+        "strPcSkillEnhanceCheck" : "[{tName}]进行技能[{tSkillName}:{tSkillValue}]成长检定: {tRollResult} {tSkillCheckReasult}",
         "strPcSkillEnhanceContent" : "\n该技能发生了增长: {tRollSubResult}",
-        "strPcSkillEnhanceAll": "[{tName}]的技能成长检定结果:\n技能列表：{tCheckedSkillList}\n共有  [{tSkillEnhanceCount}]个技能进行了检定，其中成功[{tSkillEnhanceSucceedCount}]个:  {tSkillEnhanceSucceedList}",
+        "strPcSkillEnhanceAll": "[{tName}]的技能成长检定结果:\n技能列表：{tCheckedSkillList}\n共有[{tSkillEnhanceCount}]个技能进行了检定，其中成功[{tSkillEnhanceSucceedCount}]个: {tSkillEnhanceSucceedList}",
         "strPcSkillEnhanceSkipped": "\n跳过成长(特殊属性或0值): {tSkippedSkillList}",
         "strPcSkillEnhanceNotFound": "\n未找到技能: {tNotFoundSkillList}",
-        "strPcSkillEnhanceOnlySpecial": "[{tName}]的以下技能均为无法成长的特殊属性或0值技能或未找到对应 的技能：\n{tSkippedSkillList}",
+        "strPcSkillEnhanceOnlySpecial": "[{tName}]的以下技能均为无法成长的特殊属性或0值技能或未找到对应的技能：\n{tSkippedSkillList}",
         "strPcSkillEnhanceError" : "未设置人物卡，无法进行自动成长检定",
-        "strSanCheck" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n    理智减少{tRollSubResult}点,当前剩余[{tSkillValueNew}]点",
-        "strSanCheckGreatFailed" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult}    {tSkillCheckReasult}\n理智减少{tRollSubResult}的最大值[{tRollSubResultIntMax}]点,当前剩余  [{tSkillValueNew}]点",
-        "strSanCheckError" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult}  {tSkillCheckReasult}\n掷骰表达式[{tRollSubResult}]存在错误",
-        "strSanCheckAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行理智检定 [{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}点,当前剩余    [{tSkillValueNew}]点",
-        "strSanCheckGreatFailedAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行理智检    定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}的最大值    [{tRollSubResultIntMax}]点,当前剩余[{tSkillValueNew}]点",
-        "strSanCheckErrorAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行理智检定    [{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n掷骰表达式[{tRollSubResult}]存在错误",
+        "strHiyResult" : "[{tPcName}]的骰点统计:\n骰点次数：{tTotalRolls}次\n普通成功：{tNormalSuccess}次\n困难成功：{tHardSuccess}次\n极难成功：{tExtremeSuccess}次\n大成功：{tGreatSuccess}次\n失败：{tFail}次\n大失败：{tGreatFail}次\n总成功数：{tTotalSuccess}次\n总失败数：{tTotalFail}次\n成功率：{tSuccessRate}%",
+        "strHiyPcNotFound" : "未找到人物卡或未设置人物卡",
+        "strSanCheck" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}点,当前剩余[{tSkillValueNew}]点",
+        "strSanCheckGreatFailed" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}的最大值[{tRollSubResultIntMax}]点,当前剩余[{tSkillValueNew}]点",
+        "strSanCheckError" : "[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n掷骰表达式[{tRollSubResult}]存在错误",
+        "strSanCheckAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}点,当前剩余[{tSkillValueNew}]点",
+        "strSanCheckGreatFailedAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n理智减少{tRollSubResult}的最大值[{tRollSubResultIntMax}]点,当前剩余[{tSkillValueNew}]点",
+        "strSanCheckErrorAtOther" : "[{tUserName}]帮[{tUserName01}]的人物卡[{tName}]进行理智检定[{tSkillValue}]:\n{tRollResult} {tSkillCheckReasult}\n掷骰表达式[{tRollSubResult}]存在错误",
+        "strMHOn" : "本群神话淬炼效果已开启",
+        "strMHOff" : "本群神话淬炼效果已关闭",
+        "strMHAlreadyOn" : "本群神话淬炼效果已经处于开启状态",
+        "strMHAlreadyOff" : "本群神话淬炼效果已经处于关闭状态",
+        "strMHListEmpty" : "当前没有处于神话淬炼状态的人物卡",
+        "strMHList" : "神话淬炼状态人物卡列表:\n{tCardList}",
+        "strMHAdd" : "已将人物卡[{tPcName}]添加到神话淬炼状态",
+        "strMHAddInvalid" : "人物卡名称无效",
+        "strMHDel" : "已将人物卡[{tPcName}]从神话淬炼状态中移除",
+        "strMHDelNotFound" : "人物卡[{tPcName}]未在神话淬炼状态中",
+        "strMHNeedName" : "请指定人物卡名称",
+        "strMHClear" : "已清空所有处于神话淬炼状态的角色卡",
+        "strMHClearEmpty" : "没有需要清空的处于神话淬炼状态的角色卡",
+        "strMHEffect" : "\n[神话淬炼]理智损失减半: {tOriginalLoss} -> {tActualLoss}",
         "strAtOtherPermissionDenied": "[{tUserName}]不为群主或管理员，没有代骰权限。",
         "strIntPositiveInfinite" : "正无穷大",
         "strIntNegativeInfinite" : "负无穷大",
@@ -601,7 +693,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strPcSkillCheckFate11" : "[+8 传奇]",
         "strPcSkillCheckNope" : "需要解释",
         "strPcSkillCheckError" : "发生错误",
-        "strRAVShow" : "[{tName}]与[{tName01}]进行技能[{tSkillName}]和技能[{tSkillName01}]的对抗:\n [{tSkillValue} - {tSkillValue01}]\n[{tName}]: {tRollResult} {tSkillCheckReasult}\n   [{tName01}]: {tRollResult01} {tSkillCheckReasult01}\n{tRAVResult}",
+        "strRAVShow" : "[{tName}]与[{tName01}]进行技能[{tSkillName}]和技能[{tSkillName01}]的对抗:\n[{tSkillValue} - {tSkillValue01}]\n[{tName}]: {tRollResult} {tSkillCheckReasult}\n[{tName01}]: {tRollResult01} {tSkillCheckReasult01}\n{tRAVResult}",
         "strRAVResult01" : "前者，[{tName}]获胜",
         "strRAVResult02" : "后者，[{tName01}]获胜",
         "strRAVResult03" : "平手",
@@ -611,16 +703,16 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strObListNone" : "当前旁观列表为空",
         "strObUserObList" : "当前旁观列表:\n{tResult}",
         "strObUserObListNone" : "当前旁观列表为空",
-        "strObJoin" : "[{tUserName}]现已加入旁观",
+        "strObJoin" : "[{tUserName}]现已加入旁观，若你已添加机器人为好友，暗骰结果将发送给你。同时，若你已开启自动群名片功能[.sn auto on]，你的群名片也会被修改为[ob_{tUserName}]",
         "strObJoinAlready" : "[{tUserName}]已在旁观中",
-        "strObExit" : "[{tUserName}]现已退出旁观",
+        "strObExit" : "[{tUserName}]现已退出旁观，若你已开启自动群名片功能[.sn auto on]，群名片将被修改为[{tUserName}]",
         "strObExitAlready" : "[{tUserName}]不在旁观中",
         "strObExitAll" : "[{tUserName}]现已退出所有旁观",
         "strObClear" : "已清空旁观列表",
-        "strTeamCreated": "已创建/更新小队[{tTeamName}]，当前成员数: {tMemberCount}\n当前成员列表:\n    {tMembers}",
+        "strTeamCreated": "已创建/更新小队[{tTeamName}]，当前成员数: {tMemberCount}\n当前成员列表:\n{tMembers}",
         "strTeamShow": "小队[{tTeamName}]成员列表 ({tMemberCount}人):\n{tMembers}",
         "strTeamList": "当前群组小队列表 ({tTeamCount}个小队):\n{tTeamList}",
-        "strMembersRemoved": "已从小队[{tTeamName}]中移除{tRemovedCount}名成员:\n{tRemovedMembers}\n    剩余成员数: {tMemberCount}，剩余成员列表:\n{tMembers}",
+        "strMembersRemoved": "已从小队[{tTeamName}]中移除{tRemovedCount}名成员:\n{tRemovedMembers}\n剩余成员数: {tMemberCount}，剩余成员列表:\n{tMembers}",
         "strTeamDeleted": "已删除小队[{tTeamName}]",
         "strTeamCleared": "已清空小队[{tTeamName}]的成员",
         "strTeamAt": "正在通知小队[{tTeamName}]成员:\n{tAtMembers}",
@@ -632,58 +724,25 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strTeamNameExists": "小队名称[{tTeamName}]已存在",
         "strTeamSkillUpdate": "小队[{tTeamName}]的技能更新:\n{tResults}",
         "strTeamCheckResult": "小队[{tTeamName}]进行技能[{tSkillName}]检定:\n{tResult}",
+        "strTeamCheckResultNone": "请指定小队需要检定的技能",
         "strTeamSCResult": "小队[{tTeamName}]进行理智检定:\n{tResult}",
         "strTeamRoll": "小队[{tTeamName}]掷骰:\n{tRollResult}",
         "strTeamRollWithReason": "小队[{tTeamName}]由于[{tReason}]掷骰:\n{tRollResult}",
+        "strTeamSetRecommend" : "未找到小队[{tTeamName}]，你是想找以下小队吗？\n{tSearchResult}\n请输入序号以切换对应小队",
         "strNoActiveTeam": "当前群组没有活跃小队",
         "strTeamNotFound": "小队[{tTeamName}]不存在",
         "strNoTeams": "当前群组没有创建任何小队",
         "strNoMembersRemoved": "没有移除任何成员",
-        "strTeamEmpty": "小队[{tTeamName}]中没有成员"
-    }
-    ```
-
-- OlivaDiceJoy 娱乐模块
-??? 娱乐模块
-    ```json
-    {
-        "strJoyJrrp": "[{tName}]的今日人品为[{tJrrpResult}]",
-        "strJoyZrrp": "[{tName}]的昨日人品为[{tJrrpResult}]",
-        "strJoyMrrp": "[{tName}]的明日人品为[{tJrrpResult}]"
-    }
-    ```
-
-- OlivaDiceLogger 日志模块
-??? 日志模块
-    ```json
-    {
-        "strLoggerLogOn": "开始记录日志 [{tLogName}]",
-        "strLoggerLogAlreadyOn": "已经正在记录日志 [{tLogName}]",
-        "strLoggerLogContinue": "继续记录日志 [{tLogName}] (当前已记录 {tLogLines} 行，日志总时长:  {tLogTime})",
-        "strLoggerLogInvalidName": "日志名称 [{tLogName}] 不合法",
-        "strLoggerLogOff": "暂停记录日志 [{tLogName}] (当前已记录 {tLogLines} 行，日志总时长:   {tLogTime})",
-        "strLoggerLogAlreadyOff": "没有正在进行的日志",
-        "strLoggerLogEnd": "结束记录日志 [{tLogName}] (当前已记录 {tLogLines} 行，日志总时长:   {tLogTime})",
-        "strLoggerLogAlreadyEnd": "没有正在进行的日志",
-        "strLoggerLogSave": "日志 [{tLogName}] (UUID: {tLogUUID}) 已保存",
-        "strLoggerLogUrl": "日志已上传，请在[ {tLogUrl} ]提取日志",
-        "strLoggerLogList": "本群有以下日志:\n{tLogList}",
-        "strLoggerLogListEmpty": "本群暂无日志",
-        "strLoggerLogStop": "已强制停止日志 [{tLogName}] (UUID: {tLogUUID}) (当前已记录 {tLogLines}     行，日志总时长: {tLogTime})",
-        "strLoggerLogStopError": "已强制停止日志 [{tLogName}] (UUID: {tLogUUID}) (日志已损坏)",
-        "strLoggerLogActiveSwitch": "已切换活跃日志为 [{tLogName}]",
-        "strLoggerLogUploadNoName": "请指定要上传的日志的UUID",
-        "strLoggerLogFileNotFound": "未找到[{tLogUUID}]对应的日志文件",
-        "strLoggerLogUploadSuccess": "日志 [{tLogName}](UUID: {tLogUUID}) 重新上传成功，日志总时长:     {tLogTime}，请在[ {tLogUrl} ]提取日志",
-        "strLoggerLogUploadFailed": "日志 [{tLogName}](UUID: {tLogUUID}) 重新上传失败，请稍后再试",
-        "strLoggerLogNameNotFound": "本群日志列表中未找到名称为[{tLogName}]的日志",
-        "strLoggerLogTempSuccess": "临时日志 [{tLogName}] (UUID: {tLogUUID}) 上传成功，日志总时长:  {tLogTime}，请在[ {tLogUrl} ]提取日志",
-        "strLoggerLogTempFailed": "临时日志 [{tLogName}] (UUID: {tLogUUID}) 上传失败，请稍后再试",
-        "strLoggerLogNotFound": "未找到日志 [{tLogName}]",
-        "strLoggerLogRenameSuccess": "日志 [{tLogOldName}] 已重命名为 [{tLogNewName}]",
-        "strLoggerLogRenameActiveSuccess": "当前活动日志 [{tLogOldName}] 已重命名为 [{tLogNewName}]",
-        "strLoggerLogRenameSameName": "新名称 [{tLogName}] 与旧日志名称相同",
-        "strLoggerLogRenameNameExists": "日志名称 [{tLogName}] 已存在",
+        "strTeamEmpty": "小队[{tTeamName}]中没有成员",
+        "strTeamMemberFormat": "[{tUserName}] - [{tPcName}]",
+        "strTeamMemberFormatWithIndex": "成员{tIndex}: [{tUserName}] - 人物卡: [{tPcName}]",
+        "strTeamSortMemberFormat": "{tIndex}. [{tUserName}] - [{tPcName}]({tSkillName}: {tSkillValue})",
+        "strTeamCheckMemberFormat": "{tDisplayName}({tSkillName}: {tSkillValue}): {tDiceDetail}/{tSkillValue} {tResult}",
+        "strTeamCheckMemberFormatNoSkill": "{tDisplayName}: {tDiceDetail}/{tSkillValue} {tResult}",
+        "strTeamSCMemberFormat": "{tDisplayName}(SAN:{tCurrentSan}): {tDiceDetail}/{tCurrentSan}\nSAN: {tCurrentSan} -> {tNewSan}(损失{tSanLoss}点)",
+        "strTeamSkillUpdateMemberFormat": "-> [{tUserName}] - [{tPcName}]",
+        "strTeamSkillUpdateResultFormat": "{tSkillName}: {tDetail}",
+        "strTeamRollMemberFormat": "[{tUserName}] - [{tPcName}]: {tRollResult}",
     }
     ```
 
@@ -702,7 +761,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strMasterOopmUpdateNotSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
         "strMasterOopmUpdateNotSkipDev": "{tMasterOopkNameList}\n模块为开发模式，已跳过",
         "strMasterOopmGet": "{tMasterOopkNameList}\n模块已安装成功，请使用[.system restart]应用安装",
-        "strMasterOopmGetnull": "{tMasterOopkNameList}\n模块不存在，请先使用[.oopm list]指令查看受支持的模块",
+        "strMasterOopmGetNone": "{tMasterOopkNameList}\n模块不存在，请先使用[.oopm list]指令查看受支持的模块",
         "strMasterOopmGetSkipSrc": "{tMasterOopkNameList}\n模块为手动部署模式，已跳过",
         "strMasterOopmDownloadFailed": "{tMasterOopkNameList}\n模块下载失败",
         "strMasterOopmCopyFailed": "{tMasterOopkNameList}\n模块安装失败",
@@ -713,10 +772,30 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strMasterTrustGet": "[{tName}]({tId})的{tMasterTrustName}为：{tResult}",
         "strMasterPlatformNo": "该功能在此平台不受支持",
         "strMasterGroupClearShow": "已检查[{tMasterCount01}]个群:\n{tResult}\n已经决定清除[{tMasterCount02}]个群\n请使用[.group clear do (天数)]指令执行这项操作",
+        "strMasterGroupClearShowOff": "已检查[{tMasterCount01}]个群:\n{tResult}\n已经决定清除[{tMasterCount02}]个群\n请使用[.group clear do off]指令执行这项操作",
         "strMasterGroupClearDoUnit": "已经清除群:\n{tResult}",
         "strMasterGroupClearDoUnitSend": "检测到在此处最后发言为{tResult}，即将自动退出",
         "strMasterGroupClearDo": "已检查[{tMasterCount01}]个群\n已经清除[{tMasterCount02}]个群",
-        "strMasterGroupClearUnit": "[{tName}] - ({tId}): {tResult}"
+        "strMasterGroupClearUnit": "[{tName}] - ({tId}): {tResult}",
+        "strMasterBackupStart": "正在开始备份数据...",
+        "strMasterBackupSuccess": "数据备份完成：\n{tBackupResult}",
+        "strMasterBackupFailed": "数据备份失败：\n{tBackupResult}",
+        "strMasterBackupConfigSet": "配置项 {tConfigKey} 已设置为: {tConfigValue}",
+        "strMasterBackupConfigSetFailed": "配置项设置失败：\n{tBackupResult}",
+        "strMasterBackupChangeUsage": "用法: .backup change 配置项 配置值\n可用配置项: startDate, passDay, backupTime, maxBackupCount, isBackup",
+        "strMasterBackupConfigGet": "配置项 {tConfigKey}: {tConfigValue}",
+        "strMasterBackupConfigNotFound": "配置项 {tConfigKey} 不存在或未设置",
+        "strMasterBackupInfo": "{tBackupResult}",
+        "strMasterAccountLinkSuccess": "已成功建立主从关系：\n{tAccountResult}",
+        "strMasterAccountLinkFailed": "建立主从关系失败：\n{tAccountResult}",
+        "strMasterAccountUnlinkSuccess": "已成功断开主从关系：\n{tAccountResult}",
+        "strMasterAccountUnlinkFailed": "断开主从关系失败：\n{tAccountResult}",
+        "strMasterAccountList": "{tAccountResult}",
+        "strMasterAccountShow": "{tAccountResult}",
+        "strMasterAccountImportSuccess": "数据导入成功：\n{tAccountResult}",
+        "strMasterAccountImportFailed": "数据导入失败：\n{tAccountResult}",
+        "strMasterAccountExportSuccess": "数据导出成功：\n{tAccountResult}",
+        "strMasterAccountExportFailed": "数据导出失败：\n{tAccountResult}"
     }
     ```
 
@@ -725,7 +804,31 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
     ```json
     {
         "strOdysseyCnmodsSearch": "魔都模组搜索结果如下:\n{tCnmodsResult}",
-        "strOdysseyCnmodsLuck": "魔都模组推荐如下:\n{tCnmodsResult}"
+        "strOdysseyCnmodsRec": "魔都模组编辑推荐结果如下:\n{tCnmodsResult}",
+        "strOdysseyCnmodsAuthor": "作者模组搜索结果如下:\n{tCnmodsResult}",
+        "strOdysseyCnmodsLuck": "魔都模组随机如下:\n{tCnmodsResult}",
+        "strOdysseyCnmodsSearchNotFound": "未找到相关魔都模组搜索结果",
+        "strOdysseyCnmodsRecNotFound": "未找到相关魔都模组编辑推荐结果",
+        "strOdysseyCnmodsAuthorNotFound": "未找到该作者的魔都模组",
+        "strOdysseyCnmodsLuckNotFound": "未找到魔都模组推荐结果",
+        "strOdysseyCnmodsFindNotFound": "未找到该模组(keyId: {tKeyId})",
+        "strOdysseyCnmodsFindError": "获取模组详情失败",
+        "strOdysseyCnmodsFindErrorRetry": "获取模组详情失败，请稍后再试",
+        "strOdysseyCnmodsFindOnlyNumber": "find命令只接受纯数字keyId\n例如: .cnmods find 12345",
+        "strOdysseyCnmodsGetCacheNotFound": "未找到缓存的模组列表\n或许你应当先试试查找模组",
+        "strOdysseyCnmodsGetRangeError": "序号超出范围(1-{tRange})\n或许你应当先试试查找模组",
+        "strOdysseyCnmodsGetSearchNotFound": "未找到相关魔都模组",
+        "strOdysseyCnmodsGetSearchError": "搜索失败，请稍后再试",
+        "strOdysseyCnmodsGetMultiMatch": "找到[{tCount}]个匹配的模组:\n{tCnmodsResult}",
+        "strOdysseyRulesNone": "没有找到合适的规则",
+        "strOdysseyRulesShow": "规则速查结果如下:\n{tResult}",
+        "strOdysseyRulesList": "规则速查找到如下待选结果:\n{tResult}\n输入序号以查看对应结果",
+        "strOdysseyRulesSplit": "\n",
+        "strOdysseyRulesError": "规则速查发生错误:\n{tResult}",
+        "strOdysseyKOOKBotMarketPulseUUID": "-",
+        "strOdysseyKOOKPlayGameMusicName": "-",
+        "strOdysseyKOOKPlayGameMusicSinger": "-",
+        "strOdysseyKOOKPlayGameID": "6"
     }
     ```
 
@@ -838,6 +941,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                     "机枪",
                     "重武器",
                     "表演",
+                    "喜剧",
                     "美术",
                     "摄影",
                     "伪造",
@@ -902,7 +1006,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                     "阿卡德语",
                     "藏语",
                     "拉莱耶语",
-                    "米-戈语",
+                    "米戈语",
                     "深潜者语",
                     "旧印语",
                     "奈亚拉托提普的低语",
@@ -932,6 +1036,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                     "HPMAXADD",
                     "MPMAXADD",
                     "SANMAXADD",
+                    "MOV",
                     "克苏鲁神话",
                     "信用"
                 ],
@@ -956,7 +1061,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "闪避": "({DEX})/2",
                 "母语": "{EDU}",
                 "SAN": "({POW})",
-                "SANMAX": "({POW})+({SANMAXADD})",
+                "SANMAX": "99-({克苏鲁神话})+({SANMAXADD})",
                 "HP": "(({CON})+({SIZ}))/10",
                 "HPMAX": "(({CON})+({SIZ}))/10+({HPMAXADD})",
                 "MP": "({POW})/5",
@@ -981,6 +1086,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "SANMAXADD": ["SANMAXADD","理智上限加值"],
                 "HPMAXADD": ["HPMAXADD","生命值上限加值","生命上限加值","血量上限加值","体力上限加值"],
                 "MPMAXADD": ["MPMAXADD","魔法上限加值"],
+                "MOV": ["MOV","MOVE","移动速度","移动力"],
                 "IDEA": ["灵感", "IDEA"],
                 "KNOW": ["知识", "KNOW"],
                 "MOV": ["移动力","MOV"],
@@ -992,7 +1098,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "攀爬": ["攀爬","Climb"],
                 "计算机使用": ["计算机使用","计算机","电脑","电脑使用","Computer_Use"],
                 "信用": ["信用评级","CR","信誉","信用度","信用","信誉度","Credit_Rating"],
-                "克苏鲁神话": ["克苏鲁神话","CM","克苏鲁","Cthulhu_Mythos","克神"],
+                "克苏鲁神话": ["克苏鲁神话","CM","克苏鲁","Cthulhu_Mythos","克神","克话"],
                 "乔装": ["乔装","Disguise"],
                 "闪避": ["闪避","Dodge"],
                 "汽车驾驶": ["汽车驾驶","驾驶","汽车","Drive_Auto"],
@@ -1012,7 +1118,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "博物": ["博物", "博物学","自然学","自然史","Natural_World"],
                 "导航": ["导航","领航","Navigate"],
                 "神秘学": ["神秘学","Occult"],
-                "操作重型机械": ["操作重型机械","重型机械","Operate_Heavy_Machinery","重型操作","重型   "],
+                "操作重型机械": ["操作重型机械","重型机械","Operate_Heavy_Machinery","重型操作","重型"],
                 "说服": ["说服","Persuade"],
                 "精神分析": ["精神分析","Psychoanalysis"],
                 "心理学": ["心理学","Psychology"],
@@ -1030,21 +1136,22 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "催眠": ["催眠","Hypnosis"],
                 "炮术": ["炮术","Artillery"],
                 "母语": ["母语", "Own_Language"],
-                "鞭子": ["鞭子", "Whip"],
-                "电锯": ["电锯", "Chainsaw"],
-                "链枷": ["链枷", "Flail"],
-                "绞具": ["绞具", "Garrote"],
+                "鞭子": ["鞭子", "Whip", "鞭"],
+                "电锯": ["电锯", "Chainsaw", "链锯"],
+                "链枷": ["链枷", "Flail", "连枷"],
+                "绞具": ["绞具", "Garrote", "绞索"],
                 "斧": ["斧", "Axe"],
                 "剑": ["剑", "Sword"],
                 "矛": ["矛", "Spear"],
                 "手枪": ["手枪", "Handgun"],
-                "步霰": ["步霰", "Rifle_Shotgun", "步枪", "Rifle", "霰弹枪", "Shotgun", "霰弹", "散弹   ", "散弹枪"],
+                "步霰": ["步霰", "Rifle_Shotgun", "步枪", "Rifle", "霰弹枪", "Shotgun", "霰弹", "散弹", "散弹枪"],
                 "冲锋枪": ["冲锋枪", "Submachine_Gun"],
-                "弓术": ["弓术", "Archery"],
-                "喷射器": ["喷射器", "Flamethrower"],
+                "弓术": ["弓术", "Archery", "弓"],
+                "喷射器": ["喷射器", "Flamethrower", "火焰喷射器"],
                 "机枪": ["机枪", "Machine_Gun"],
                 "重武器": ["重武器", "Heavy_Weapons"],
                 "表演": ["表演", "Acting"],
+                "喜剧": ["喜剧", "Comedy"],
                 "美术": ["美术", "Art"],
                 "摄影": ["摄影", "Photography"],
                 "伪造": ["伪造", "Forgery"],
@@ -1070,7 +1177,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "木匠": ["木匠", "Carpentry"],
                 "莫里斯舞蹈": ["莫里斯舞蹈", "Morris_Dance"],
                 "歌剧歌唱": ["歌剧歌唱", "Opera_Singing"],
-                "粉刷匠与油漆工": ["粉刷匠与油漆工", "Painting_Decorating"],
+                "粉刷匠与油漆工": ["粉刷匠与油漆工", "Painting_Decorating", "粉刷匠和油漆工"],
                 "吹真空管": ["吹真空管", "Vacuum_Tube_Repair"],
                 "飞行器": ["飞行器", "Pilot_Aircraft"],
                 "船": ["船", "Boat"],
@@ -1109,7 +1216,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "阿卡德语": ["阿卡德语", "Akkadian"],
                 "藏语": ["藏语", "Tibetan"],
                 "拉莱耶语": ["拉莱耶语", "R\"lyehian"],
-                "米-戈语": ["米-戈语", "Mi-Go"],
+                "米戈语": ["米戈语", "MiGo"],
                 "深潜者语": ["深潜者语", "Deep_One"],
                 "旧印语": ["旧印语", "Elder_Sign"],
                 "奈亚拉托提普的低语": ["奈亚拉托提普的低语", "Nyarlathotep\"s_Whispers"],
@@ -1128,7 +1235,8 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "幸运": "LUC",
                 "理智": "SAN",
                 "灵感": "IDEA",
-                "知识": "KNOW"
+                "知识": "KNOW",
+                "移动速度": "MOV"
             },
             "showName": {
                 "STR": "力量",
@@ -1141,8 +1249,10 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "EDU": "教育",
                 "LUC": "幸运",
                 "IDEA": "灵感",
-                "KNOW": "知识"
+                "KNOW": "知识",
+                "MOV": "移动速度"
             },
+            "snTitle": "{tName} hp{HP}/{HPMAX} san{SAN}/{SANMAX} dex{DEX}",
             "defaultSkillValue": {
                 "会计": 5,
                 "人类学": 1,
@@ -1190,7 +1300,59 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
                 "炮术": 1,
                 "手枪": 20,
                 "步霰": 25,
-                "斗殴": 20,
+                "斗殴": 25,
+                "书法": 5,
+                "伪造": 5,
+                "写作": 5,
+                "冲锋枪": 15,
+                "制陶": 5,
+                "剑": 20,
+                "动物学": 1,
+                "化学": 1,
+                "厨艺": 5,
+                "司法科学": 1,
+                "吹真空管": 5,
+                "喜剧": 5,
+                "乐理": 5,
+                "地质学": 1,
+                "天文学": 1,
+                "密码学": 1,
+                "工程学": 1,
+                "弓术": 15,
+                "技术制图": 5,
+                "摄影": 5,
+                "数学": 10,
+                "斧": 15,
+                "木匠": 5,
+                "机枪": 10,
+                "植物学": 1,
+                "歌剧歌唱": 5,
+                "气象学": 1,
+                "喷射器": 10,
+                "物理学": 1,
+                "理发": 5,
+                "生存": 10,
+                "生物学": 1,
+                "矛": 20,
+                "科学": 1,
+                "粉刷匠与油漆工": 5,
+                "绞具": 15,
+                "美术": 5,
+                "耕作": 5,
+                "舞蹈": 5,
+                "船": 1,
+                "药学": 1,
+                "莫里斯舞蹈": 5,
+                "表演": 5,
+                "裁缝": 5,
+                "链枷": 10,
+                "速记": 5,
+                "重武器": 10,
+                "电锯": 10,
+                "雕塑": 5,
+                "鞭子": 5,
+                "飞行器": 1,
+                "SANMAX": 99,
                 "SANMAXADD": 0,
                 "HPMAXADD": 0,
                 "MPMAXADD": 0
