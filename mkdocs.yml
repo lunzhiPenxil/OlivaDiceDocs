@@ -20,6 +20,7 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.expand
+    - navigation.footer
   palette:
     - scheme: default
       primary: indigo
