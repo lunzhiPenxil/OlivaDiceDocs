@@ -2,3 +2,48 @@
     --md-primary-fg-color: #00A0EA;
     --md-accent-fg-color: #27bbff;
 }
+
+.md-nav__list .md-ellipsis,
+.md-content a {
+    position: relative !important;
+    width: max-content;
+}
+
+.md-nav__list .md-ellipsis::after,
+.md-content a::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 100%;
+    width: 0;
+    height: 1px;
+    background: var(--md-accent-fg-color);
+    transition: width 350ms, left 350ms;
+
+}
+
+.md-nav__list .md-ellipsis:focus::after,
+.md-nav__list .md-ellipsis:hover::after,
+.md-content a:focus::after,
+.md-content a:hover::after {
+    left: 0;
+    width: 100%;
+    transition: width 350ms, left 0ms;
+}
+
+.md-header--shadow {
+    background-color: #00000000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 5;
+}
+
+.md-header--shadow::before {
+    content: "";
+    position: absolute;
+    background-color: var(--md-primary-fg-color);
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}

@@ -1,1 +1,9 @@
 site
+
+# Python
+*.egg-info/
+*.egg
+build/
+dist/
+__pycache__/
+*.py[cod]

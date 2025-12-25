@@ -1,0 +1,46 @@
+# pyproject.toml
+[project]
+name = "olivadice-docs"
+version = "1.0.0"
+description = "OlivaDice·青果核心官方文档"
+readme = "README.md"
+requires-python = ">=3.8"
+
+# 必须依赖（运行文档必须）
+dependencies = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-redirects",
+]
+
+# 可选依赖（推荐安装）
+[project.optional-dependencies]
+# 开发增强
+dev = [
+    "pymdown-extensions",  # Markdown扩展
+    "mkdocs-minify-plugin",  # 压缩
+    "mkdocs-git-revision-date-localized-plugin",  # 最后更新时间
+    "mkdocs-awesome-pages-plugin",  # 自动导航
+]
+
+# 部署相关
+deploy = [
+    "mike",  # 多版本管理
+    "mkdocs-gh-deploy-plugin",  # GitHub部署
+]
+
+# 高级功能
+advanced = [
+    "mkdocs-autorefs",  # 自动引用
+    "mkdocs-gallery",  # 代码示例
+    "mkdocstrings[python]",  # API文档
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# 项目URLs
+[project.urls]
+Repository = "https://github.com/OlivOS-Team/OlivaDiceCore"
+Documentation = "https://wiki.dice.center"
