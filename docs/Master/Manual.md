@@ -167,6 +167,7 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
 |:------------------------|:--------:|:--------------------------------------------------|
 | defaultLogQuote         | 0        | 是否默认开启日志自动引用上次记录，默认关闭<br/>`0`关闭<br/>`1`开启<br/>新群将默认使用此设置 |
 | defaultLogUsePcName     | 0        | 是否默认开启日志使用角色卡名字，默认关闭<br/>`0`关闭<br/>`1`开启<br/>新群将默认使用此设置<br/>开启后日志记录时将使用发送者的角色卡名字 |
+| defaultLogUploadTimeout | 60       | 日志上传超时时间（秒），默认60秒<br/>当网络较差时，日志上传可能会超时<br/>超时后将自动保存日志并解锁，用户可稍后使用 `.log upload` 手动上传<br/>建议范围: 30-120秒 |
 
 - OlivaDiceJoy 娱乐模块
 
@@ -763,6 +764,56 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
     }
     ```
 
+- OlivaDiceLogger 日志模块
+??? 日志模块
+    ```json
+    {
+        "strLoggerLogOn": "开始记录日志 [{tLogName}] (UUID: {tLogUUID})",
+        "strLoggerLogAlreadyOn": "已经正在记录日志 [{tLogName}]",
+        "strLoggerLogContinue": "继续记录日志 [{tLogName}] (UUID: {tLogUUID})\n当前已记录 {tLogLines} 行，日志总时长: {tLogTime})",
+        "strLoggerLogInvalidName": "日志名称 [{tLogName}] 不合法",
+        "strLoggerLogOff": "暂停记录日志 [{tLogName}] (UUID: {tLogUUID})\n当前已记录 {tLogLines} 行，日志总时长: {tLogTime}",
+        "strLoggerLogAlreadyOff": "没有正在进行的日志",
+        "strLoggerLogEnd": "结束记录日志 [{tLogName}] (当前已记录 {tLogLines} 行，日志总时长: {tLogTime})",
+        "strLoggerLogAlreadyEnd": "没有正在进行的日志",
+        "strLoggerLogEndingInProgress": "正在处理日志结束操作，请稍候……",
+        "strLoggerLogUploadTimeout": "日志 [{tLogName}] (UUID: {tLogUUID}) 上传超时，已自动保存。您可以稍后使用 .log upload {tLogUUID} 手动上传",
+        "strLoggerLogSave": "日志 [{tLogName}] (UUID: {tLogUUID}) 已保存",
+        "strLoggerLogUrl": "日志已上传，请在[ {tLogUrl} ]提取日志",
+        "strLoggerLogList": "本群有以下日志:\n{tLogList}",
+        "strLoggerLogListEmpty": "本群暂无日志",
+        "strLoggerLogStop": "已强制停止日志 [{tLogName}] (UUID: {tLogUUID}) (当前已记录 {tLogLines} 行，日志总时长: {tLogTime})",
+        "strLoggerLogStopUnlock": "已解除日志结束锁定状态",
+        "strLoggerLogStopError": "已强制停止日志 [{tLogName}] (UUID: {tLogUUID}) (日志已损坏)",
+        "strLoggerLogActiveSwitch": "已切换活跃日志为 [{tLogName}]",
+        "strLoggerLogSetRecommend": "未找到日志[{tLogSelection}]，你是想找以下日志吗？:\n{tSearchResult}\n请输入序号以选择对应日志",
+        "strLoggerLogUploadNoName": "请指定要上传的日志的UUID",
+        "strLoggerLogFileNotFound": "未找到[{tLogUUID}]对应的日志文件",
+        "strLoggerLogUploadSuccess": "日志 [{tLogName}](UUID: {tLogUUID}) 重新上传成功，日志总时长: {tLogTime}，请在[ {tLogUrl} ]提取日志",
+        "strLoggerLogUploadFailed": "日志 [{tLogName}](UUID: {tLogUUID}) 重新上传失败，请稍后再试",
+        "strLoggerLogGenerateNoUUID": "请指定要生成日志的UUID",
+        "strLoggerLogGenerateNotFound": "未找到UUID为[{tLogUUID}]的日志文件",
+        "strLoggerLogGenerateSuccess": "已成功为UUID [{tLogUUID}] (日志名称: {tLogName}) 生成trpglog文件",
+        "strLoggerLogGenerateFailed": "为UUID [{tLogUUID}] 生成trpglog文件失败",
+        "strLoggerLogNameNotFound": "本群日志列表中未找到名称为[{tLogName}]的日志",
+        "strLoggerLogTempSuccess": "临时日志 [{tLogName}] (UUID: {tLogUUID}) 上传成功，日志总时长: {tLogTime}，请在[ {tLogUrl} ]提取日志",
+        "strLoggerLogTempFailed": "临时日志 [{tLogName}] (UUID: {tLogUUID}) 上传失败，请稍后再试",
+        "strLoggerLogNotFound": "未找到日志 [{tLogName}]",
+        "strLoggerLogRenameSuccess": "日志 [{tLogOldName}] 已重命名为 [{tLogNewName}]",
+        "strLoggerLogRenameActiveSuccess": "当前活动日志 [{tLogOldName}] 已重命名为 [{tLogNewName}]",
+        "strLoggerLogRenameSameName": "新名称 [{tLogName}] 与旧日志名称相同",
+        "strLoggerLogRenameNameExists": "日志名称 [{tLogName}] 已存在",
+        "strLoggerLogInfo": "[{tLogName}] 日志状态:\nUUID: {tLogUUID}\n当前状态: {tLogInfo}\n日志行数: {tLogLines}\n日志总时长: {tLogTime}",
+        "strLoggerLogInfoNoLog": "当前没有活跃日志",
+        "strLoggerLogQuote": "此处为 [{tLogName}] 日志结束消息",
+        "strLoggerLogQuoteError": "[{tLogName}] 日志引用失败，可能原因是平台不为QQ或者Bot未记录上次结束日志的消息",
+        "strLoggerLogQuoteOn": "本群已开启自动引用上次结束日志功能",
+        "strLoggerLogQuoteAlreadyOn": "本群自动引用上次结束日志功能已处于开启状态",
+        "strLoggerLogQuoteOff": "本群已关闭自动引用上次结束日志功能",
+        "strLoggerLogQuoteAlreadyOff": "本群自动引用上次结束日志功能已处于关闭状态"
+    }
+    ```
+
 - OlivaDiceMaster 大师模块
 ??? 大师模块
     ```json
@@ -846,6 +897,29 @@ Master是骰子的控制者，每个骰娘同时可以有多个Master。Master�
         "strOdysseyKOOKPlayGameMusicName": "-",
         "strOdysseyKOOKPlayGameMusicSinger": "-",
         "strOdysseyKOOKPlayGameID": "6"
+    }
+    ```
+
+- OlivaDiceJoy 娱乐模块
+??? 娱乐模块
+    ```json
+    {
+        "strJoyJrrp": "[{tUserName}]的今日人品为[{tJrrpResult}]",
+        "strJoyZrrp": "[{tUserName}]的昨日人品为[{tJrrpResult}]",
+        "strJoyMrrp": "[{tUserName}]的明日人品为[{tJrrpResult}]",
+        "strJoyPokeCustom": "[{tUserName}]你好，这里是青果核心OlivaDice。"
+    }
+    ```
+
+- OlivaStoryCore 故事引擎模块
+??? 故事引擎模块
+    ```json
+    {
+        "strStoryCoreStoryTall": "{tStoryCoreResult}\n\n{tStoryCoreSelection}",
+        "strStoryCoreStoryTallNone": "故事不存在",
+        "strStoryCoreStoryTallBreak": "故事中断了",
+        "strStoryCoreStoryTallEnd": "故事结束了",
+        "strStoryCoreStoryRecommend": "未找到故事，您可能想要的是：\n{tStoryCoreRecommend}"
     }
     ```
 
