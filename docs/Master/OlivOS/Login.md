@@ -6,8 +6,7 @@
 > 又或者参考这个教程进行NapCat的分离部署：[【教程】小白可用的 OlivaDice 对接 NapCat 分离部署](https://forum.olivos.run/d/832-olivadice-napcat)  
 
 ## 获取软件
-你可以从一下页面获取链接：  
-[青果云](http://pan.benzencloudhk.xyz/s/ex9uwmsh)   密码：`LOVEOLIVA`  
+你可以从以下页面获取链接：  
 [Github](https://github.com/OlivOS-Team/OlivaDiceCore/releases)  
 
 下载后解压并双击运行`OlivOS.exe`，稍加等待便会弹出登录窗口。  
