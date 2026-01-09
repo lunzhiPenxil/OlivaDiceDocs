@@ -1,6 +1,15 @@
 # OlivaDice For OlivOS 启程手册
 
-> 更完善的指引请参考[【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)  
+> 更完善的指引请参考教程: 
+> + [【教程】小白可用的 OlivaDice 对接 NapCat 分离部署](https://forum.olivos.run/d/832)  
+> + [【搬运-教程】新llob教程-小白可学的用 LLOneBot 对接 OlivOS](https://forum.olivos.run/d/835)  
+> + [【踩坑指南】论如何在 Windows Server 上搭建 WSL 运行 Linux，实现 Windows 端 OlivOS 与子系统 NapCat 的对接](https://forum.olivos.run/d/880)  
+> + [【教程】手把手教你搭建青果骰](https://forum.olivos.run/d/25)
+> 
+> 论坛: <https://forum.olivos.run>  
+> 主页: <http://oliva.dice.center>  
+> 手册: <https://wiki.dice.center>  
+> 备用手册: <https://oliva.dicer.wiki>   
 > 注意：此教程的Windows搭建方法已过时，推荐使用Lagrange进行分离部署，请参考[【教程】小白可学的用 Lagrange.OneBot 对接 OlivOS](https://forum.olivos.run/d/705-lagrangeonebot-olivos/)  
 > 或者进行LLOneBot的分离部署，请参考这篇教程：[【搬运-教程】新llob教程-小白可学的用 LLOneBot 对接 OlivOS](https://forum.olivos.run/d/835-llob-llonebot-olivos)  
 > 又或者参考这个教程进行NapCat的分离部署：[【教程】小白可用的 OlivaDice 对接 NapCat 分离部署](https://forum.olivos.run/d/832-olivadice-napcat)  
